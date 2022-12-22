@@ -1,0 +1,37 @@
+@import "colors";
+
+.globalBtn {
+  background-color: $night;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  padding: 15px 25px;
+
+  &:hover {
+    background-color: $night;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.smBtn {
+  background-color: $night;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  padding: 8px 15px;
+
+  &:hover {
+    background-color: $night;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.topMarged {
+  margin-top: 10px;
+}

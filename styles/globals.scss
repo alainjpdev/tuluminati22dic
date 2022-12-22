@@ -1,0 +1,347 @@
+@import "colors";
+
+.globalImg {
+  width: 100%;
+  height: auto;
+}
+
+.text-night {
+  color: $night;
+}
+
+.text-dark {
+  color: $dark;
+}
+
+.text-light {
+  color: $light;
+}
+
+.text-lighter {
+  color: $lighter;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-white {
+  color: $white;
+}
+
+.bg-night {
+  background-color: $white;
+}
+
+.bg-dark {
+  background-color: $dark;
+}
+
+.bg-light {
+  background-color: $light;
+}
+
+.bg-lighter {
+  background-color: $lighter;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.lift {
+  -webkit-transition: box-shadow 0.25s ease, -webkit-transform 0.25s ease;
+  transition: box-shadow 0.25s ease, -webkit-transform 0.25s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease,
+    -webkit-transform 0.25s ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 1rem 2.5rem rgba(22, 28, 45, 0.1),
+      0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.1) !important;
+    -webkit-transform: translate3d(0, -1px, 0);
+    transform: translate3d(0, -1px, 0);
+  }
+}
+
+.lift-lg:hover,
+.lift-lg:focus {
+  box-shadow: 0 2rem 5rem rgba(22, 28, 45, 0.1),
+    0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.05) !important;
+  -webkit-transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -5px, 0);
+}
+
+@media screen and (min-width: 768px) {
+  .globalImg {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+.custom-paginate {
+  display: flex;
+  list-style: none;
+  height: 40px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  width: fit-content;
+  align-items: center;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.actived {
+  font-weight: bold;
+  background-color: $night;
+  pointer-events: none;
+  color: $white;
+}
+
+.paginate {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.paginate-center {
+  width: 35%;
+  margin: 0 auto;
+
+  .previous {
+    margin: 0 auto;
+  }
+
+  .next {
+    margin: 0 auto;
+  }
+}
+
+a {
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.nav-link {
+  color: $dark;
+
+  &:hover {
+    color: blue;
+  }
+}
+
+.mask {
+  cursor: pointer;
+}
+
+.carousel-control-prev-icon:after {
+  content: "";
+}
+
+.carousel-control-next-icon:after {
+  content: "";
+}
+
+.contact-card {
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+}
+
+.navbar-toggler-icon {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.navbar-toggler-icon:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  pointer-events: none;
+  content: "\f142";
+  color: $dark;
+}
+
+.login-row {
+  width: 100%;
+  margin: 0 !important;
+
+  img {
+    max-height: 98vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .paginate-center {
+    width: 35%;
+
+    .previous {
+      margin: 0 auto;
+    }
+
+    .next {
+      margin: 0 auto;
+    }
+  }
+}
+
+.back {
+  // background: rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  
+}
+
+
+.sticky {
+  position: sticky;
+
+  top: 0;
+
+  align-items:stretch;
+  background-color: white;
+  padding-bottom: 10px;
+  z-index: 1;
+  
+}
+
+.mapButton {
+  
+  // position:absolute;
+  position: fixed;
+  left: 45%;
+  top:90%;
+  z-index: 1;
+  background-color:#dcebff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  color:rgba(0, 0, 255, 0.75);
+  border-radius: 2px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.mapIcon {
+  // padding-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .login-img {
+    display: none;
+  }
+
+  .login-row {
+    min-height: 80vh;
+  }
+
+  .paginate-center {
+    width: 70%;
+
+    .previous {
+      margin: 0 auto;
+    }
+
+    .next {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .paginate-center {
+    width: 100%;
+
+    .previous {
+      margin: 0 auto;
+    }
+
+    .next {
+      margin: 0 auto;
+    }
+  }
+}
+
+.map-content {
+  display: flex;
+  height: 560px;
+}
+
+.map {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-left: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #00853e;
+  border-radius: 0;
+}
+
+.marker {
+  border: none;
+  cursor: pointer;
+  height: 26px;
+  width: 26px;
+  background-image: url("/marker.png");
+  background-size: cover;
+  // background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/washington-monument.jpg');
+}
+
+/* Marker tweaks */
+.mapboxgl-popup {
+  padding-bottom: 50px;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.mapboxgl-popup-content h3 {
+  background: #91c949;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+.mapboxgl-popup-content h4 {
+  margin: 0;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.mapboxgl-popup-content div {
+  padding: 10px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: #91c949;
+}
