@@ -48,9 +48,9 @@ const MapPageSales = ({ properties }) => {
           
           </div>
         <MapboxComponentTest/>
-
+        <i class="fas fa-list"></i>
       <Link href={"/properties"}>
-          <div className="mapButton"><MDBIcon fas icon="map-marked" className="mapIcon"/>     List</div>
+          <div className="mapButton"><MDBIcon  className="fas fa-list"/>     List</div>
           {/* <PropertyCard properties={properties} /> */}
           </Link>
           <div className="d-flex row justify-content-center mx-auto paginate-center">

@@ -1,6 +1,7 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from 'mdb-react-ui-kit';
 import { MDBIcon } from 'mdb-react-ui-kit';
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -8,9 +9,7 @@ const Footer = () => {
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6" className="text-center align-self-center">
-            <h8 className="title">
-              Tuluminati X  
-            </h8>
+          <Image src="/images/logoX.png" width={150} height={45} alt="Logo" />
             <br/>
             <br/>
 

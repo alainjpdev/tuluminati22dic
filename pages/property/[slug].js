@@ -9,6 +9,7 @@ import {
   MDBRow,
   MDBContainer,
   MDBIcon,
+  MDBBtn,
 } from "mdb-react-ui-kit";
 import Slug from "../../components/Slug";
 import CardVip from "../../components/CardVip";
@@ -19,6 +20,7 @@ import { MDBInput } from "mdbreact";
 import { useRouter } from "next/router";
 import Carousel from "../../components/Carousel";
 import Carousel2 from "../../components/Carousel2";
+import Link from "next/link";
 
 const Property = ({ property, propertiesVip, propertiesRelated }) => {
   const styles = {
@@ -36,14 +38,14 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
       <div>
         {property && (
           <Layout>
-            <MDBContainer>
-              <MDBCard>
-                <MDBCardBody>
+            {/* <MDBContainer> */}
+              {/* <MDBCard> */}
+                <MDBCardBody className="mx-0 p-0">
                   <MDBRow>
-                    <MDBCol md="9" lg="9">
+                    <MDBCol md="6" lg="9">
                       <Carousel2 images={property.images} />
                     </MDBCol>
-                    <MDBCol md="2" lg="3">
+                    <MDBCol md="1" lg="3">
                       <h4 className="mt-3"></h4>
                       <div style={styles} className="m-2">
                         <strong>{property.name}</strong>
@@ -75,15 +77,25 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                         {/* <MDBIcon icon="mobile-alt" className="mr-2" /> */}
                         {property.delivery?.finish}
                       </div>
+                      <div className="sticky">
+            <Link href={"/properties"}>
+          <MDBBtn className='me-3 my-1 p-3 mx-1 px-6' color='white'>
+        Request a tour
+        </MDBBtn>
+        </Link>
+        <MDBBtn className='me-3 p-3 mx-1 px-6'color='primary'>
+        Contact agent
+        </MDBBtn> 
+        </div>
                       <div style={styles}>
                         {/* <MDBIcon icon="envelope" className="mr-2" />
                      {property.card.agency} */}
                       </div>
-                      <h3 className="mt4 mb-3"></h3>
-                      <CardVip properties={propertiesVip} />
+                      <h3 className="mx-0 lh-1"></h3>
+                      {/* <CardVip properties={propertiesVip} /> */}
                     </MDBCol>
                   </MDBRow>
-                  <hr className="my-4" />
+                  <hr className="my-1" />
                   <MDBRow>
                     {propertiesRelated && propertiesRelated.length !== 0 && (
                       <MDBCol>
@@ -97,8 +109,8 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                   <hr />
                   Facts and features
                 </MDBCardBody>
-              </MDBCard>
-            </MDBContainer>
+              {/* </MDBCard> */}
+            {/* </MDBContainer> */}
 
             <section className="contact-section my-5">
               <MDBCard className="contact-card">

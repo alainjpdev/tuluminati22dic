@@ -37,7 +37,7 @@ export default function Home({ propertiesVip, properties }) {
           {/* <MapboxComponent /> */}
           <MDBContainer>
        
-            <PropertyVip properties={propertiesVip} />
+            {/* <PropertyVip properties={propertiesVip} /> */}
           
 
             {/* <PropertySection

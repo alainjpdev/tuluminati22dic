@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import Card from "../components/Card";
-import { MDBContainer } from "mdb-react-ui-kit";
+import { MDBBtn, MDBContainer, MDBIcon } from "mdb-react-ui-kit";
 import { useRouter } from "next/router";
 import ReactPaginate from "react-paginate";
 import SearchFilter from "../components/SearchFilter";
@@ -10,6 +10,7 @@ import MapboxComponent from "../components/Mapbox/Mapbox";
 
 import { propertiesMock } from "../src/constants";
 import PropertyCard from "../components/PropertyCard/PropertyCard";
+import Link from "next/link";
 
 const Rent = ({ properties, currentPage, pageCount }) => {
   const router = useRouter();
@@ -30,15 +31,30 @@ const Rent = ({ properties, currentPage, pageCount }) => {
         <title>Tuluminati X Rental of properties</title>
       </Head>
       <Layout>
-        <MDBContainer>
+      <br/>
+           <div className="sticky">
+            <Link href={"/properties"}>
+          <MDBBtn className='me-3 mx-3' color='white'>
+        For Sale
+        </MDBBtn>
+        </Link>
+        <MDBBtn className='me-1'color='primary' active>
+        For Rent
+        </MDBBtn> 
+        </div>
+        {/* <MDBContainer> */}
+
           {/* <SearchFilter /> */}
-          <h2 className="h1-responsive font-weight-bold text-center my-4 text-night">
-            Check out the our list of Rental properties
-          </h2>
+          <h4 className="h4-responsive font-weight-bold text-center my-4 text-night">
+          Rental Listings
+          </h4>
           <p className="text-center w-responsive mx-auto mb-5">
             Each property at Tuluminati X is unique, find here your rental
             property
           </p>
+          <Link href={"/mapPageRents"} >
+          <div className="mapButton"><MDBIcon fas icon="map-marked" className="mapIcon"/>     Map</div>
+          </Link>
 
           <PropertyCard properties={properties} />
 
@@ -57,8 +73,8 @@ const Rent = ({ properties, currentPage, pageCount }) => {
               containerClassName="custom-paginate"
             />
           </div>
-        </MDBContainer>
-        <MapboxComponent />
+        {/* </MDBContainer> */}
+        {/* <MapboxComponent /> */}
       </Layout>
     </section>
   );

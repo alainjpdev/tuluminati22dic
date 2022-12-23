@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Card } from "primereact/card";
+import { MDBCol } from "mdb-react-ui-kit";
 
 const PropertyCard = ({ properties }) => {
   const generateAboutText = (text) => {
@@ -14,7 +15,7 @@ const PropertyCard = ({ properties }) => {
     <div className="grid align-items-end ">
       {properties.map((property) => {
         return (
-          <div className="col-12 sm:col-12 md:col-6 lg:col-4 mb-4 cursor-pointer">
+          <div className="col-12 sm:col-12 md:col-6 lg:col-4 mb-4 cursor-pointer ">
             <Link
               href="/property/[id]"
               as={`/property/${property.id}`}
@@ -31,18 +32,54 @@ const PropertyCard = ({ properties }) => {
                   </div>
                 }
               >
-                <div className="font-bold text-xl mt-2 mb-2">
+                <div className="text-sm-start mt-1 mx-3 text-sm-start lh-sm">
                   {property.name}{" "}
-                  <span style={{ color: "green" }}>
+                  <h3 style={{ color: "green" }}>
                     {property.price.toLocaleString("en-US", {
                       style: "currency",
                       currency: "USD",
                     })}
-                  </span>
+                  </h3>
+                  <strong>{property.factsandfeatures.beds} </strong>bd |
+                <strong>{" " + property.factsandfeatures.bath}</strong>  ba |
+                
+               
+                <br/>
+                   {property.address.street.toUpperCase()}
+                                <h9>
+                   {property.developer.toUpperCase()}
+                </h9>
                 </div>
-                <p className="m-0" style={{ lineHeight: "1.5" }}>
+                 <MDBCol lg="3" className="mx-3 cardPa">
+                <span className="text-night">
+                  <h6 className="font-weight-bold mb-3">
+                    {/* <MDBIcon icon="building" className="pr-2" /> */}
+                    {/* {property.category.name} */}
+                  </h6>
+                </span>
+                <h3 className="font-weight-bold p-0 flex">
+                {/* <>${PriceFormated(property.price)}</> */}
+                
+                  {/* <strong>{property.name}</strong> */}
+                </h3>
+{/*                
+                <strong>{property.factsandfeatures.beds} </strong>bd |
+                <strong>{" " + property.factsandfeatures.bath}</strong>  ba |
+                
+                */}
+                {/* <br/>
+                   {property.address.street.toUpperCase()}
+                <br/>
+                <h9>
+                   {property.developer.toUpperCase()}
+                </h9>
+                 */}
+              </MDBCol>
+                
+                {/* <p className="m-3" style={{ lineHeight: "1.8" }}>
                   {generateAboutText(property.about)}
-                </p>
+                </p> */}
+                <hr/>
               </Card>
             </Link>
           </div>
