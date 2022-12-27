@@ -202,21 +202,17 @@ a {
 
 .sticky {
   position: sticky;
-
   top: 0;
-
   align-items:stretch;
   background-color: white;
   padding-bottom: 10px;
   z-index: 1;
-  
 }
 
 .mapButton {
-  
   // position:absolute;
   position: fixed;
-  left: 45%;
+  left: 40%;
   top:90%;
   z-index: 1;
   background-color:#dcebff;
@@ -225,14 +221,21 @@ a {
   padding-left: 20px;
   padding-right: 20px;
 
-  color:rgba(0, 0, 255, 0.75);
+  color:rgba(0, 0, 255, 0.954);
   border-radius: 2px; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
 }
 
-.mapIcon {
-  // padding-left: 10px;
+
+
+.cardPa {
+
+  margin-top:0px;
+}
+
+.fontSize {
+  text-justify: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -273,7 +276,7 @@ a {
 
 .map-content {
   display: flex;
-  height: 560px;
+  height: 580px;
 }
 
 .map {

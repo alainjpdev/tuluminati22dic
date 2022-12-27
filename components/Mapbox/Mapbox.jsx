@@ -3,6 +3,17 @@ import React, { useEffect, useState } from "react";
 import { propertiesMock } from "../../src/constants.js";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import {
+  
+  MDBModal,
+  MDBModalDialog,
+  MDBModalContent,
+  MDBModalHeader,
+  MDBModalTitle,
+  MDBModalBody,
+  MDBModalFooter,
+} from 'mdb-react-ui-kit';
+
 
 
 const lng = propertiesMock.BuyHomes[0].address.lng
@@ -19,8 +30,8 @@ const store = {
       type: "Feature",
       geometry: {
         type: "Point",
-        // coordinates: [-77.034084142948, 38.909671288923],
-        coordinates: [propertiesMock.BuyHomes[0].address.lng,propertiesMock.BuyHomes[0].address.lat],
+        coordinates: [-87.460795, 20.200037],
+        // coordinates: [propertiesMock.BuyHomes[0].address.lng,propertiesMock.BuyHomes[0].address.lat],
 
         // coordinates: [propertiesMock.BuyHomes[0].address.lng,propertiesMock.BuyHomes[0].address.lat],
       },
@@ -92,9 +103,11 @@ const MapboxComponent = () => {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: "map",
-      style: "mapbox://styles/mapbox/light-v11",
-      center: [-87.46325,20.21173 ],
-      zoom: 10,
+      // style: "mapbox://styles/mapbox/light-v11",
+      style: "mapbox://styles/mapbox/streets-v12",
+
+      center: [-87.460795, 20.200037],
+      zoom: 12,
       scrollZoom: false,
     });
 
@@ -183,16 +196,30 @@ const MapboxComponent = () => {
     // <h6><strong>${propertiesMock.BuyHomes[0].factsandfeatures.bath}</strong> ba </h6>
     //   <h6>${currentFeature.properties.address}</h6>
     //  `)
-     .setHTML(`<a href=/property/${propertiesMock.BuyHomes[0].id}> 
-      <img
-      className="someImg"
-      src={"https://res.cloudinary.com/dk473trop/image/upload/v1670333637/atikk/2015_R_AttikTulum_Ext01_id0glm.jpg"}
-      alt="property picture"
-    />
-    <h6><strong>$${propertiesMock.BuyHomes[0].price}k</strong></h6>
-    <h6><strong>${propertiesMock.BuyHomes[0].factsandfeatures.beds}</strong> bds |</h6>
-    <h6><strong>${propertiesMock.BuyHomes[0].factsandfeatures.bath}</strong> ba </h6>
-      <h6>${currentFeature.properties.address}</h6></a> 
+     .setHTML(`
+     <iframe width="320" height="215" 
+     src="https://www.youtube.com/embed/D8dX6hk5XI4?autoplay=1&mute=1&controls=0">
+</iframe>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>  
      `)
       .addTo(map);
   };

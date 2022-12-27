@@ -95,9 +95,8 @@ const MapboxComponentTest = () => {
     const map = new mapboxgl.Map({
       container: "map",
       style: "mapbox://styles/mapbox/streets-v12",
-      center: [-87.46325, 20.21173],
-      zoom: 10,
-      
+      center: [-87.460795, 20.200037],
+      zoom: 13,
       scrollZoom: false,
     });
 
@@ -163,12 +162,12 @@ const MapboxComponentTest = () => {
     }
   };
 
-  // const flyToStore = (currentFeature) => {
-  //   map.flyTo({
-  //     center: [currentFeature.address.lat, currentFeature.address.lng],
-  //     zoom: 12,
-  //   });
-  // };
+  const flyToStore = (currentFeature) => {
+    map.flyTo({
+      center: [currentFeature.address.lat, currentFeature.address.lng],
+      zoom: 12,
+    });
+  };
 
   // const createPopUp = (currentFeature) => {
   //   const popUps = document.getElementsByClassName("mapboxgl-popup");
@@ -176,15 +175,15 @@ const MapboxComponentTest = () => {
   //   const popup = new mapboxgl.Popup({ closeOnClick: false })
   //     .setLngLat([currentFeature.address.lat, currentFeature.address.lng])
   //   .setHTML(`
-  //   <img
-  //   className="someImg"
-  //   src=${propertiesMock.BuyHomes[0].images}
-  //   alt="property picture"
-  // />
+  // //   <img
+  // //   className="someImg"
+  // //   src=${propertiesMock.BuyHomes[0].images}
+  // //   alt="property picture"
+  // // />
   // <h6><strong>$${propertiesMock.BuyHomes[0].price}k</strong></h6>
   // <h6><strong>${propertiesMock.BuyHomes[0].factsandfeatures.beds}</strong> bds |</h6>
   // <h6><strong>${propertiesMock.BuyHomes[0].factsandfeatures.bath}</strong> ba </h6>
-  //   <h6>${currentFeature.properties.address}</h6>
+  //  <h6>${currentFeature.properties.address}</h6>
   //  `)
   //  console.log(currentFeature)
   //  .setHTML(`<a href=/property/${propertiesMock.BuyHomes[0].id}>
@@ -194,8 +193,8 @@ const MapboxComponentTest = () => {
   //   alt="property picture"
   // />
   // <h6><strong>$${propertiesMock.BuyHomes[0].price}k</strong></h6>
-  // <h6><strong>${propertiesMock.BuyHomes[0].factsandfeatures.beds}</strong> bds |</h6>
-  // <h6><strong>${propertiesMock.BuyHomes[0].factsandfeatures.bath}</strong> ba </h6>
+  // // <h6><strong>${propertiesMock.BuyHomes[0].factsandfeatures.beds}</strong> bds |</h6>
+  // // <h6><strong>${propertiesMock.BuyHomes[0].factsandfeatures.bath}</strong> ba </h6>
   //   <h6>${currentFeature.properties.address}</h6></a>
   //  `)
   //     .addTo(map);

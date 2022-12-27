@@ -1,0 +1,55 @@
+
+.awssld {
+    --slider-height-percentage: 45%;
+    --slider-transition-duration: 700ms;
+    --organic-arrow-thickness: 2px;
+    --organic-arrow-border-radius: 3px;
+    --organic-arrow-height: 25px;
+    --organic-arrow-color: #e4d9ff;
+    --control-button-width: 10%;
+    --control-button-height: 25%;
+    --control-button-background: transparent;
+    --control-bullet-color: #e4d9ff;
+    --control-bullet-active-color: #273469;
+    --loader-bar-color: #273469;
+    --loader-bar-height: 2px;
+    // position:sticky;
+    // position: absolute;
+    // top:0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .awssld {
+      height: 100vh;
+      width: 100vw;
+    }
+  }
+  
+  
+  
+  .awssld2 {
+    --slider-height-percentage: 45%;
+    --slider-transition-duration: 700ms;
+    --organic-arrow-thickness: 2px;
+    --organic-arrow-border-radius: 3px;
+    --organic-arrow-height: 25px;
+    --organic-arrow-color: #e4d9ff;
+    --control-button-width: 5%;
+    --control-button-height: 25%;
+    --control-button-background: transparent;
+    --control-bullet-color: #e4d9ff;
+    --control-bullet-active-color: #273469;
+    --loader-bar-color: #273469;
+    --loader-bar-height: 1px;
+    // position:sticky;
+    // top:0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .awssld {
+      height: 100vh;
+    //   width: 100vh;
+    }
+  }
+  
+  

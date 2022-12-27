@@ -15,7 +15,24 @@ import Header from "../components/Header";
 import MapboxComponentTest from "../components/Mapboxtest";
 import Link from "next/link";
 
+import  { useState } from 'react';
+import {
+  
+  MDBModal,
+  MDBModalDialog,
+  MDBModalContent,
+  MDBModalHeader,
+  MDBModalTitle,
+  MDBModalBody,
+  MDBModalFooter,
+} from 'mdb-react-ui-kit';
+
 const MapPageSales = ({ properties }) => {
+
+  const [basicModal, setBasicModal] = useState(false);
+
+  const toggleShow = () => setBasicModal(!basicModal);
+
   // const router = useRouter();
 
   // const paginationHandler = (page) => {
@@ -44,15 +61,38 @@ const MapPageSales = ({ properties }) => {
         <MDBBtn className='me-1'>
         For Rent
         </MDBBtn> 
-         
-          
+        
           </div>
-        <MapboxComponentTest/>
+        <MapboxComponent/>
+        {/* <MapboxComponentTest/> */}
+        
+
         <i class="fas fa-list"></i>
       <Link href={"/properties"}>
           <div className="mapButton"><MDBIcon  className="fas fa-list"/>     List</div>
           {/* <PropertyCard properties={properties} /> */}
           </Link>
+          <>
+      <MDBBtn onClick={toggleShow}>LAUNCH DEMO MODAL</MDBBtn>
+      <MDBModal show={basicModal} setShow={setBasicModal} tabIndex='-1'>
+        <MDBModalDialog>
+          <MDBModalContent>
+            <MDBModalHeader>
+              <MDBModalTitle>Modal title</MDBModalTitle>
+              <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
+            </MDBModalHeader>
+            <MDBModalBody>...</MDBModalBody>
+
+            <MDBModalFooter>
+              <MDBBtn color='secondary' onClick={toggleShow}>
+                Close
+              </MDBBtn>
+              <MDBBtn>Save changes</MDBBtn>
+            </MDBModalFooter>
+          </MDBModalContent>
+        </MDBModalDialog>
+      </MDBModal>
+    </>
           <div className="d-flex row justify-content-center mx-auto paginate-center">
             {/* <ReactPaginate
               onPageChange={paginationHandler}
@@ -67,6 +107,8 @@ const MapPageSales = ({ properties }) => {
               pageClassName="paginate"
               containerClassName="custom-paginate"
             /> */}
+
+            
           </div>
         {/* </MDBContainer> */}
       

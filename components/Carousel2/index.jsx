@@ -7,8 +7,8 @@ const AutoPlaySlider = withAutoplay(AwesomeSlider);
 
 const Carousel2 = ({images}) => (
     <AutoPlaySlider
-    //   cssModule={AwsSliderStyles}
-      className="awssld2 mb-5"
+      // cssModule={AwsSliderStyles}
+      className="awssld2 mb-1"
       play={false}
       cancelOnInteraction={true}
       interval={6000}

@@ -38,8 +38,8 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
       <div>
         {property && (
           <Layout>
-            {/* <MDBContainer> */}
-              {/* <MDBCard> */}
+            <MDBContainer className="p-0">
+              <MDBCard>
                 <MDBCardBody className="mx-0 p-0">
                   <MDBRow>
                     <MDBCol md="6" lg="9">
@@ -77,13 +77,13 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                         {/* <MDBIcon icon="mobile-alt" className="mr-2" /> */}
                         {property.delivery?.finish}
                       </div>
-                      <div className="sticky">
+                      <div className="d-flex justify-content-around sticky">
             <Link href={"/properties"}>
-          <MDBBtn className='me-3 my-1 p-3 mx-1 px-6' color='white'>
+          <MDBBtn className='me-2 my-1 p-2 mx-0 px-6' color='white'>
         Request a tour
         </MDBBtn>
         </Link>
-        <MDBBtn className='me-3 p-3 mx-1 px-6'color='primary'>
+        <MDBBtn className='me-3 p-3 mx-1 px-7'>
         Contact agent
         </MDBBtn> 
         </div>
@@ -104,13 +104,15 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                       </MDBCol>
                     )}
                   </MDBRow>
+                  <div className="p-2">
                   Overview
                   <div>{property.about}</div>
                   <hr />
                   Facts and features
+                  </div>
                 </MDBCardBody>
-              {/* </MDBCard> */}
-            {/* </MDBContainer> */}
+              </MDBCard>
+            </MDBContainer>
 
             <section className="contact-section my-5">
               <MDBCard className="contact-card">
