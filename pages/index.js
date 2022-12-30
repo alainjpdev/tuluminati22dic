@@ -30,7 +30,7 @@ export default function Home({ propertiesVip, properties }) {
         </Head>
         <Layout>
           <div className="mx-0">
-       <video style={{ width: '100%', height: 'auto' }} mute loop autoplay>
+       <video style={{ width: '100%', height: 'auto' }} mute loop controls autoplay>
           <source src="/videos/movieB.mp4" 
           type="video/mp4" />
          </video>
