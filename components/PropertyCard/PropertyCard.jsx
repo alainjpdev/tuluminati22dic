@@ -79,6 +79,7 @@ const PropertyCard = ({ properties }) => {
                 {/* <p className="m-3" style={{ lineHeight: "1.8" }}>
                   {generateAboutText(property.about)}
                 </p> */}
+                
                 <hr/>
               </Card>
             </Link>

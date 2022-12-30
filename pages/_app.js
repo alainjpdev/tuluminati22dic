@@ -21,7 +21,9 @@ Router.events.on("routeChangeStart", () => {
 Router.events.on("routeChangeComplete", () => Nprogress.done());
 Router.events.on("routeChangeError", () => Nprogress.done());
 
+
 function MyApp({ Component, pageProps }) {
+
   return (
     <>
       <Head>

@@ -11,6 +11,7 @@ import MapboxComponent from "../components/Mapbox/Mapbox";
 import MapboxComponentTest from "../components/Mapboxtest";
 import Image from "next/image";
 import CardSection from "../components/CardSection";
+// import videoBg from "../src/videos/cut.mp4"
 
 export default function Home({ propertiesVip, properties }) {
   const [estate, setEstate] = useState(true);
@@ -28,7 +29,16 @@ export default function Home({ propertiesVip, properties }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Layout>
-          <Carousel/>
+          <div className="mx-0">
+       <video style={{ width: '100%', height: 'auto' }} mute loop autoplay>
+          <source src="/videos/movieB.mp4" 
+          type="video/mp4" />
+         </video>
+         </div> 
+
+  
+
+          {/* <Carousel/> */}
           {/* <div className="fillit">
           <Image src="/images/2.jpg" width={1080} height={600} alt="Logo" className="back"/>
 
