@@ -11,6 +11,7 @@ import MapboxComponent from "../components/Mapbox/Mapbox";
 import MapboxComponentTest from "../components/Mapboxtest";
 import Image from "next/image";
 import CardSection from "../components/CardSection";
+import Header from "../components/Header";
 // import videoBg from "../src/videos/cut.mp4"
 
 export default function Home({ propertiesVip, properties }) {
@@ -29,12 +30,15 @@ export default function Home({ propertiesVip, properties }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Layout>
-          <div className="mx-0">
-       <video style={{ width: '100%', height: 'auto' }} mute loop controls autoplay>
-          <source src="/videos/movieB.mp4" 
-          type="video/mp4" />
+            {/* <h2 className="hello">hello world</h2> */}
+          {/* <div> */}
+       <video style={{ width: '100%', height: '100%',  }}
+        muted autoPlay loop src="/videos/movieB.mp4" className="main"
+          type="video/mp4" > 
+          
          </video>
-         </div> 
+       
+         {/* </div>  */}
 
   
 

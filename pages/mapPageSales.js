@@ -72,27 +72,7 @@ const MapPageSales = ({ properties }) => {
           <div className="mapButton"><MDBIcon  className="fas fa-list"/>     List</div>
           {/* <PropertyCard properties={properties} /> */}
           </Link>
-          <>
-      <MDBBtn onClick={toggleShow}>LAUNCH DEMO MODAL</MDBBtn>
-      <MDBModal show={basicModal} setShow={setBasicModal} tabIndex='-1'>
-        <MDBModalDialog>
-          <MDBModalContent>
-            <MDBModalHeader>
-              <MDBModalTitle>Modal title</MDBModalTitle>
-              <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
-            </MDBModalHeader>
-            <MDBModalBody>...</MDBModalBody>
-
-            <MDBModalFooter>
-              <MDBBtn color='secondary' onClick={toggleShow}>
-                Close
-              </MDBBtn>
-              <MDBBtn>Save changes</MDBBtn>
-            </MDBModalFooter>
-          </MDBModalContent>
-        </MDBModalDialog>
-      </MDBModal>
-    </>
+         
           <div className="d-flex row justify-content-center mx-auto paginate-center">
             {/* <ReactPaginate
               onPageChange={paginationHandler}

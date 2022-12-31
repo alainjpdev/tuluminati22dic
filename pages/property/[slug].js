@@ -51,9 +51,10 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                     </MDBCol>
                     <MDBCol md="3" lg="3">
                       <h4 className="mt-3"></h4>
-                      <div style={styles} className="m-2 mt-2">
-                        <strong>{property.name}</strong><DialogDemo/>
+                      <div style={styles} className="m-2 mt-5">
+                        <strong >{property.name}</strong>
                       </div>
+                      <DialogDemo />
 
                       <div style={styles} className="m-2">
                         <strong> $ {property.price}k</strong>
@@ -82,8 +83,8 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                         {property.delivery?.finish}
                       </div>
                       <div className="d-flex justify-content-around sticky">
-            
-        </div>
+
+                      </div>
                       <div style={styles}>
                         {/* <MDBIcon icon="envelope" className="mr-2" />
                      {property.card.agency} */}
@@ -101,26 +102,38 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                       </MDBCol>
                     )}
                   </MDBRow>
-                  
-                  
+
+
                   <div className="sticky d-flex justify-content-around justify-content-lg-start">
-                  <Link href={"#contactUs"}>
-          <MDBBtn className='me-2 my-1 p-2 mx-1 px-6 py-3 sticky' color='white'>
-            
-        Request a tour
-        </MDBBtn>
-        </Link>
-        <Link href={"#contactUs"}>
-        <MDBBtn className='me-2 my-1 p-2 mx-1 px-6 py-3 sticky'>
-        Contact agent
-        </MDBBtn> 
-        </Link>
-        </div>
-                  <div className="p-2">
-                  Overview
-                  <div>{property.about}</div>
-                  <hr />
-                  Facts and features
+                    <Link href={"#contactUs"}>
+                      <MDBBtn className='me-2 my-1 p-2 mx-1 px-6 py-3 sticky' color='white'>
+
+                        Request a tour
+                      </MDBBtn>
+                    </Link>
+                    <Link href={"#contactUs"}>
+                      <MDBBtn className='me-2 my-1 p-2 mx-1 px-6 py-3 sticky'>
+                        Contact agent
+                      </MDBBtn>
+                    </Link>
+                  </div>
+                  <div className="p-0">
+                    <div class="scrollmenu sticky2">
+                      <Link href={"#overview"}>Overview</Link>
+                      <Link href={"#factsnadfeatures"}>Facts and features</Link>
+                 
+                      ...
+                    </div >
+                    <div id="overview">
+
+                    Overview
+                    </div>
+                    <div>{property.about}</div>
+                    <hr />
+                    <div id="factsnadfeatures">
+                    Facts and features
+                    </div>
+                    
                   </div>
                 </MDBCardBody>
               </MDBCard>
@@ -132,7 +145,7 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                   <MDBCol lg="8">
                     <MDBCardBody className="form">
                       <h3 className="mt-4">
-                        <MDBIcon icon="envelope" className="pr-2" id = "contactUs" />
+                        <MDBIcon icon="envelope" className="pr-2" id="contactUs" />
                         Contact agent:
                       </h3>
                       <MDBRow>
@@ -166,17 +179,18 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                                 "I am interested in " + property.address.street
                               }
                             />
-                            {}
+                            { }
                             <MDBBtn className='me-2 my-1 py-3 mx-1 px-6 py-2 btn-block smBtn'>
-                          
+
                               Contact Agent
                             </MDBBtn>
+                            
                           </div>
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
                   </MDBCol>
-               
+
 
                   <MDBCol lg="4">
                     <MDBCardBody className="contact text-center h-100 white-text">
