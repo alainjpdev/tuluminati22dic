@@ -63,8 +63,8 @@ const Properties = ({ properties, currentPage, pageCount }) => {
               pageCount={pageCount}
               marginPagesDisplayed={1}
               pageRangeDisplayed={2}
-              previousLabel="Anterior"
-              nextLabel="Siguiente"
+              previousLabel="Back"
+              nextLabel="Next"
               activeClassName="actived"
               breakLabel="..."
               pageClassName="paginate"

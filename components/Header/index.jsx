@@ -64,6 +64,14 @@ const Header = () => {
               </a>
             </Link>
           </MDBNavItem>
+          <MDBNavItem>
+            <Link href="/agents/agents" passHref>
+              <a className="nav-link">
+                {/* <MDBIcon icon="building" className="mr-1" /> */}
+                Agents
+              </a>
+            </Link>
+          </MDBNavItem>
           <MDBNavItem active={router.pathname === "/contact"}>
             <Link href="/contact">
               <a className="nav-link">

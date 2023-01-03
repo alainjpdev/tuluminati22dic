@@ -22,7 +22,7 @@ const CardSection = () => (
   <div className="container-fluid">
   <Link href={"/properties"}>
 <div  className="row">
-   <div className="col">
+   <div className="col-12">
     <MDBCard  alignment='center'>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
       <MDBCardImage src='images/hometul.png' width={200}fluid alt='...' />
@@ -53,9 +53,9 @@ const CardSection = () => (
   
   
   <Link href={"/rent"}>
-
+<div className="row">
   
-   <div className="col">
+   <div className="col-6">
   <MDBCard  alignment='center'>
     
     <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
@@ -75,7 +75,7 @@ const CardSection = () => (
     </MDBCardBody>
   </MDBCard>
   </div>
-  
+    </div>
     </Link>
 </div>
 </>

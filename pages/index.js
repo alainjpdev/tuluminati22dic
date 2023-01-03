@@ -30,37 +30,31 @@ export default function Home({ propertiesVip, properties }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Layout>
-            {/* <h2 className="hello">hello world</h2> */}
+          {/* <h2 className="hello">hello world</h2> */}
           {/* <div> */}
-       <video style={{ width: '100%', height: '100%',  }}
-        muted autoPlay loop src="/videos/movieB.mp4" className="main"
-          type="video/mp4" > 
-          
-         </video>
-       
-         {/* </div>  */}
 
-  
+          <div className="container-fluid p-0">
+            <div className="row">
+              <div className="col-md-3 p-0"></div>
+              <div className="col-md-6 p-0">
+                  <video style={{ width: '100%', height: '100%', }}
+                  muted autoPlay loop src="/videos/movieB.mp4" className="main p-0 m-0"
+                  type="video/mp4" >
+                  </video>
+              </div>
+              
+              <div className="col-md-3 p-0"></div>
+              
+            </div>
+            <div className="row">
+              <div className="col">
 
-          {/* <Carousel/> */}
-          {/* <div className="fillit">
-          <Image src="/images/2.jpg" width={1080} height={600} alt="Logo" className="back"/>
+                   <CardSection />
+              </div>
+              </div>
+            
+          </div>
 
-          </div> */}
-          {/* <MapboxComponentTest/> */}
-          {/* <MapboxComponent /> */}
-          <MDBContainer>
-       
-            {/* <PropertyVip properties={propertiesVip} /> */}
-          
-
-            {/* <PropertySection
-              properties={properties}
-              handleDisplay={handleDisplay}
-            /> */}
-          <CardSection/>
-          </MDBContainer>
-         
         </Layout>
       </div>
     );

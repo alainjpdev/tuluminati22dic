@@ -252,7 +252,7 @@ div.scrollmenu a:hover {
 }
 
 .sticky {
-  position: sticky;
+  position: fixed;
   top: 0;
   align-items: stretch;
   background-color: white;
@@ -266,6 +266,10 @@ div.scrollmenu a:hover {
   background-color: white;
   padding-bottom: 10px;
   z-index: 1;
+}
+
+.cursorpointer{
+  cursor: pointer;
 }
 
 .mapButton {
