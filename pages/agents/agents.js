@@ -44,7 +44,7 @@ const agents = () => {
                 className='rounded-circle'
               />
               <div className='ms-3'>
-                <p className='fw-bold mb-1'>Diana Moncada</p>
+                <p className='fw-bold mb-1 d-flex align-items-center'>Diana Moncada</p>
                 <p className='text-muted mb-0'>diana@gmail.com</p>
               </div>
             </div>

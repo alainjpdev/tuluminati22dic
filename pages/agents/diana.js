@@ -25,22 +25,24 @@ const diana = () => {
                 </div> 
 
             <div className='row'>
-                <div className="col-lg-3 col-5">
+                <div className="col">
+                  {/* <div className="d-none"> */}
                     <img
                         src='https://res.cloudinary.com/dk473trop/image/upload/v1672770418/agentes/diana_d4fi05.webp'
                         alt=''
-                        style={{ width: '200px', height: '200px' }}
+                        style={{ width: '150px', height: '150px' }}
                         className='rounded-circle'
                     />
+                    {/* </div> */}
                      </div>
-                <div className='col-lg-8 col-7'>
+                <div className='col'>
                     <h4><strong>Diana Moncada</strong></h4>
                     <h6>Agencia Test</h6>
                 </div>
            
             </div>
             <div className='row'>
-                <div className="col">
+                <div className="col-md">
                     <div className="d-grid gap-2">
                     <button  className="btn btn-primary px-4">
                         Contact us

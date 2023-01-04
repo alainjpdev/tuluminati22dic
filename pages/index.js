@@ -1,26 +1,39 @@
-import React, { useState } from "react";
-import Head from "next/head";
-import Layout from "../components/Layout";
-import PropertyVip from "../components/PropertyVip";
-import { MDBContainer } from "mdb-react-ui-kit";
-import Carousel from "../components/Carousel";
-import PropertySection from "../components/PropertySection";
-import Features from "../components/Features";
-import { propertiesMock } from "../src/constants";
-import MapboxComponent from "../components/Mapbox/Mapbox";
-import MapboxComponentTest from "../components/Mapboxtest";
-import Image from "next/image";
-import CardSection from "../components/CardSection";
-import Header from "../components/Header";
+import React, { useState } from 'react'
+import Head from 'next/head'
+import Layout from '../components/Layout'
+import PropertyVip from '../components/PropertyVip'
+
+import Carousel from '../components/Carousel'
+import PropertySection from '../components/PropertySection'
+import Features from '../components/Features'
+import { propertiesMock } from '../src/constants'
+import MapboxComponent from '../components/Mapbox/Mapbox'
+import MapboxComponentTest from '../components/Mapboxtest'
+import Image from 'next/image'
+import CardSection from '../components/CardSection'
+import Header from '../components/Header'
+import Link from 'next/link'
+import {
+  MDBCard,
+  MDBCardBody,
+  MDBCardText,
+  MDBCardTitle,
+  MDBCol,
+  MDBRow,
+  MDBCardImage,
+  MDBRipple,
+  MDBBtn,
+} from 'mdb-react-ui-kit'
+
 // import videoBg from "../src/videos/cut.mp4"
 
 export default function Home({ propertiesVip, properties }) {
-  const [estate, setEstate] = useState(true);
+  const [estate, setEstate] = useState(true)
 
   const handleDisplay = (event) => {
-    event.preventDefault();
-    setEstate(!estate);
-  };
+    event.preventDefault()
+    setEstate(!estate)
+  }
 
   if (estate) {
     return (
@@ -35,29 +48,120 @@ export default function Home({ propertiesVip, properties }) {
 
           <div className="container-fluid p-0">
             <div className="row">
-              <div className="col-md-3 p-0"></div>
-              <div className="col-md-6 p-0">
-                  <video style={{ width: '100%', height: '100%', }}
-                  muted autoPlay loop src="/videos/movieB.mp4" className="main p-0 m-0"
-                  type="video/mp4" >
-                  </video>
-              </div>
-              
-              <div className="col-md-3 p-0"></div>
-              
-            </div>
-            <div className="row">
               <div className="col">
+                <div className="d-md-none">
+                  <video
+                    style={{ width: '100%', height: '100%' }}
+                    muted
+                    autoPlay
+                    loop
+                    src="/videos/tulumBeach.mp4"
+                    className="main p-0 m-0"
+                    type="video/mp4"
+                  ></video>
+                </div>
+                <div className="d-none d-md-block">
+                  <video
+                    style={{ width: '100%', height: '100%' }}
+                    muted
+                    autoPlay
+                    loop
+                    src="/videos/tulumBeachFull.mp4"
+                    className="main p-0 m-0"
+                    type="video/mp4"
+                  ></video>
+                </div>
+              </div>
+            </div>
 
-                   <CardSection />
+            <div className="row">
+              <div className="col-md">
+                <Link href={'/properties'}>
+                  <MDBCard alignment="center">
+                    <MDBRipple
+                      rippleColor="light"
+                      rippleTag="div"
+                      className="bg-image hover-overlay"
+                    >
+                      <MDBCardImage
+                        src="images/hometul.png"
+                        width={200}
+                        fluid
+                        alt="..."
+                      />
+                      {/* <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' /> */}
+                      <a>
+                        <div
+                          className="mask"
+                          style={{
+                            backgroundColor: 'rgba(251, 251, 251, 0.15)',
+                          }}
+                        ></div>
+                      </a>
+                    </MDBRipple>
+                    <MDBCardBody>
+                      <MDBCardTitle>
+                        <strong>Buy a home</strong>
+                      </MDBCardTitle>
+                      <MDBCardText>
+                        Find your place with an immersive photo experience and
+                        the most listings, including things you won’t find
+                        anywhere else.
+                      </MDBCardText>
+                      <MDBBtn>Buy Home</MDBBtn>
+                    </MDBCardBody>
+                  </MDBCard>
+                </Link>
               </div>
+              <div className="col-md">
+                <Link href={'/rent'}>
+                  <div className="col">
+                    <MDBCard alignment="center">
+                      <MDBRipple
+                        rippleColor="light"
+                        rippleTag="div"
+                        className="bg-image hover-overlay"
+                      >
+                        <MDBCardImage
+                          src="images/rentul.png"
+                          width={200}
+                          fluid
+                          alt="..."
+                        />
+
+                        {/* <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' /> */}
+                        <a>
+                          <div
+                            className="mask"
+                            style={{
+                              backgroundColor: 'rgba(251, 251, 251, 0.15)',
+                            }}
+                          ></div>
+                        </a>
+                      </MDBRipple>
+                      <MDBCardBody>
+                        <MDBCardTitle>
+                          <strong>Rent a home</strong>
+                        </MDBCardTitle>
+                        <MDBCardText>
+                          Whether you’re looking for a single-family home,
+                          high-rise apartment, or something in between, we’ll
+                          help you find it.
+                          <br />
+                        </MDBCardText>
+                        <MDBBtn>Find Rentals</MDBBtn>
+                      </MDBCardBody>
+                    </MDBCard>
+                  </div>
+                </Link>
               </div>
-            
+
+              {/* <CardSection /> */}
+            </div>
           </div>
-
         </Layout>
       </div>
-    );
+    )
   } else {
     return (
       <div>
@@ -76,17 +180,17 @@ export default function Home({ propertiesVip, properties }) {
           </MDBContainer>
         </Layout>
       </div>
-    );
+    )
   }
 }
 
 export const getStaticProps = async () => {
-  const properties = propertiesMock.BuyHomes;
+  const properties = propertiesMock.BuyHomes
 
   return {
     props: {
       propertiesVip: [],
       properties: properties,
     },
-  };
-};
+  }
+}
