@@ -48,35 +48,36 @@ export default function Home({ propertiesVip, properties }) {
 
           <div className="container-fluid p-0">
             <div className="row">
-              <div className="col">
-                <div className="d-md-none">
+              <div className="col mainVideo">
+                {/* <div className="d-md-none"> */}
+                <video
+                  style={{ width: '100%', height: '100%' }}
+                  muted
+                  autoPlay
+                  loop
+                  // src="/videos/tulumBeach.mp4"
+                  src="/videos/tb.mp4"
+                  className="main p-0 m-0 videoBg"
+                  type="video/mp4"
+                ></video>
+                {/* </div> */}
+                {/* <div className="d-none d-md-block">
                   <video
                     style={{ width: '100%', height: '100%' }}
                     muted
                     autoPlay
                     loop
-                    src="/videos/tulumBeach.mp4"
+                    src="/videos/tb.mp4"
                     className="main p-0 m-0"
                     type="video/mp4"
                   ></video>
-                </div>
-                <div className="d-none d-md-block">
-                  <video
-                    style={{ width: '100%', height: '100%' }}
-                    muted
-                    autoPlay
-                    loop
-                    src="/videos/tulumBeachFull.mp4"
-                    className="main p-0 m-0"
-                    type="video/mp4"
-                  ></video>
-                </div>
+                </div> */}
               </div>
             </div>
 
             <div className="row">
               <div className="col-md">
-                <Link href={'/properties'}>
+                <Link href={'/buy'}>
                   <MDBCard alignment="center">
                     <MDBRipple
                       rippleColor="light"
@@ -147,7 +148,6 @@ export default function Home({ propertiesVip, properties }) {
                           Whether you’re looking for a single-family home,
                           high-rise apartment, or something in between, we’ll
                           help you find it.
-                          <br />
                         </MDBCardText>
                         <MDBBtn>Find Rentals</MDBBtn>
                       </MDBCardBody>
@@ -168,10 +168,7 @@ export default function Home({ propertiesVip, properties }) {
         <Head>
           <title>WebImmo</title>
           <link rel="icon" href="/favicon.ico" />
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
-          />
+          <link rel="stylesheet" href="" />
         </Head>
         <Layout>
           <Carousel />
@@ -184,12 +181,12 @@ export default function Home({ propertiesVip, properties }) {
   }
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async (ctx) => {
   const properties = propertiesMock.BuyHomes
 
   return {
     props: {
-      propertiesVip: [],
+      // propertiesVip: [],
       properties: properties,
     },
   }

@@ -1,7 +1,7 @@
-import React from "react";
-import Head from "next/head";
-import Layout from "../../components/Layout";
-import CardCarousel from "../../components/CardCarousel";
+import React, { useState } from 'react'
+import Head from 'next/head'
+import Layout from '../../components/Layout'
+import CardCarousel from '../../components/CardCarousel'
 import {
   MDBCard,
   MDBCardBody,
@@ -10,32 +10,85 @@ import {
   MDBContainer,
   MDBIcon,
   MDBBtn,
-} from "mdb-react-ui-kit";
-import Slug from "../../components/Slug";
-import CardVip from "../../components/CardVip";
-import CardRelated from "../../components/CardRelated/index.jsx";
-import { propertiesMock } from "../../src/constants.js";
+} from 'mdb-react-ui-kit'
+import Slug from '../../components/Slug'
+import CardVip from '../../components/CardVip'
+import CardRelated from '../../components/CardRelated/index.jsx'
+import { propertiesMock } from '../../src/constants.js'
 
-import { MDBInput } from "mdbreact";
-import { useRouter } from "next/router";
-import Carousel from "../../components/Carousel";
-import Carousel2 from "../../components/Carousel2";
-import Link from "next/link";
-
-
+import { MDBInput } from 'mdbreact'
+import { useRouter } from 'next/router'
+import Carousel from '../../components/Carousel'
+import Carousel2 from '../../components/Carousel2'
+import Link from 'next/link'
+import emailjs, { send } from '@emailjs/browser'
+import { useRef } from 'react'
 // import './DialogDemo.css';
-import DialogDemo from "../../components/DialogDemo";
+import DialogDemo from '../../components/DialogDemo'
+import DialogModal from '../../components/DialogModal'
 
-const Property = ({ property, propertiesVip, propertiesRelated }) => {
+import { Sidebar } from 'primereact/sidebar'
+import { Button } from 'primereact/button'
+import Router from 'next/router'
+
+const Property = ({
+  property,
+  propertiesVip,
+  propertiesRelated,
+  properties,
+}) => {
   const styles = {
     fontSize: 15,
-  };
+  }
 
-  const router = useRouter();
+  const router = useRouter()
   const onSubmit = (event) => {
-    event.preventDefault();
-    router.push("/");
-  };
+    event.preventDefault()
+    router.push('/')
+  }
+
+  const [visibleFullScreen, setVisibleFullScreen] = useState(false)
+
+  // let { isLoggedIn } = this.state
+
+  // const renderAuthButton = () => {
+  //   if (isLoggedIn) {
+  //     return <button>Logout</button>
+  //   } else {
+  //     return <button>Login</button>
+  //   }
+  // }
+  const [isString, setIsString] = useState(
+    'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0'
+  )
+
+  const form = useRef()
+
+  // const redirect = (e) => {
+  //   sendEmail()
+  //   // history.push('/agents')
+  // }
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'service_t42ges4',
+        'template_i02jnzw',
+        form.current,
+        'LWhLzpN2d1Yzzs4DY'
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
+    Router.push('/success')
+  }
 
   return (
     <>
@@ -43,18 +96,20 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
         {property && (
           <Layout>
             <MDBContainer className="p-0">
-              <MDBCard>
+              <MDBCard id="top">
                 <MDBCardBody className="mx-0 p-0">
                   <MDBRow>
-                    <MDBCol md="6" lg="9">
+                    <MDBCol className="col col-lg-12">
                       <Carousel2 images={property.images} />
                     </MDBCol>
                     <MDBCol md="3" lg="3">
                       <h4 className="mt-3"></h4>
                       <div style={styles} className="m-2 mt-5">
-                        <strong >{property.name}</strong>
+                        <strong>{property.name}</strong>
                       </div>
-                      <DialogDemo />
+                      <div className="mx-2">
+                        <DialogDemo tour={property.virtualTour} />
+                      </div>
 
                       <div style={styles} className="m-2">
                         <strong> $ {property.price}k</strong>
@@ -62,15 +117,15 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                       <div style={styles} className="d-inline m-2">
                         {/* <MDBIcon icon="calculator" className="mr-2" /> */}
                         <strong>
-                          {" " + property.factsandfeatures.beds}
-                        </strong>{" "}
+                          {' ' + property.factsandfeatures.beds}
+                        </strong>{' '}
                         bd |
                       </div>
                       <div style={styles} className="d-inline m-2">
                         {/* <MDBIcon icon="calculator" className="mr-2" /> */}
                         <strong>
-                          {" " + property.factsandfeatures.bath}
-                        </strong>{" "}
+                          {' ' + property.factsandfeatures.bath}
+                        </strong>{' '}
                         ba |
                       </div>
 
@@ -82,9 +137,7 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                         {/* <MDBIcon icon="mobile-alt" className="mr-2" /> */}
                         {property.delivery?.finish}
                       </div>
-                      <div className="d-flex justify-content-around sticky">
-
-                      </div>
+                      <div className="d-flex justify-content-around sticky"></div>
                       <div style={styles}>
                         {/* <MDBIcon icon="envelope" className="mr-2" />
                      {property.card.agency} */}
@@ -103,37 +156,38 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                     )}
                   </MDBRow>
 
-
                   <div className="sticky d-flex justify-content-around justify-content-lg-start">
-                    <Link href={"#contactUs"}>
-                      <MDBBtn className='me-2 my-1 p-2 mx-1 px-6 py-3 sticky' color='white'>
-
+                    <Link href={'#contactUs'}>
+                      <MDBBtn
+                        className="me-2 my-1 p-2 mx-1 px-6 py-3 sticky"
+                        color="white"
+                      >
                         Request a tour
                       </MDBBtn>
                     </Link>
-                    <Link href={"#contactUs"}>
-                      <MDBBtn className='me-2 my-1 p-2 mx-1 px-6 py-3 sticky'>
+                    <Link href={'#contactUs'}>
+                      <MDBBtn
+                        className="me-2 my-1 p-2 mx-1 px-6 py-3 sticky"
+                        // onClick={sendEmail}
+                      >
                         Contact agent
                       </MDBBtn>
                     </Link>
                   </div>
                   <div className="p-0">
                     <div class="scrollmenu sticky2">
-                      <Link href={"#overview"}>Overview</Link>
-                      <Link href={"#factsnadfeatures"}>Facts and features</Link>
-                 
+                      <Link href={'#overview'}>Overview</Link>
+                      <Link href={'#factsnadfeatures'}>Facts and features</Link>
                       ...
-                    </div >
-                    <div id="overview">
-
-                    Overview
                     </div>
-                    <div>{property.about}</div>
+                    <div id="overview" className="px-2">
+                      Overview
+                    </div>
+                    <div className="px-2">{property.about}</div>
                     <hr />
-                    <div id="factsnadfeatures">
-                    Facts and features
+                    <div id="factsnadfeatures" className="px-2">
+                      Facts and features
                     </div>
-                    
                   </div>
                 </MDBCardBody>
               </MDBCard>
@@ -145,52 +199,120 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
                   <MDBCol lg="8">
                     <MDBCardBody className="form">
                       <h3 className="mt-4">
-                        <MDBIcon icon="envelope" className="pr-2" id="contactUs" />
+                        <MDBIcon
+                          icon="envelope"
+                          className="pr-2"
+                          id="contactUs"
+                        />
                         Contact agent:
                       </h3>
                       <MDBRow>
                         <MDBCol md="6">
-                          <div className="md-form mb-0">
-                            <MDBInput
-                              type="text"
-                              id="form-contact-phone"
-                              label="Phone"
-                            />
-                          </div>
-                        </MDBCol>
-                        <MDBCol md="6">
-                          <div className="md-form mb-0">
-                            <MDBInput
-                              type="text"
-                              id="form-contact-email"
-                              label="Email"
-                            />
-                          </div>
+                          <form ref={form}>
+                            <div className="md-form mb-0">
+                              <div class="form-group">
+                                <label for="name">Name</label>
+                                <input
+                                  type="name"
+                                  name="user_name"
+                                  class="form-control"
+                                  id="name"
+                                  placeholder="enter your name"
+                                />
+                              </div>
+                              <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input
+                                  type="email"
+                                  name="user_email"
+                                  class="form-control"
+                                  id="email"
+                                  placeholder="enter your email"
+                                />
+                              </div>
+                              <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input
+                                  type="numer"
+                                  name="user_phone"
+                                  class="form-control"
+                                  id="email"
+                                  placeholder="enter your phone"
+                                />
+                              </div>
+
+                              <div class="form-group">
+                                <label for="email_body">Message</label>
+                                <textarea
+                                  class="form-control"
+                                  name="message"
+                                  id="email_body"
+                                  rows="5"
+                                >
+                                  {'I am interested in ' +
+                                    property.address.street}
+                                </textarea>
+                              </div>
+
+                              <textarea
+                                name="property_id"
+                                className="hide"
+                                display="none"
+                              >
+                                {property.id}
+                              </textarea>
+                              {/* <MDBInput
+                                type="text"
+                                id="form-contact-phone"
+                                label="Phone"
+                              /> */}
+                            </div>
+                          </form>
                         </MDBCol>
                       </MDBRow>
                       <MDBRow>
                         <MDBCol md="12">
                           <div className="md-form mb-0">
-                            <MDBInput
-                              type="textarea"
-                              id="form-contact-message"
-                              label="Message"
-                              valueDefault={
-                                "I am interested in " + property.address.street
-                              }
-                            />
-                            { }
-                            <MDBBtn className='me-2 my-1 py-3 mx-1 px-6 py-2 btn-block smBtn'>
-
+                            <MDBBtn
+                              className="me-2 my-1 py-3 mx-1 px-6 py-2 btn-block smBtn"
+                              onClick={sendEmail}
+                              target="_top"
+                            >
                               Contact Agent
                             </MDBBtn>
-                            
+                            {/* <DialogModal
+                              className="hide"
+                              sendEmail={sendEmail}
+                              form={form}
+                            /> */}
                           </div>
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
                   </MDBCol>
-
+                  {/* <div className="dialog-demo">
+                    <Sidebar
+                      visible={visibleFullScreen}
+                      style={{ 'background-color': 'white' }}
+                      fullScreen
+                      onHide={() => setVisibleFullScreen(false)}
+                    >
+                      <h3 className="d-flex justify-content-end">
+                        <Button
+                          onClick={() => setVisibleFullScreen(false)}
+                          className="d-flex justify-content-end btn btn-tertiary"
+                        >
+                          CLOSE
+                        </Button>
+                      </h3>
+                    </Sidebar>
+                    <MDBBtn
+                      onClick={setVisibleFullScreen(true)}
+                      className="me-2 my-1 py-3 mx-1 px-6 py-2 btn-block smBtn"
+                    >
+                      CONTACT AGENT
+                    </MDBBtn>
+                  </div> */}
 
                   <MDBCol lg="4">
                     <MDBCardBody className="contact text-center h-100 white-text">
@@ -224,22 +346,26 @@ const Property = ({ property, propertiesVip, propertiesRelated }) => {
             </section>
           </Layout>
         )}
+        |
       </div>
     </>
-  );
-};
+  )
+}
 
 export const getServerSideProps = (context) => {
-  const { slug } = context.query;
-  const property = propertiesMock.BuyHomes.find((home) => home.id === slug);
+  // export const getStaticProps = (context) => {
+  const { slug } = context.query
+  const property = propertiesMock.BuyHomes.find((home) => home.id === slug)
+  // const properties = propertiesMock.BuyHomes
 
   return {
     props: {
       property: property,
       propertiesVip: [],
       propertiesRelated: [],
+      // properties: properties,
     },
-  };
-};
+  }
+}
 
-export default Property;
+export default Property

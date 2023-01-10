@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import {
   MDBNavbar,
   MDBNavbarNav,
@@ -6,33 +6,33 @@ import {
   MDBNavbarToggler,
   MDBCollapse,
   MDBIcon,
-} from "mdbreact";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import { MDBCol } from "mdb-react-ui-kit";
+} from 'mdbreact'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import Image from 'next/image'
+import { MDBCol } from 'mdb-react-ui-kit'
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
-  const router = useRouter();
+  const router = useRouter()
 
   const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   return (
     <MDBNavbar className="py-0 navbarcss" expand="md">
       <MDBNavbarToggler onClick={handleToggle} />
       <MDBCol xs="1" className="text-center align-self-center">
-      <Link href="/">
-        <Image src="/images/logoX.png" width={150} height={45} alt="Logo" />
-      </Link>
+        <Link href="/">
+          <Image src="/images/logoX.png" width={150} height={45} alt="Logo" />
+        </Link>
       </MDBCol>
       <MDBCollapse id="navbarCollapse" navbar isOpen={isOpen}>
         <MDBNavbarNav left></MDBNavbarNav>
         <MDBNavbarNav right>
-          <MDBNavItem active={router.pathname === "/"}>
+          <MDBNavItem active={router.pathname === '/'}>
             <Link href="/">
               <a className="nav-link">
                 {/* <MDBIcon icon="home" className="mr-1" /> */}
@@ -41,7 +41,7 @@ const Header = () => {
             </Link>
           </MDBNavItem>
           <MDBNavItem>
-            <Link href="/properties" passHref>
+            <Link href="/buy" passHref>
               <a className="nav-link">
                 {/* <MDBIcon icon="building" className="mr-1" /> */}
                 Buy
@@ -65,14 +65,14 @@ const Header = () => {
             </Link>
           </MDBNavItem>
           <MDBNavItem>
-            <Link href="/agents/agents" passHref>
+            <Link href="/agents/agents2Page" passHref>
               <a className="nav-link">
                 {/* <MDBIcon icon="building" className="mr-1" /> */}
                 Agents
               </a>
             </Link>
           </MDBNavItem>
-          <MDBNavItem active={router.pathname === "/contact"}>
+          <MDBNavItem active={router.pathname === '/contact'}>
             <Link href="/contact">
               <a className="nav-link">
                 {/* <MDBIcon icon="address-book" className="mr-1" /> */}
@@ -83,7 +83,7 @@ const Header = () => {
         </MDBNavbarNav>
       </MDBCollapse>
     </MDBNavbar>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
