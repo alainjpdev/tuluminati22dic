@@ -1,9 +1,9 @@
-import React from "react";
-import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from "react-awesome-slider/dist/autoplay";
-import AwsSliderStyles from "../../styles/Carousel.module.scss";
+import React from 'react'
+import AwesomeSlider from 'react-awesome-slider'
+import withAutoplay from 'react-awesome-slider/dist/autoplay'
+import AwsSliderStyles from '../../styles/Carousel.module.scss'
 
-const AutoPlaySlider = withAutoplay(AwesomeSlider);
+const AutoPlaySlider = withAutoplay(AwesomeSlider)
 
 const Carousel = () => (
   <AutoPlaySlider
@@ -19,6 +19,6 @@ const Carousel = () => (
     {/* <div data-src="/images/tulump.png" /> */}
     <div data-src="/images/beach2.jpg" />
   </AutoPlaySlider>
-);
+)
 
-export default Carousel;
+export default Carousel

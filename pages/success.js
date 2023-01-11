@@ -10,8 +10,11 @@ const success = () => {
         <title>Tuluminati X - Contact</title>
       </Head>
       <Layout>
+        <br />
+        <br />
         <div className="row">
-          <div className="col-md-3"></div>
+          <br />
+          <div className="col-md-4"></div>
           <div className="d-flex col justify-content-center align-items-centerpt-5 success px-5">
             <Image
               src="/images/check.png"
@@ -21,11 +24,12 @@ const success = () => {
               padding={10}
             />
             <h3>
-              Your request has been sent. The agent will connect with you
-              shortly.
+              Your request has been sent.
+              <br />
+              The agent will connect with you shortly.
             </h3>
           </div>
-          <div className="col-md-3"></div>
+          <div className="col-md-4"></div>
         </div>
         <br />
         <br />

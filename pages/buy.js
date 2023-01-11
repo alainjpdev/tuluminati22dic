@@ -8,7 +8,7 @@ import PropertySection from '../components/PropertySection'
 import Features from '../components/Features'
 import { propertiesMock } from '../src/constants'
 import MapboxComponent from '../components/Mapbox/Mapbox'
-import MapboxComponentTest from '../components/Mapboxtest'
+import MapboxComponentTestBuy from '../components/MapboxTestBuy'
 import Image from 'next/image'
 import CardSection from '../components/CardSection'
 import Header from '../components/Header'
@@ -79,7 +79,8 @@ export default function Buy({ properties, currentPage, pageCount }) {
               </div>
 
               <div className="box2">
-                <MapboxComponentTest />
+                {/* <MapboxComponentTestBuy /> */}
+                <MapboxComponent propertiesB={properties} />
               </div>
             </div>
           </div>

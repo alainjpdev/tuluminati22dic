@@ -27,10 +27,11 @@ import {
 } from 'mdb-react-ui-kit'
 import PropertyCard from '../components/PropertyCard/PropertyCard'
 import { useRouter } from 'next/router'
+import PropertyCardRent from '../components/PropertyCardRent/PropertyCardRent'
 
 // import videoBg from "../src/videos/cut.mp4"
 
-export default function Buy({ properties, currentPage, pageCount }) {
+export default function Rent({ propertyRent, currentPage, pageCount }) {
   const router = useRouter()
 
   const paginationHandler = (page) => {
@@ -76,17 +77,15 @@ export default function Buy({ properties, currentPage, pageCount }) {
           <div className="d-none d-md-block">
             <div className="wrap">
               <div className="box">
-                <PropertyCard properties={properties} />
+                <PropertyCardRent propertyRent={propertyRent} />
               </div>
 
-              <div className="box2">
-                <MapboxComponentTest />
-              </div>
+              <div className="box2">{<MapboxComponentTest />}</div>
             </div>
           </div>
           <div className="d-md-none">
             <div className="col-md-4">
-              <PropertyCard properties={properties} />
+              <PropertyCardRent propertyRent={propertyRent} />
             </div>
             {/* <div className="col-md-8">{<MapboxComponentTest />}</div> */}
           </div>
@@ -111,8 +110,9 @@ export default function Buy({ properties, currentPage, pageCount }) {
     </section>
   )
 }
+
 export const getServerSideProps = async ({ query }) => {
-  const properties = propertiesMock.RentHomes
+  const propertyRent = propertiesMock.RentHomes
 
   const page = query.page || 1
   const totalItemsCount = propertiesMock.RentHomes.length
@@ -128,7 +128,7 @@ export const getServerSideProps = async ({ query }) => {
   } else {
     slicePosition = numberOfItemsPerPage * (page - 1)
   }
-  const sliceProperties = properties.slice(
+  const sliceProperties = propertyRent.slice(
     slicePosition,
     slicePosition + numberOfItemsPerPage
   )
@@ -136,20 +136,9 @@ export const getServerSideProps = async ({ query }) => {
   return {
     props: {
       // properties : properties
-      properties: sliceProperties,
+      propertyRent: sliceProperties,
       currentPage: page,
       pageCount: numberOfPages,
     },
   }
 }
-
-// export const getStaticProps = async (ctx) => {
-//   const properties = propertiesMock.BuyHomes
-
-//   return {
-//     props: {
-//       // propertiesVip: [],
-//       properties: properties,
-//     },
-//   }
-// }

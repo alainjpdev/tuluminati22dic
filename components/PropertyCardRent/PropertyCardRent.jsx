@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { Card } from 'primereact/card'
-import { MDBCol } from 'mdb-react-ui-kit'
+import { MDBCard, MDBCol } from 'mdb-react-ui-kit'
 
-const PropertyCard = ({ properties }) => {
+const PropertyCardRent = ({ propertyRent }) => {
   const generateAboutText = (text) => {
     if (text.length > 200) {
       return `${text.substring(0, 200)}...`
@@ -12,14 +12,14 @@ const PropertyCard = ({ properties }) => {
 
   return (
     <div className="grid align-items-end ">
-      {properties.map((property) => {
+      {propertyRent.map((property) => {
         return (
           <div className="container-fluid p-0">
-            <div className="row p-0">
-              <div className="col-12 sm:col-12 md:col-8 lg:col-8 mb-4 cursor-pointer p-0 ">
+            <div className="row">
+              <div className="col-12 sm:col-12 md:col-12 lg:col-12 mb-4 cursor-pointer p-0">
                 <Link
-                  href="/property/[slug]"
-                  as={`/property/${property.id}`}
+                  href="/propertyRent/[slug]"
+                  as={`/propertyRent/${property.id}`}
                   passHref
                 >
                   <Card
@@ -48,7 +48,7 @@ const PropertyCard = ({ properties }) => {
                       {property.address.street.toUpperCase()}
                       <h6>{property.developer.toUpperCase()}</h6>
                     </div>
-                    <MDBCol sm="3" lg="3" className="mx-3 cardPa">
+                    <MDBCol lg="3" className="mx-3 cardPa">
                       <span className="text-night">
                         <h6 className="font-weight-bold mb-3">
                           {/* <MDBIcon icon="building" className="pr-2" /> */}
@@ -90,4 +90,4 @@ const PropertyCard = ({ properties }) => {
   )
 }
 
-export default PropertyCard
+export default PropertyCardRent

@@ -31,11 +31,11 @@ import { Sidebar } from 'primereact/sidebar'
 import { Button } from 'primereact/button'
 import Router from 'next/router'
 
-const Property = ({
-  property,
+const PropertyRent = ({
   propertiesVip,
   propertiesRelated,
-  properties,
+
+  propertyRent,
 }) => {
   const styles = {
     fontSize: 15,
@@ -93,49 +93,49 @@ const Property = ({
   return (
     <>
       <div>
-        {property && (
+        {propertyRent && (
           <Layout>
             <MDBContainer className="p-0">
               <MDBCard id="top">
                 <MDBCardBody className="mx-0 p-0">
                   <MDBRow>
                     <MDBCol className="col col-lg-12">
-                      <Carousel2 images={property.images} />
+                      <Carousel2 images={propertyRent.images} />
                     </MDBCol>
                     <MDBCol md="3" lg="3">
                       <h4 className="mt-3"></h4>
                       <div style={styles} className="m-2 mt-5">
-                        <strong>{property.name}</strong>
+                        <strong>{propertyRent.name}</strong>
                       </div>
                       <div className="mx-2">
-                        <DialogDemo tour={property.virtualTour} />
+                        <DialogDemo tour={propertyRent.virtualTour} />
                       </div>
 
                       <div style={styles} className="m-2">
-                        <strong> $ {property.price}k</strong>
+                        <strong> $ {propertyRent.price}k</strong>
                       </div>
                       <div style={styles} className="d-inline m-2">
                         {/* <MDBIcon icon="calculator" className="mr-2" /> */}
                         <strong>
-                          {' ' + property.factsandfeatures.beds}
+                          {' ' + propertyRent.factsandfeatures.beds}
                         </strong>{' '}
                         bd |
                       </div>
                       <div style={styles} className="d-inline m-2">
                         {/* <MDBIcon icon="calculator" className="mr-2" /> */}
                         <strong>
-                          {' ' + property.factsandfeatures.bath}
+                          {' ' + propertyRent.factsandfeatures.bath}
                         </strong>{' '}
                         ba |
                       </div>
 
                       <div style={styles} className="m-2">
                         {/* <MDBIcon icon="mobile-alt" className="mr-2" /> */}
-                        {property.address.street}
+                        {propertyRent.address.street}
                       </div>
                       <div style={styles} className="m-2">
                         {/* <MDBIcon icon="mobile-alt" className="mr-2" /> */}
-                        {property.delivery?.finish}
+                        {propertyRent.delivery?.finish}
                       </div>
                       <div className="d-flex justify-content-around sticky"></div>
                       <div style={styles}>
@@ -183,12 +183,12 @@ const Property = ({
                     <div id="overview" className="px-2 anchor">
                       Overview
                     </div>
-                    <div className="px-2">{property.about}</div>
+                    <div className="px-2">{propertyRent.about}</div>
                     <hr />
                     <div id="factsnadfeatures" className="px-2 anchor2">
                       Facts and features
                     </div>
-                    <div className="px-2">{property.about}</div>
+                    <div className="px-2">{propertyRent.about}</div>
                   </div>
                 </MDBCardBody>
               </MDBCard>
@@ -251,7 +251,7 @@ const Property = ({
                                   rows="5"
                                 >
                                   {'I am interested in ' +
-                                    property.address.street}
+                                    propertyRent.address.street}
                                 </textarea>
                               </div>
 
@@ -260,7 +260,7 @@ const Property = ({
                                 className="hide"
                                 display="none"
                               >
-                                {property.id}
+                                {propertyRent.id}
                               </textarea>
                               {/* <MDBInput
                                 type="text"
@@ -356,20 +356,20 @@ const Property = ({
 export const getServerSideProps = (context) => {
   // export const getStaticProps = (context) => {
   const { slug } = context.query
-  const property = propertiesMock.BuyHomes.find((home) => home.id === slug)
-  // const propertyRent = propertiesMock.RentHomes.find((home) => home.id === slug)
+
+  const propertyRent = propertiesMock.RentHomes.find((home) => home.id === slug)
 
   // const properties = propertiesMock.BuyHomes
 
   return {
     props: {
-      property: property,
+      //   property: property,
       propertiesVip: [],
       propertiesRelated: [],
-      // propertyRent: propertyRent,
+      propertyRent: propertyRent,
       // properties: properties,
     },
   }
 }
 
-export default Property
+export default PropertyRent

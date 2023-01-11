@@ -14,6 +14,7 @@ import {
 import { Rating } from 'primereact/rating'
 import Link from 'next/link'
 import { agentsMock } from '../../src/agents'
+// import Carousel3 from '../../components/Carousel3'
 
 const agentsArr = agentsMock.agents
 
@@ -33,6 +34,7 @@ const agents = () => {
                 <th scope="col">Status</th>
               </tr>
             </thead>
+            {/* <Carousel3 /> */}
 
             <tbody>
               {agentsArr.map((agent) => (

@@ -60,7 +60,7 @@ const MapPageSales = ({ properties }) => {
           <MDBBtn className="me-1">For Rent</MDBBtn>
         </Link>
       </div>
-      <MapboxComponent />
+      <MapboxComponent propertiesB={properties} />
       {/* <MapboxComponentTest/> */}
 
       <i class="fas fa-list"></i>
@@ -94,31 +94,31 @@ const MapPageSales = ({ properties }) => {
 export const getServerSideProps = async ({ query }) => {
   const properties = propertiesMock.BuyHomes
 
-  //   const page = query.page || 1;
-  //   const totalItemsCount = propertiesMock.BuyHomes.length;
-  //   const numberOfItemsPerPage = 9;
+  const page = query.page || 1
+  const totalItemsCount = propertiesMock.BuyHomes.length
+  const numberOfItemsPerPage = 6
 
-  //   const numberOfPages = Math.floor(
-  //     (totalItemsCount + numberOfItemsPerPage - 1) / numberOfItemsPerPage
-  //   );
+  const numberOfPages = Math.floor(
+    (totalItemsCount + numberOfItemsPerPage - 1) / numberOfItemsPerPage
+  )
 
-  //   let slicePosition = 0;
-  //   if (page === 1) {
-  //     slicePosition = 0;
-  //   } else {
-  //     slicePosition = numberOfItemsPerPage * (page - 1);
-  //   }
-  //   const sliceProperties = properties.slice(
-  //     slicePosition,
-  //     slicePosition + numberOfItemsPerPage
-  //   );
+  let slicePosition = 0
+  if (page === 1) {
+    slicePosition = 0
+  } else {
+    slicePosition = numberOfItemsPerPage * (page - 1)
+  }
+  const sliceProperties = properties.slice(
+    slicePosition,
+    slicePosition + numberOfItemsPerPage
+  )
 
   return {
     props: {
-      properties: properties,
-      // properties: sliceProperties,
-      // currentPage: page,
-      // pageCount: numberOfPages,
+      // properties : properties
+      properties: sliceProperties,
+      currentPage: page,
+      pageCount: numberOfPages,
     },
   }
 }
