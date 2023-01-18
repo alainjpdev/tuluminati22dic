@@ -27,10 +27,11 @@ import {
 } from 'mdb-react-ui-kit'
 import PropertyCard from '../components/PropertyCard/PropertyCard'
 import { useRouter } from 'next/router'
+import CardAl from '../components/CardAl'
 
 // import videoBg from "../src/videos/cut.mp4"
 
-export default function Buy({ properties, currentPage, pageCount }) {
+export default function Buy2({ properties, currentPage, pageCount }) {
   const router = useRouter()
 
   const paginationHandler = (page) => {
@@ -47,67 +48,69 @@ export default function Buy({ properties, currentPage, pageCount }) {
       <Head>
         <title>Tuluminati X List of properties</title>
       </Head>
-      <Layout>
-        {/* <MDBContainer> */}
-        {/* <SearchFilter /> */}
-        <br />
-        <div>
-          <MDBBtn className="me-3 mx-3" color="primary">
-            For Sale
+      <Header />
+      {/* <MDBContainer> */}
+      {/* <SearchFilter /> */}
+      <br />
+      <div className="sticky2">
+        <MDBBtn className="me-3 mx-3" color="primary">
+          For Sale
+        </MDBBtn>
+        <Link href={'/rent'}>
+          <MDBBtn className="me-1" color="white">
+            For Rent
           </MDBBtn>
-          <Link href={'/rent'}>
-            <MDBBtn className="me-1" color="white">
-              For Rent
-            </MDBBtn>
+        </Link>
+        <div className="d-md-none">
+          <Link href={'/mapPageSales'}>
+            <div className="mapButton">
+              <MDBIcon fas icon="map-marked" className="mapIcon" /> Map
+            </div>
           </Link>
-          <div className="d-md-none">
-            <Link href={'/mapPageSales'}>
-              <div className="mapButton">
-                <MDBIcon fas icon="map-marked" className="mapIcon" /> Map
-              </div>
-            </Link>
-          </div>
         </div>
-        <h4 className="h1-responsive font-weight-bold text-center my-3 text-night"></h4>
-        <div className="row ">
-          <div className="d-none d-md-block">
-            <div className="wrap">
-              <div className="box">
-                <PropertyCard properties={properties} />
+      </div>
+      <h4 className="h1-responsive font-weight-bold text-center my-3 text-night"></h4>
+      <div className="row ">
+        <div className="d-none d-md-block">
+          <div className="wrap">
+            <div className="box">
+              <div className="row p-0">
+                {properties.map((property) => (
+                  <CardAl propertiesB={property} />
+                ))}
               </div>
+            </div>
 
-              <div className="box2">
-                {/* <MapboxComponentTestBuy /> */}
-                <MapboxComponent propertiesB={properties} />
-              </div>
+            <div className="box2">
+              <MapboxComponent propertiesB={properties} />
             </div>
           </div>
-          <div className="d-md-none">
-            <div className="col-md-4">
-              <PropertyCard properties={properties} />
-            </div>
-            {/* <div className="col-md-8">{<MapboxComponentTest />}</div> */}
+        </div>
+        <div className="d-md-none">
+          <div className="col-md-4">
+            <PropertyCard properties={properties} />
           </div>
+          {/* <div className="col-md-8">{<MapboxComponentTest />}</div> */}
         </div>
-        <div className="d-flex row justify-content-center mx-auto paginate-center">
-          <br />
-          <br />
-          <ReactPaginate
-            onPageChange={paginationHandler}
-            initialPage={currentPage - 1}
-            pageCount={pageCount}
-            marginPagesDisplayed={1}
-            pageRangeDisplayed={2}
-            previousLabel="Back"
-            nextLabel="Next"
-            activeClassName="actived"
-            breakLabel="..."
-            pageClassName="paginate"
-            containerClassName="custom-paginate"
-          />
-        </div>
-        {/* </MDBContainer> */}
-      </Layout>
+      </div>
+      <div className="d-flex row justify-content-center mx-auto paginate-center">
+        <br />
+        <br />
+        <ReactPaginate
+          onPageChange={paginationHandler}
+          initialPage={currentPage - 1}
+          pageCount={pageCount}
+          marginPagesDisplayed={1}
+          pageRangeDisplayed={2}
+          previousLabel="Back"
+          nextLabel="Next"
+          activeClassName="actived"
+          breakLabel="..."
+          pageClassName="paginate"
+          containerClassName="custom-paginate"
+        />
+      </div>
+      {/* </MDBContainer> */}
     </section>
   )
 }

@@ -1,4 +1,8 @@
 @import 'colors';
+html,
+body {
+  overflow-x: hidden;
+}
 
 .globalImg {
   width: 100%;
@@ -261,14 +265,27 @@ div.scrollmenu a:hover {
 }
 .sticky2 {
   position: sticky;
-  top: 60px;
+  top: 40px;
   align-items: stretch;
   background-color: white;
   padding-bottom: 10px;
   z-index: 1;
 }
+.sticky3 {
+  position: sticky;
+  top: 100px;
+  align-items: stretch;
+  background-color: white;
+  padding-bottom: 10px;
+  // z-index: 1;
+}
+.card-header-image {
+  height: 18vh;
+  width: 100%;
+  object-fit: cover;
+}
 
-.cursorpointer{
+.cursorpointer {
   cursor: pointer;
 }
 
@@ -319,59 +336,56 @@ div.scrollmenu a:hover {
   width: 100px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-.hide{
+.hide {
   display: none;
 }
 
-.success{
-
-  background-color:rgba(216, 244, 222, 0.9);
-  margin:1px;
+.success {
+  background-color: rgba(216, 244, 222, 0.9);
+  margin: 1px;
   border: 1px solid green;
-
-  
- 
 }
-.success > h3{
-  font-size: .8rem;
+.success > h3 {
+  font-size: 0.8rem;
 }
 
-.wrap{display:flex;}
-.box{
-  display:inline-block;
+.wrap {
+  display: flex;
+}
+.box {
+  display: inline-block;
   height: 100vh;
-   width: 40%;
-    // background-color: blue;
-    overflow-y: scroll;
+  width: 40%;
+  // background-color: blue;
+  overflow-y: scroll;
 }
-.box2{
-  display:inline-block;
+.box2 {
+  display: inline-block;
   height: 100vh;
-   width: 60%;
-    // background-color: blue;
-    overflow: scroll;
+  width: 60%;
+  // background-color: blue;
+  overflow: scroll;
 }
 
-.mainVideo{
-  
-    width: 100vw;
-    height: 100vh;
-    margin: 0px;
-    padding: 0px;
-    top: 0px;
-    // position: relative;
-    // z-index: 1;
-  }
-  .videoBg {
-    object-fit: cover;
-  }
+.mainVideo {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  top: 0px;
+  // position: relative;
+  // z-index: 1;
+}
+.videoBg {
+  object-fit: cover;
+}
 
-  .anchor {
-    display: block;
-    position: relative;
-    top: -100px;
-    visibility: hidden;
-}  
+.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
 .anchor2 {
   display: block;
   position: relative;
@@ -453,19 +467,21 @@ div.scrollmenu a:hover {
 }
 
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 50px;
 }
 
 .mapboxgl-popup-content {
-  text-align: center;
+  text-align: justify;
   font-family: 'Open Sans', sans-serif;
 }
 
 .mapboxgl-popup-content h3 {
   background: #91c949;
-  color: #fff;
+  // color: #fff;
+  color: blue;
+
   margin: 0;
-  padding: 10px;
+  padding: 0px;
   border-radius: 3px 3px 0 0;
   font-weight: 700;
   margin-top: -15px;
@@ -478,11 +494,11 @@ div.scrollmenu a:hover {
 }
 
 .mapboxgl-popup-content div {
-  padding: 10px;
+  padding: 0px;
 }
 
 .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {

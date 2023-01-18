@@ -13,88 +13,14 @@ import {
   MDBModalFooter,
 } from 'mdb-react-ui-kit'
 
-const lng = propertiesMock.BuyHomes[0].address.lng
-const lat = propertiesMock.BuyHomes[0].address.lat
-
-const properties = propertiesMock.BuyHomes
-
-// const store = propertiesMock
-
-const store = {
-  type: 'FeatureCollection',
-  features: [
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-87.460795, 20.200037],
-        // coordinates: [propertiesMock.BuyHomes[0].address.lng,propertiesMock.BuyHomes[0].address.lat],
-
-        // coordinates: [propertiesMock.BuyHomes[0].address.lng,propertiesMock.BuyHomes[0].address.lat],
-      },
-      properties: {
-        phoneFormatted: '(202) 234-7336',
-        phone: '2022347336',
-        // address: "1471 P St NW",
-        address: propertiesMock.BuyHomes[0].address.street,
-
-        city: 'Washington DC',
-        country: 'United States',
-        crossStreet: 'at 15th St NW',
-        postalCode: '20005',
-        state: 'D.C.',
-      },
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [
-          propertiesMock.BuyHomes[1].address.lng,
-          propertiesMock.BuyHomes[1].address.lat,
-        ],
-        // coordinates: [-77.034084142948, 38.909671288923],
-      },
-      properties: {
-        phoneFormatted: '(202) 234-7336',
-        phone: '2022347336',
-        // address: "1471 P St NW",
-        address: propertiesMock.BuyHomes[1].address.street,
-
-        city: 'Washington DC',
-        country: 'United States',
-        crossStreet: 'at 15th St NW',
-        postalCode: '20005',
-        state: 'D.C.',
-      },
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [
-          propertiesMock.BuyHomes[2].address.lng,
-          propertiesMock.BuyHomes[1].address.lat,
-        ],
-        // coordinates: [-77.034084142948, 38.909671288923],
-      },
-      properties: {
-        phoneFormatted: '(202) 234-7336',
-        phone: '2022347336',
-        // address: "1471 P St NW",
-        address: propertiesMock.BuyHomes[2].address.street,
-
-        city: 'Washington DC',
-        country: 'United States',
-        crossStreet: 'at 15th St NW',
-        postalCode: '20005',
-        state: 'D.C.',
-      },
-    },
-  ],
-}
-
 const MapboxComponent = ({ propertiesB }) => {
+  const propertiesArr = propertiesB
+
+  const storeObj = { type: 'FeatureCollection', features: propertiesArr }
+  // console.log(propertiesB[0])
+
+  const store = storeObj
+
   const [map, setMap] = useState()
   const [stores, setStores] = useState(store)
 
@@ -116,7 +42,8 @@ const MapboxComponent = ({ propertiesB }) => {
 
     const storesCopy = { ...stores }
     storesCopy.features.forEach(function (store, i) {
-      store.properties.id = i
+      // store.properties.id = i
+      store.geometry.id = i
     })
     setStores(storesCopy)
   }, [])
@@ -128,7 +55,7 @@ const MapboxComponent = ({ propertiesB }) => {
           type: 'geojson',
           data: stores,
         })
-
+        map.scrollZoom.enable()
         addMarkers()
       })
     }
@@ -140,7 +67,9 @@ const MapboxComponent = ({ propertiesB }) => {
       /* Create a div element for the marker. */
       const el = document.createElement('div')
       /* Assign a unique `id` to the marker. */
-      el.id = `marker-${marker.properties.id}`
+      // el.id = `marker-${marker.properties.id}`
+      el.id = `marker-${marker.geometry.id}`
+
       /* Assign the `marker` class to each marker for styling. */
       el.className = 'marker'
 
@@ -160,7 +89,7 @@ const MapboxComponent = ({ propertiesB }) => {
        **/
       el.addEventListener('click', (e) => {
         /* Fly to the point */
-        flyToStore(marker)
+        // flyToStore(marker)
         /* Close all other popups and display popup for clicked store */
         createPopUp(marker)
         /* Highlight listing in sidebar */
@@ -173,12 +102,12 @@ const MapboxComponent = ({ propertiesB }) => {
     }
   }
 
-  const flyToStore = (currentFeature) => {
-    map.flyTo({
-      center: currentFeature.geometry.coordinates,
-      zoom: 16,
-    })
-  }
+  // const flyToStore = (currentFeature) => {
+  //   map.flyTo({
+  //     center: currentFeature.geometry.coordinates,
+  //     zoom: 16,
+  //   })
+  // }
 
   const createPopUp = (currentFeature) => {
     const popUps = document.getElementsByClassName('mapboxgl-popup')
@@ -196,42 +125,48 @@ const MapboxComponent = ({ propertiesB }) => {
       // <h6><strong>${propertiesMock.BuyHomes[0].factsandfeatures.bath}</strong> ba </h6>
       //   <h6>${currentFeature.properties.address}</h6>
       //  `)
+      //       .setHTML(
+      //         `
+      //      <iframe width="320" height="215"
+      //      src="https://www.youtube.com/embed/D8dX6hk5XI4?autoplay=1&mute=1&controls=0">
+      // </iframe>
+      // //       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      // //   Launch demo modal
+      // // </button>
+      // <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      //   <div class="modal-dialog">
+      //     <div class="modal-content">
+      //       <div class="modal-header">
+      //         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+      //         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      //       </div>
+      //       <div class="modal-body">
+      //         ...
+      //       </div>
+      //       <div class="modal-footer">
+      //         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      //         <button type="button" class="btn btn-primary">Save changes</button>
+      //       </div>
+      //     </div>
+      //   </div>
+      // </div>
       .setHTML(
         `
-     <iframe width="320" height="215" 
-     src="https://www.youtube.com/embed/D8dX6hk5XI4?autoplay=1&mute=1&controls=0">
-</iframe>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>  
-     `
+        <a href="http://localhost:3000/property/${currentFeature.id}" target="_blank" title="Opens in a new window">
+     <img
+       className="someImg"
+       src=${currentFeature.images[0]}
+       alt="property picture"
+       width="150" height="80"
+     /><p>$${currentFeature.price}K <br/>${currentFeature.factsandfeatures.beds}<strong> bd</strong>, ${currentFeature.factsandfeatures.bath}<strong> ba</strong>
+     </a></p>
+          `
       )
+
       .addTo(map)
   }
 
-  const propertiesArr = propertiesB
   const propertyId = propertiesArr
-  propertyId.map((properties) => {
-    console.log(properties.id)
-  })
-  // console.log(propertyId)
 
   return (
     <div className="map-content">

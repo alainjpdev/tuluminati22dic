@@ -48,37 +48,8 @@ const PropertyCard = ({ properties }) => {
                       {property.address.street.toUpperCase()}
                       <h6>{property.developer.toUpperCase()}</h6>
                     </div>
-                    <MDBCol sm="3" lg="3" className="mx-3 cardPa">
-                      <span className="text-night">
-                        <h6 className="font-weight-bold mb-3">
-                          {/* <MDBIcon icon="building" className="pr-2" /> */}
-                          {/* {property.category.name} */}
-                        </h6>
-                      </span>
-                      <h3 className="font-weight-bold p-0 flex">
-                        {/* <>${PriceFormated(property.price)}</> */}
 
-                        {/* <strong>{property.name}</strong> */}
-                      </h3>
-                      {/*                
-                <strong>{property.factsandfeatures.beds} </strong>bd |
-                <strong>{" " + property.factsandfeatures.bath}</strong>  ba |
-                
-                */}
-                      {/* <br/>
-                   {property.address.street.toUpperCase()}
-                <br/>
-                <h9>
-                   {property.developer.toUpperCase()}
-                </h9>
-                 */}
-                    </MDBCol>
-
-                    {/* <p className="m-3" style={{ lineHeight: "1.8" }}>
-                  {generateAboutText(property.about)}
-                </p> */}
-
-                    <hr />
+                    {/* <hr /> */}
                   </Card>
                 </Link>
               </div>

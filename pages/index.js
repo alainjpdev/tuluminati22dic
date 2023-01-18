@@ -47,8 +47,8 @@ export default function Home({ propertiesVip, properties }) {
           {/* <div> */}
 
           <div className="container-fluid p-0">
-            <div className="row">
-              <div className="col mainVideo">
+            <div className="row p-0">
+              <div className="col mainVideo p-0">
                 {/* <div className="d-md-none"> */}
                 <video
                   style={{ width: '100%', height: '100%' }}
@@ -77,7 +77,7 @@ export default function Home({ propertiesVip, properties }) {
 
             <div className="row">
               <div className="col-md">
-                <Link href={'/buy'}>
+                <Link href={'/buy2'}>
                   <MDBCard alignment="center">
                     <MDBRipple
                       rippleColor="light"

@@ -22,9 +22,9 @@ const Header = () => {
   }
 
   return (
-    <MDBNavbar className="py-0 navbarcss" expand="md">
+    <MDBNavbar className="py-0 navbarcss sticky" expand="md">
       <MDBNavbarToggler onClick={handleToggle} />
-      <MDBCol xs="1" className="text-center align-self-center">
+      <MDBCol xs="1" className="text-center align-self-center p-0">
         <Link href="/">
           <Image src="/images/logoX.png" width={150} height={45} alt="Logo" />
         </Link>
