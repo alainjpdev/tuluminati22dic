@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import PropertyVip from '../components/PropertyVip'
@@ -26,8 +26,71 @@ import {
 } from 'mdb-react-ui-kit'
 
 // import videoBg from "../src/videos/cut.mp4"
+const isSafari = () => {
+  const ua = navigator.userAgent.toLowerCase()
+  return ua.indexOf('safari') > -1 && ua.indexOf('chrome') < 0
+}
+
+const mainVideo = '/videos/tb.mp4'
 
 export default function Home({ propertiesVip, properties }) {
+  const videoParentRef = useRef()
+  const [shouldUseImage, setShouldUseImage] = useState(false)
+  useEffect(() => {
+    // check if user agent is safari and we have the ref to the container <div />
+    if (isSafari() && videoParentRef.current) {
+      // obtain reference to the video element
+      const player = videoParentRef.current.children[0]
+
+      // if the reference to video player has been obtained
+      if (player) {
+        // set the video attributes using javascript as per the
+        // webkit Policy
+        player.controls = false
+        player.playsinline = true
+        player.muted = true
+        player.setAttribute('muted', '') // leave no stones unturned :)
+        player.autoplay = true
+
+        // Let's wait for an event loop tick and be async.
+        setTimeout(() => {
+          // player.play() might return a promise but it's not guaranteed crossbrowser.
+          const promise = player.play()
+          // let's play safe to ensure that if we do have a promise
+          if (promise.then) {
+            promise
+              .then(() => {})
+              .catch(() => {
+                // if promise fails, hide the video and fallback to <img> tag
+                videoParentRef.current.style.display = 'none'
+                setShouldUseImage(true)
+              })
+          }
+        }, 0)
+      }
+    }
+  }, [])
+
+  // return shouldUseImage ? (
+  //   <img src={mainVideo} alt="Muted Video" />
+  // ) : (
+  //   <div
+  //     ref={videoParentRef}
+  //     dangerouslySetInnerHTML={{
+  //       __html: `
+  //       <video
+  //         loop
+  //         muted
+  //         autoplay
+  //         playsinline
+  //         preload="metadata"
+  //       >
+  //       <source src="${mainVideo}" type="video/mp4" />
+  //       </video>`,
+  //     }}
+  //   />
+  // )
+
   const [estate, setEstate] = useState(true)
 
   const handleDisplay = (event) => {
@@ -46,20 +109,36 @@ export default function Home({ propertiesVip, properties }) {
           {/* <h2 className="hello">hello world</h2> */}
           {/* <div> */}
 
-          <div className="container-fluid p-0">
+          <div className="container-fluid cont p-0">
             <div className="row p-0">
-              <div className="col mainVideo p-0">
+              <div className="col mainVideo contr p-0">
                 {/* <div className="d-md-none"> */}
-                <video
+
+                <div
+                  ref={videoParentRef}
+                  dangerouslySetInnerHTML={{
+                    __html: `
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          preload="metadata"
+        >
+        <source src="${mainVideo}" type="video/mp4" />
+        </video>`,
+                  }}
+                />
+
+                {/* <video
                   style={{ width: '100%', height: '100%' }}
-                  muted
                   autoPlay
                   loop
                   // src="/videos/tulumBeach.mp4"
                   src="/videos/tb.mp4"
                   className="main p-0 m-0 videoBg"
                   type="video/mp4"
-                ></video>
+                ></video> */}
                 {/* </div> */}
                 {/* <div className="d-none d-md-block">
                   <video
@@ -77,7 +156,7 @@ export default function Home({ propertiesVip, properties }) {
 
             <div className="row">
               <div className="col-md">
-                <Link href={'/buy2'}>
+                <Link href={'/buy'}>
                   <MDBCard alignment="center">
                     <MDBRipple
                       rippleColor="light"
