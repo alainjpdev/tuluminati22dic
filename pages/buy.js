@@ -8,7 +8,7 @@ import PropertySection from '../components/PropertySection'
 import Features from '../components/Features'
 import { propertiesMock } from '../src/constants'
 import MapboxComponent from '../components/Mapbox/Mapbox'
-// import MapboxComponentTestBuy from '../components/MapboxTestBuy'
+// import MapboxComponentTestBuy from '../components/MapboxTestBuy'xi
 import Image from 'next/image'
 import CardSection from '../components/CardSection'
 import Header from '../components/Header'

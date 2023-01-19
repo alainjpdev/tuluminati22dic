@@ -109,9 +109,9 @@ export default function Home({ propertiesVip, properties }) {
           {/* <h2 className="hello">hello world</h2> */}
           {/* <div> */}
 
-          <div className="container-fluid cont p-0">
-            <div className="row p-0">
-              <div className="col mainVideo contr p-0">
+          <div className="container-fluid  p-0">
+            <div className="row  maint p-0">
+              <div className="col mainVideo overlat p-0">
                 {/* <div className="d-md-none"> */}
 
                 <div
@@ -154,7 +154,7 @@ export default function Home({ propertiesVip, properties }) {
               </div>
             </div>
 
-            <div className="row">
+            <div className="row rowTop">
               <div className="col-md">
                 <Link href={'/buy'}>
                   <MDBCard alignment="center">
