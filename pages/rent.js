@@ -116,7 +116,7 @@ export const getServerSideProps = async ({ query }) => {
 
   const page = query.page || 1
   const totalItemsCount = propertiesMock.RentHomes.length
-  const numberOfItemsPerPage = 6
+  const numberOfItemsPerPage = 12
 
   const numberOfPages = Math.floor(
     (totalItemsCount + numberOfItemsPerPage - 1) / numberOfItemsPerPage

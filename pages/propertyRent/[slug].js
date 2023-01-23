@@ -99,7 +99,7 @@ const PropertyRent = ({
               <MDBCard id="top">
                 <MDBCardBody className="mx-0 p-0">
                   <MDBRow>
-                    <MDBCol className="col col-lg-12">
+                    <MDBCol className="col col-lg-12 mb-2">
                       <Carousel2 images={propertyRent.images} />
                     </MDBCol>
                     <MDBCol md="3" lg="3">

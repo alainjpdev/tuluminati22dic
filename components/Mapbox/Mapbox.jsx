@@ -152,7 +152,7 @@ const MapboxComponent = ({ propertiesB }) => {
       // </div>
       .setHTML(
         `
-        <a href="http://localhost:3000/property/${currentFeature.id}" target="_blank" title="Opens in a new window">
+        <a href="https://tuluminati22dic.vercel.app/property/${currentFeature.id}" target="_blank" title="Opens in a new window">
      <img
        className="someImg"
        src=${currentFeature.images[0]}

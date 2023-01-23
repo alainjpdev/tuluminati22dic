@@ -101,6 +101,7 @@ const Property = ({
                   <MDBRow>
                     <MDBCol className="col col-lg-12">
                       <Carousel2 images={property.images} />
+                      <br />
                     </MDBCol>
                     <MDBCol md="3" lg="3">
                       <h4 className="mt-3"></h4>

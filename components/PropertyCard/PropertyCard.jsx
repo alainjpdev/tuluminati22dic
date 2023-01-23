@@ -16,7 +16,8 @@ const PropertyCard = ({ properties }) => {
         return (
           <div className="container-fluid p-0">
             <div className="row p-0">
-              <div className="col-12 sm:col-12 md:col-8 lg:col-8 mb-4 cursor-pointer p-0 ">
+              {/* <div className="col-12 sm:col-12 md:col-8 lg:col-8 mb-4 cursor-pointer p-0 "> */}
+              <div className=" sm:col-12 px-2 cursor-pointer">
                 <Link
                   href="/property/[slug]"
                   as={`/property/${property.id}`}
@@ -53,6 +54,7 @@ const PropertyCard = ({ properties }) => {
                   </Card>
                 </Link>
               </div>
+              {/* </div> */}
             </div>
           </div>
         )

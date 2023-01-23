@@ -8,7 +8,7 @@ import PropertySection from '../components/PropertySection'
 import Features from '../components/Features'
 import { propertiesMock } from '../src/constants'
 import MapboxComponent from '../components/Mapbox/Mapbox'
-// import MapboxComponentTestBuy from '../components/MapboxTestBuy'xi
+// import MapboxComponentTestBuy from '../components/MapboxTestBuy'
 import Image from 'next/image'
 import CardSection from '../components/CardSection'
 import Header from '../components/Header'
@@ -116,7 +116,7 @@ export const getServerSideProps = async ({ query }) => {
 
   const page = query.page || 1
   const totalItemsCount = propertiesMock.BuyHomes.length
-  const numberOfItemsPerPage = 6
+  const numberOfItemsPerPage = 18
 
   const numberOfPages = Math.floor(
     (totalItemsCount + numberOfItemsPerPage - 1) / numberOfItemsPerPage
