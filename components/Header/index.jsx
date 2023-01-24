@@ -22,67 +22,69 @@ const Header = () => {
   }
 
   return (
-    <MDBNavbar className="py-0 navbarcss sticky" expand="md">
-      <MDBNavbarToggler onClick={handleToggle} />
-      <MDBCol xs="1" className="text-center align-self-center p-0">
-        <Link href="/">
-          <Image src="/images/logoX.png" width={150} height={45} alt="Logo" />
-        </Link>
-      </MDBCol>
-      <MDBCollapse id="navbarCollapse" navbar isOpen={isOpen}>
-        <MDBNavbarNav left></MDBNavbarNav>
-        <MDBNavbarNav right>
-          <MDBNavItem active={router.pathname === '/'}>
-            <Link href="/">
-              <a className="nav-link">
-                {/* <MDBIcon icon="home" className="mr-1" /> */}
-                Home
-              </a>
-            </Link>
-          </MDBNavItem>
-          <MDBNavItem>
-            <Link href="/buy" passHref>
-              <a className="nav-link">
-                {/* <MDBIcon icon="building" className="mr-1" /> */}
-                Buy
-              </a>
-            </Link>
-          </MDBNavItem>
-          <MDBNavItem>
-            <Link href="/rent" passHref>
-              <a className="nav-link">
-                {/* <MDBIcon icon="building" className="mr-1" /> */}
-                Rent
-              </a>
-            </Link>
-          </MDBNavItem>
-          <MDBNavItem>
-            <Link href="/mapPdf" passHref>
-              <a className="nav-link">
-                {/* <MDBIcon icon="building" className="mr-1" /> */}
-                Manzana33
-              </a>
-            </Link>
-          </MDBNavItem>
-          <MDBNavItem>
-            <Link href="/agents/agents2Page" passHref>
-              <a className="nav-link">
-                {/* <MDBIcon icon="building" className="mr-1" /> */}
-                Agents
-              </a>
-            </Link>
-          </MDBNavItem>
-          <MDBNavItem active={router.pathname === '/contact'}>
-            <Link href="/contact">
-              <a className="nav-link">
-                {/* <MDBIcon icon="address-book" className="mr-1" /> */}
-                Contact
-              </a>
-            </Link>
-          </MDBNavItem>
-        </MDBNavbarNav>
-      </MDBCollapse>
-    </MDBNavbar>
+    <div className="container-fluid p-0">
+      <MDBNavbar className="py-0 navbarcss" expand="md">
+        <MDBNavbarToggler onClick={handleToggle} />
+        <MDBCol xs="1" className="text-center align-self-center p-0">
+          <Link href="/">
+            <Image src="/images/logoX.png" width={150} height={45} alt="Logo" />
+          </Link>
+        </MDBCol>
+        <MDBCollapse id="navbarCollapse" navbar isOpen={isOpen}>
+          <MDBNavbarNav left></MDBNavbarNav>
+          <MDBNavbarNav right>
+            <MDBNavItem active={router.pathname === '/'}>
+              <Link href="/">
+                <a className="nav-link">
+                  {/* <MDBIcon icon="home" className="mr-1" /> */}
+                  Home
+                </a>
+              </Link>
+            </MDBNavItem>
+            <MDBNavItem>
+              <Link href="/buy" passHref>
+                <a className="nav-link">
+                  {/* <MDBIcon icon="building" className="mr-1" /> */}
+                  Buy
+                </a>
+              </Link>
+            </MDBNavItem>
+            <MDBNavItem>
+              <Link href="/rent" passHref>
+                <a className="nav-link">
+                  {/* <MDBIcon icon="building" className="mr-1" /> */}
+                  Rent
+                </a>
+              </Link>
+            </MDBNavItem>
+            <MDBNavItem>
+              <Link href="/mapPdf" passHref>
+                <a className="nav-link">
+                  {/* <MDBIcon icon="building" className="mr-1" /> */}
+                  Manzana33
+                </a>
+              </Link>
+            </MDBNavItem>
+            <MDBNavItem>
+              <Link href="/agents/agents2Page" passHref>
+                <a className="nav-link">
+                  {/* <MDBIcon icon="building" className="mr-1" /> */}
+                  Agents
+                </a>
+              </Link>
+            </MDBNavItem>
+            <MDBNavItem active={router.pathname === '/contact'}>
+              <Link href="/contact">
+                <a className="nav-link">
+                  {/* <MDBIcon icon="address-book" className="mr-1" /> */}
+                  Contact
+                </a>
+              </Link>
+            </MDBNavItem>
+          </MDBNavbarNav>
+        </MDBCollapse>
+      </MDBNavbar>
+    </div>
   )
 }
 

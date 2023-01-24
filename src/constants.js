@@ -15,11 +15,11 @@ export const propertiesMock = {
       geometry: {
         type: 'Point',
         // coordinates: ['20.201300850472347', '-87.44990084555297'],
-        coordinates: [-87.460795, 20.200037],
+        coordinates: [-87.44990084555297, 20.201300850472347],
 
         // coordinates: [-77.034084142948, 38.909671288923],
       },
-      price: 400,
+      price: 934000,
       priceRange: ['166337', '934,000'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1669829391/aflora/dy8ZbiqmkJQhqISoXNz3_f240B3ssQ0yCuc9UO1Zwig_cud7ru.jpg',
@@ -100,7 +100,7 @@ export const propertiesMock = {
 
         // coordinates: [-77.034084142948, 38.909671288923],
       },
-      price: 339000,
+      price: 0,
       priceRange: ['229900', '$339,000.00'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1670333637/atikk/2015_R_AttikTulum_Ext01_id0glm.jpg',
@@ -174,12 +174,12 @@ export const propertiesMock = {
       geometry: {
         type: 'Point',
         // coordinates: ['20.201300850472347', '-87.44990084555297'],
-        coordinates: [-87.44090084055297, 20.200037],
+        coordinates: [-87.45642030535112, 20.205264593968476],
 
         // coordinates: [-77.034084142948, 38.909671288923],
       },
-      price: 400,
-      priceRange: ['166337', '934,000'],
+      price: 226900,
+      priceRange: ['1429000', '2269000'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1670608718/amaru_inca/PHOTO-2022-09-27-20-28-00_1_copia_rbnpqy.jpg',
         'https://res.cloudinary.com/dk473trop/image/upload/v1670608739/amaru_inca/AM_SALA_jvvh5k.png',
@@ -651,38 +651,43 @@ export const propertiesMock = {
         },
       },
     },
-  ],
-  RentHomes: [
     {
-      name: 'Aflora Tulum to Rent',
-      developer: 'Luxma, Shangrhla',
-      id: 'RH001',
-      delivery: { notFinish: 'Coming soon', finish: 'Entrega inmediata' },
+      name: 'CALAKMUL',
+      developer: 'GRUPO ALSADI',
+      id: 'BH009',
+      delivery: { notFinish: 'Coming soon', finish: 'Finished' },
       address: {
         street: 'Aldea Zama Street',
         neighborhood: 'Aldea Zama',
         zipCode: '7760',
         state: 'Quintana Roo',
       },
-
       type: 'Feature',
       geometry: {
         type: 'Point',
-        // coordinates: ['20.201300850472347', '-87.44990084555297'],
-        coordinates: [-87.460795, 20.200037],
 
-        // coordinates: [-77.034084142948, 38.909671288923],
+        coordinates: [-87.46002381825825, 20.194210419463175],
       },
-      price: 400,
-      priceRange: ['166337', '934,000'],
+      price: 470000,
+      priceRange: ['290000', '470000'],
       images: [
-        'https://res.cloudinary.com/dk473trop/image/upload/v1669829391/aflora/dy8ZbiqmkJQhqISoXNz3_f240B3ssQ0yCuc9UO1Zwig_cud7ru.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1669829395/aflora/mKq0O19ft3See4DebonO4r1k8k05nsG-9Hp0UntCUms_kwlg31.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1669829398/aflora/9s00sxsl863lmWSH_ZnO94A3j9zU0tyWqc6CHNrMOVw_mogaxp.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1669829397/aflora/i6d2_iYkcYmwp1ETnwqzHTHF5lCYifrrU4ihlTMINDM_rxnzjk.jpg',
-        ,
-        'https://res.cloudinary.com/dk473trop/image/upload/v1669829399/aflora/Wu2kmdANZReUpxIEfX954BIXU-Nd0OnwmJvcKWL9ZJs_zr1pwe.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1669829396/aflora/x4kaamHlyUXN-ffZaEPxye6GRBohF01Oi6ji5_oVdzQ_ue3ohy.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497521/Calakmul/13-Estancia_CalaKmul_m7xgtk.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497611/Calakmul/18-Jacuzzi_en_terrazas_CalaKmul_qjwloj.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497553/Calakmul/16-Recamara_secundaria_CalaKmul_bqyb01.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497548/Calakmul/11-Gym_CalaKmul_apcuhb.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497542/Calakmul/08-Alberca_CalaKmul_qhoccm.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497534/Calakmul/09-Bar_CalaKmul_iznadd.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497531/Calakmul/17-Lock_off_CalaKmul_v800dk.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497522/Calakmul/07-Loby_CalaKmul_znqotx.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497521/Calakmul/13-Estancia_CalaKmul_m7xgtk.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497519/Calakmul/15-Recamara_principal_CalaKmul_ok_ydfrx0.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497515/Calakmul/14-Ba%C3%B1os_xnas4u.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497515/Calakmul/12-Sala_juegos_CalaKmul_anpa3y.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497515/Calakmul/02-Fachada_2_dia_CalaKmul_erysv8.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497528/Calakmul/03-Fachada_4_dia_CalaKmul_cmbaxe.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497548/Calakmul/20-Master_Plan_CalaKmul_1_dgsho7.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497549/Calakmul/20-Alberca_en_Depto_Planta_baja_CalaKmul_hpkwjk.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674497551/Calakmul/20-Master_Plan_CalaKmul_2_bct2fd.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
       video: 'https://youtu.be/CGE2st9Y_jo',
@@ -699,9 +704,97 @@ export const propertiesMock = {
         bath: '1',
         'Lot size': '987 sqm',
       },
-      about:
-        'Aflora sits lightly on its abundant 3 hectare boundary, located between the town of Tulum and its crystalline beaches, inside the prime neighborhood of Aldea Zama. We invite you to make yourself at home with our wide range of amenities designed to cultivate inspiration. Woven into the site’s geography and architecture, we invite you to make yourself at home with our wide range of amenities designed                 See more....',
-      features: ['some info', 'more info', 'and more'],
+      about: '                See more....',
+      features2: ['some info', 'more info', 'and more'],
+      Interiors: {
+        'Total Livable Area': 'Number',
+        Parking: 'Garage',
+        Basement: 'Partial',
+        Flooring: 'Hardwood',
+        Cooling: 'Central',
+      },
+      'Property details': {
+        Parking: {
+          'Total spaces': '2',
+          'Parking feaures': 'Garage - Detached, Covered',
+        },
+        Property: {
+          'Exterior features': 'Shingle (Not Wood)',
+          'Patio and porch details': 'Porch open',
+        },
+      },
+      'Construction details': {
+        'Home type': {
+          'Home type': 'Single Family',
+          'Architectural style': 'Colonial',
+        },
+        'Material information': {
+          Roof: 'Asphalt',
+          Windows: 'Drapes - Some',
+        },
+        Condition: {
+          'Property condition': 'Existing',
+          'New construction': 'No',
+          'Year built': '2022',
+        },
+      },
+    },
+    {
+      name: 'Cardinal',
+      developer: '',
+      id: 'BH010',
+      delivery: { notFinish: 'Coming soon', finish: 'Finished' },
+      address: {
+        street: 'Aldea Zama Street',
+        neighborhood: 'Aldea Zama',
+        zipCode: '7760',
+        state: 'Quintana Roo',
+      },
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+
+        coordinates: [-87.45466408757765, 20.2000112342772],
+      },
+      price: 610545,
+      priceRange: ['436244', '610545'],
+      images: [
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578587/cardinal/Copia_de_Cardinal_andador_central_qetc8a.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578587/cardinal/Copia_de_Cardinal_coworking_bvuqa0.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578587/cardinal/Copia_de_Cardinal_escaleras_kvkla4.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578588/cardinal/Copia_de_Cardinal_ba%C3%B1o_i4l3oe.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578587/cardinal/Copia_de_Cardinal_comedor_jrlrwv.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578587/cardinal/Copia_de_Cardinal_vista_exterior_01_rabkwe.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578587/cardinal/Copia_de_Cardinal_vista_exterior_02_kvzvuj.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578587/cardinal/Copia_de_Cardinal_vista_cenital_pv6gtz.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578587/cardinal/Copia_de_Cardinal_vista_acceso_rv5emz.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578586/cardinal/Copia_de_Cardinal_vista_alberca_lepmp9.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578586/cardinal/Copia_de_Cardinal_villas__fire_pit_kity0g.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578586/cardinal/Copia_de_Cardinal_tina_vxx3ht.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578586/cardinal/Copia_de_Cardinal_spa_bpmagk.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578586/cardinal/Copia_de_Cardinal_roof_top_ouyeos.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578586/cardinal/Copia_de_Cardinal_sala_comedor_pwqu40.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578586/cardinal/Copia_de_Cardinal_lobby_ccib1f.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578586/cardinal/Copia_de_Cardinal_roof_top_02_pud78p.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1674578586/cardinal/Copia_de_Cardinal_recamara_g8rgdt.jpg',
+      ],
+      virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
+      video: 'https://youtu.be/CGE2st9Y_jo',
+      card: {
+        agent: 'Alain Raimond',
+        agency: 'Desrochers Real Estate',
+        agentImage:
+          'https://media-exp1.licdn.com/dms/image/C4E03AQH_mVvxK1EM8w/profile-displayphoto-shrink_400_400/0/1660188307942?e=1675296000&v=beta&t=Rw2tXyQqqOISzDX-BWt7imTxWlFLtLsRb_cWDHMiv9Y',
+      },
+      factsandfeatures: {
+        type: 'string',
+        'Year build': '2022',
+        beds: '2',
+        bath: '1',
+        'Lot size': '987 sqm',
+      },
+      about: '                See more....',
+      features2: ['some info', 'more info', 'and more'],
       Interiors: {
         'Total Livable Area': 'Number',
         Parking: 'Garage',
@@ -736,22 +829,106 @@ export const propertiesMock = {
       },
     },
   ],
-  dronMarker: [
-    {
-      lat: '20.20130085047500',
-      lng: '-87.44990084555900',
-    },
-    {
-      lat: '20.20130085047300',
-      lng: '-87.4499008455200',
-    },
-  ],
-  dronIcon: 'dron link svg',
-  shopMarker: [
-    {
-      lat: '20.20130085047500',
-      lng: '-87.44990084555900',
-    },
-  ],
-  shopIcon: 'shop a or b or c',
+  // RentHomes: [
+  //   {
+  //     name: 'Aflora Tulum to Rent',
+  //     developer: 'Luxma, Shangrhla',
+  //     id: 'RH001',
+  //     delivery: { notFinish: 'Coming soon', finish: 'Entrega inmediata' },
+  //     address: {
+  //       street: 'Aldea Zama Street',
+  //       neighborhood: 'Aldea Zama',
+  //       zipCode: '7760',
+  //       state: 'Quintana Roo',
+  //     },
+
+  //     type: 'Feature',
+  //     geometry: {
+  //       type: 'Point',
+  //       // coordinates: ['20.201300850472347', '-87.44990084555297'],
+  //       coordinates: [-87.460795, 20.200037],
+
+  //       // coordinates: [-77.034084142948, 38.909671288923],
+  //     },
+  //     price: 400,
+  //     priceRange: ['166337', '934,000'],
+  //     images: [
+  //       'https://res.cloudinary.com/dk473trop/image/upload/v1669829391/aflora/dy8ZbiqmkJQhqISoXNz3_f240B3ssQ0yCuc9UO1Zwig_cud7ru.jpg',
+  //       'https://res.cloudinary.com/dk473trop/image/upload/v1669829395/aflora/mKq0O19ft3See4DebonO4r1k8k05nsG-9Hp0UntCUms_kwlg31.jpg',
+  //       'https://res.cloudinary.com/dk473trop/image/upload/v1669829398/aflora/9s00sxsl863lmWSH_ZnO94A3j9zU0tyWqc6CHNrMOVw_mogaxp.jpg',
+  //       'https://res.cloudinary.com/dk473trop/image/upload/v1669829397/aflora/i6d2_iYkcYmwp1ETnwqzHTHF5lCYifrrU4ihlTMINDM_rxnzjk.jpg',
+  //       ,
+  //       'https://res.cloudinary.com/dk473trop/image/upload/v1669829399/aflora/Wu2kmdANZReUpxIEfX954BIXU-Nd0OnwmJvcKWL9ZJs_zr1pwe.jpg',
+  //       'https://res.cloudinary.com/dk473trop/image/upload/v1669829396/aflora/x4kaamHlyUXN-ffZaEPxye6GRBohF01Oi6ji5_oVdzQ_ue3ohy.jpg',
+  //     ],
+  //     virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
+  //     video: 'https://youtu.be/CGE2st9Y_jo',
+  //     card: {
+  //       agent: 'Alain Raimond',
+  //       agency: 'Desrochers Real Estate',
+  //       agentImage:
+  //         'https://media-exp1.licdn.com/dms/image/C4E03AQH_mVvxK1EM8w/profile-displayphoto-shrink_400_400/0/1660188307942?e=1675296000&v=beta&t=Rw2tXyQqqOISzDX-BWt7imTxWlFLtLsRb_cWDHMiv9Y',
+  //     },
+  //     factsandfeatures: {
+  //       type: 'string',
+  //       'Year build': '2022',
+  //       beds: '2',
+  //       bath: '1',
+  //       'Lot size': '987 sqm',
+  //     },
+  //     about:
+  //       'Aflora sits lightly on its abundant 3 hectare boundary, located between the town of Tulum and its crystalline beaches, inside the prime neighborhood of Aldea Zama. We invite you to make yourself at home with our wide range of amenities designed to cultivate inspiration. Woven into the site’s geography and architecture, we invite you to make yourself at home with our wide range of amenities designed                 See more....',
+  //     features: ['some info', 'more info', 'and more'],
+  //     Interiors: {
+  //       'Total Livable Area': 'Number',
+  //       Parking: 'Garage',
+  //       Basement: 'Partial',
+  //       Flooring: 'Hardwood',
+  //       Cooling: 'Central',
+  //     },
+  //     'Property details': {
+  //       Parking: {
+  //         'Total spaces': '2',
+  //         'Parking feaures': 'Garage - Detached, Covered',
+  //       },
+  //       Property: {
+  //         'Exterior features': 'Shingle (Not Wood)',
+  //         'Patio and porch details': 'Porch open',
+  //       },
+  //     },
+  //     'Construction details': {
+  //       'Home type': {
+  //         'Home type': 'Single Family',
+  //         'Architectural style': 'Colonial',
+  //       },
+  //       'Material information': {
+  //         Roof: 'Asphalt',
+  //         Windows: 'Drapes - Some',
+  //       },
+  //       Condition: {
+  //         'Property condition': 'Existing',
+  //         'New construction': 'No',
+  //         'Year built': '2022',
+  //       },
+  //     },
+  //   },
+  // ],
+  // dronMarker: [
+  //   {
+  //     lat: '20.20130085047500',
+  //     lng: '-87.44990084555900',
+  //   },
+  //   {
+  //     lat: '20.20130085047300',
+  //     lng: '-87.4499008455200',
+  //   },
+  // ],
+  // dronIcon: 'dron link svg',
+  // shopMarker: [
+  //   {
+  //     lat: '20.20130085047500',
+  //     lng: '-87.44990084555900',
+  //   },
+  // ],
+  // shopIcon: 'shop a or b or c',
 }

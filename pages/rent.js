@@ -48,65 +48,64 @@ export default function Rent({ propertyRent, currentPage, pageCount }) {
       <Head>
         <title>Tuluminati X List of properties</title>
       </Head>
-      <Layout>
-        {/* <MDBContainer> */}
-        {/* <SearchFilter /> */}
-        <br />
-        <div className="sticky">
-          <Link href={'/buy'}>
-            <MDBBtn className="me-3 mx-3" color="white">
-              For Sale
-            </MDBBtn>
-          </Link>
-
-          <MDBBtn className="me-1" color="primary">
-            For Rent
+      <Header />
+      {/* <MDBContainer> */}
+      {/* <SearchFilter /> */}
+      <br />
+      <div className="sticky">
+        <Link href={'/buy'}>
+          <MDBBtn className="me-3 mx-3" color="white">
+            For Sale
           </MDBBtn>
-          <div className="d-md-none">
-            <Link href={'/mapPageSales'}>
-              <div className="mapButton">
-                <MDBIcon fas icon="map-marked" className="mapIcon" /> Map
-              </div>
-            </Link>
-          </div>
-        </div>
-        <h4 className="h1-responsive font-weight-bold text-center my-3 text-night">
-          Rent Aparments
-        </h4>
-        <div className="row">
-          <div className="d-none d-md-block">
-            <div className="wrap">
-              <div className="box">
-                <PropertyCardRent propertyRent={propertyRent} />
-              </div>
+        </Link>
 
-              <div className="box2">{<MapboxComponentTest />}</div>
+        <MDBBtn className="me-1" color="primary">
+          For Rent
+        </MDBBtn>
+        <div className="d-md-none">
+          <Link href={'/mapPageSales'}>
+            <div className="mapButton">
+              <MDBIcon fas icon="map-marked" className="mapIcon" /> Map
             </div>
-          </div>
-          <div className="d-md-none">
-            <div className="col-md-4">
+          </Link>
+        </div>
+      </div>
+      <h4 className="h1-responsive font-weight-bold text-center my-3 text-night">
+        Rent Aparments
+      </h4>
+      <div className="row">
+        <div className="d-none d-md-block">
+          <div className="wrap">
+            <div className="box">
               <PropertyCardRent propertyRent={propertyRent} />
             </div>
-            {/* <div className="col-md-8">{<MapboxComponentTest />}</div> */}
+
+            <div className="box2">{<MapboxComponentTest />}</div>
           </div>
         </div>
-        <div className="d-flex row justify-content-center mx-auto paginate-center">
-          <ReactPaginate
-            onPageChange={paginationHandler}
-            initialPage={currentPage - 1}
-            pageCount={pageCount}
-            marginPagesDisplayed={1}
-            pageRangeDisplayed={2}
-            previousLabel="Back"
-            nextLabel="Next"
-            activeClassName="actived"
-            breakLabel="..."
-            pageClassName="paginate"
-            containerClassName="custom-paginate"
-          />
+        <div className="d-md-none">
+          <div className="col-md-4">
+            <PropertyCardRent propertyRent={propertyRent} />
+          </div>
+          {/* <div className="col-md-8">{<MapboxComponentTest />}</div> */}
         </div>
-        {/* </MDBContainer> */}
-      </Layout>
+      </div>
+      <div className="d-flex row justify-content-center mx-auto paginate-center">
+        <ReactPaginate
+          onPageChange={paginationHandler}
+          initialPage={currentPage - 1}
+          pageCount={pageCount}
+          marginPagesDisplayed={1}
+          pageRangeDisplayed={2}
+          previousLabel="Back"
+          nextLabel="Next"
+          activeClassName="actived"
+          breakLabel="..."
+          pageClassName="paginate"
+          containerClassName="custom-paginate"
+        />
+      </div>
+      {/* </MDBContainer> */}
     </section>
   )
 }

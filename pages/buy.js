@@ -47,28 +47,28 @@ export default function Buy({ properties, currentPage, pageCount }) {
       <Head>
         <title>Tuluminati X List of properties</title>
       </Head>
-      <Layout>
-        {/* <MDBContainer> */}
-        {/* <SearchFilter /> */}
-        <br />
-        <div>
-          <MDBBtn className="me-3 mx-3" color="primary">
-            For Sale
+      <Header />
+      {/* <MDBContainer> */}
+      {/* <SearchFilter /> */}
+      <br />
+      <div>
+        <MDBBtn className="me-3 mx-3" color="primary">
+          For Sale
+        </MDBBtn>
+        <Link href={'/rent'}>
+          <MDBBtn className="me-1" color="white">
+            For Rent
           </MDBBtn>
-          <Link href={'/rent'}>
-            <MDBBtn className="me-1" color="white">
-              For Rent
-            </MDBBtn>
+        </Link>
+        <div className="d-md-none">
+          <Link href={'/mapPageSales'}>
+            <div className="mapButton">
+              <MDBIcon fas icon="map-marked" className="mapIcon" /> Map
+            </div>
           </Link>
-          <div className="d-md-none">
-            <Link href={'/mapPageSales'}>
-              <div className="mapButton">
-                <MDBIcon fas icon="map-marked" className="mapIcon" /> Map
-              </div>
-            </Link>
-          </div>
         </div>
-        <h4 className="h1-responsive font-weight-bold text-center my-3 text-night"></h4>
+      </div>
+      <div className="container">
         <div className="row ">
           <div className="d-none d-md-block">
             <div className="wrap">
@@ -86,28 +86,28 @@ export default function Buy({ properties, currentPage, pageCount }) {
             <div className="col-md-4">
               <PropertyCard properties={properties} />
             </div>
+            <ReactPaginate
+              onPageChange={paginationHandler}
+              initialPage={currentPage - 1}
+              pageCount={pageCount}
+              marginPagesDisplayed={1}
+              pageRangeDisplayed={2}
+              previousLabel="Back"
+              nextLabel="Next"
+              activeClassName="actived"
+              breakLabel="..."
+              pageClassName="paginate"
+              containerClassName="custom-paginate"
+            />
             {/* <div className="col-md-8">{<MapboxComponentTest />}</div> */}
           </div>
         </div>
-        <div className="d-flex row justify-content-center mx-auto paginate-center">
-          <br />
-          <br />
-          <ReactPaginate
-            onPageChange={paginationHandler}
-            initialPage={currentPage - 1}
-            pageCount={pageCount}
-            marginPagesDisplayed={1}
-            pageRangeDisplayed={2}
-            previousLabel="Back"
-            nextLabel="Next"
-            activeClassName="actived"
-            breakLabel="..."
-            pageClassName="paginate"
-            containerClassName="custom-paginate"
-          />
-        </div>
-        {/* </MDBContainer> */}
-      </Layout>
+      </div>
+      <div className="d-flex row justify-content-center mx-auto paginate-center">
+        <br />
+        <br />
+      </div>
+      {/* </MDBContainer> */}
     </section>
   )
 }

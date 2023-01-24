@@ -16,7 +16,7 @@ const PropertyCardRent = ({ propertyRent }) => {
         return (
           <div className="container-fluid p-0">
             <div className="row">
-              <div className="col-12 sm:col-12 md:col-12 lg:col-12 mb-4 cursor-pointer p-0">
+              <div className=" sm:col-12 px-2 cursor-pointer">
                 <Link
                   href="/propertyRent/[slug]"
                   as={`/propertyRent/${property.id}`}

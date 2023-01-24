@@ -25,7 +25,7 @@ import emailjs, { send } from '@emailjs/browser'
 import { useRef } from 'react'
 // import './DialogDemo.css';
 import DialogDemo from '../../components/DialogDemo'
-import DialogModal from '../../components/DialogModal'
+// import DialogModal from '../../components/DialogModal'
 
 import { Sidebar } from 'primereact/sidebar'
 import { Button } from 'primereact/button'
