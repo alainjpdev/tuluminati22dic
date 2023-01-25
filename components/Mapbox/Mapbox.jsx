@@ -33,7 +33,7 @@ const MapboxComponent = ({ propertiesB }) => {
       style: 'mapbox://styles/mapbox/streets-v12',
 
       center: [-87.460795, 20.200037],
-      zoom: 16,
+      zoom: 14,
       scrollZoom: false,
     })
 
@@ -158,7 +158,9 @@ const MapboxComponent = ({ propertiesB }) => {
        src=${currentFeature.images[0]}
        alt="property picture"
        width="150" height="80"
-     /><p>$${currentFeature.price}K <br/>${currentFeature.factsandfeatures.beds}<strong> bd</strong>, ${currentFeature.factsandfeatures.bath}<strong> ba</strong>
+     />
+     <p></p>
+     <p>${currentFeature.name}<br/>$${currentFeature.price}K <br/>${currentFeature.factsandfeatures.beds}<strong> bd</strong>, ${currentFeature.factsandfeatures.bath}<strong> ba</strong>
      </a></p>
           `
       )

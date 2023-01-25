@@ -1,0 +1,90 @@
+// {
+//     name: '',
+//     developer: '',
+//     id: 'BH01',
+//     delivery: { notFinish: 'Coming soon', finish: 'Finished' },
+//     address: {
+//       street: 'Aldea Zama Street',
+//       neighborhood: 'Aldea Zama',
+//       zipCode: '7760',
+//       state: 'Quintana Roo',
+//     },
+//     type: 'Feature',
+//     geometry: {
+//       type: 'Point',
+
+//       coordinates: [],
+//     },
+//     price: ,
+//     priceRange: ['', ''],
+//     images: [
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//       '',
+//     ],
+//     virtualTour: 'https://biganto.com/tour/36623/',
+//     video: 'https://youtu.be/CGE2st9Y_jo',
+//     card: {
+//       agent: 'Alain Raimond',
+//       agency: 'Desrochers Real Estate',
+//       agentImage:
+//         'https://media-exp1.licdn.com/dms/image/C4E03AQH_mVvxK1EM8w/profile-displayphoto-shrink_400_400/0/1660188307942?e=1675296000&v=beta&t=Rw2tXyQqqOISzDX-BWt7imTxWlFLtLsRb_cWDHMiv9Y',
+//     },
+//     factsandfeatures: {
+//       type: 'string',
+//       'Year build': '2022',
+//       beds: '2',
+//       bath: '1',
+//       'Lot size': '987 sqm',
+//     },
+//     about: '                See more....',
+//     features2: ['some info', 'more info', 'and more'],
+//     Interiors: {
+//       'Total Livable Area': 'Number',
+//       Parking: 'Garage',
+//       Basement: 'Partial',
+//       Flooring: 'Hardwood',
+//       Cooling: 'Central',
+//     },
+//     'Property details': {
+//       Parking: {
+//         'Total spaces': '2',
+//         'Parking feaures': 'Garage - Detached, Covered',
+//       },
+//       Property: {
+//         'Exterior features': 'Shingle (Not Wood)',
+//         'Patio and porch details': 'Porch open',
+//       },
+//     },
+//     'Construction details': {
+//       'Home type': {
+//         'Home type': 'Single Family',
+//         'Architectural style': 'Colonial',
+//       },
+//       'Material information': {
+//         Roof: 'Asphalt',
+//         Windows: 'Drapes - Some',
+//       },
+//       Condition: {
+//         'Property condition': 'Existing',
+//         'New construction': 'No',
+//         'Year built': '2022',
+//       },
+//     },
+//   },
+// }

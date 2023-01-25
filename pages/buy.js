@@ -47,7 +47,7 @@ export default function Buy({ properties, currentPage, pageCount }) {
       <Head>
         <title>Tuluminati X List of properties</title>
       </Head>
-      <Header />
+      <Header className="fixed" />
       {/* <MDBContainer> */}
       {/* <SearchFilter /> */}
       <br />
@@ -68,42 +68,43 @@ export default function Buy({ properties, currentPage, pageCount }) {
           </Link>
         </div>
       </div>
-      <div className="container">
-        <div className="row ">
-          <div className="d-none d-md-block">
-            <div className="wrap">
-              <div className="box">
-                <PropertyCard properties={properties} />
-              </div>
 
-              <div className="box2">
-                {/* <MapboxComponentTestBuy /> */}
-                <MapboxComponent propertiesB={properties} />
-              </div>
-            </div>
-          </div>
-          <div className="d-md-none">
-            <div className="col-md-4">
+      <div className="row ">
+        <div className="d-none d-md-block">
+          <div className="wrap">
+            <div className="box">
               <PropertyCard properties={properties} />
             </div>
-            <ReactPaginate
-              onPageChange={paginationHandler}
-              initialPage={currentPage - 1}
-              pageCount={pageCount}
-              marginPagesDisplayed={1}
-              pageRangeDisplayed={2}
-              previousLabel="Back"
-              nextLabel="Next"
-              activeClassName="actived"
-              breakLabel="..."
-              pageClassName="paginate"
-              containerClassName="custom-paginate"
-            />
-            {/* <div className="col-md-8">{<MapboxComponentTest />}</div> */}
+
+            <div className="box2">
+              {/* <MapboxComponentTestBuy /> */}
+              <MapboxComponent propertiesB={properties} />
+            </div>
           </div>
         </div>
+        <div className="d-md-none">
+          <div className="col-md-4">
+            <PropertyCard properties={properties} />
+          </div>
+
+          {/* <div className="col-md-8">{<MapboxComponentTest />}</div> */}
+        </div>
       </div>
+
       <div className="d-flex row justify-content-center mx-auto paginate-center">
+        {/* <ReactPaginate
+          onPageChange={paginationHandler}
+          initialPage={currentPage - 1}
+          pageCount={pageCount}
+          marginPagesDisplayed={1}
+          pageRangeDisplayed={2}
+          previousLabel="Back"
+          nextLabel="Next"
+          activeClassName="actived"
+          breakLabel="..."
+          pageClassName="paginate"
+          containerClassName="custom-paginate"
+        /> */}
         <br />
         <br />
       </div>
