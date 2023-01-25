@@ -843,7 +843,7 @@ export const propertiesMock = {
       geometry: {
         type: 'Point',
 
-        coordinates: [20.1951554097456, -87.45803558757771],
+        coordinates: [-87.45803558757771, 20.1951554097456],
       },
       price: 602700,
       priceRange: ['172200', '602700'],
@@ -932,7 +932,7 @@ export const propertiesMock = {
       geometry: {
         type: 'Point',
 
-        coordinates: [20.203813760340644, -87.4574904875071],
+        coordinates: [-87.4574904875071, 20.203813760340644],
       },
       price: 699000,
       priceRange: ['380000', '699000'],
@@ -1022,7 +1022,7 @@ export const propertiesMock = {
       geometry: {
         type: 'Point',
 
-        coordinates: [20.202796480611443, -87.46235146052034],
+        coordinates: [-87.46235146052034, 20.202796480611443],
       },
       price: 479000,
       priceRange: ['479000', '0'],
@@ -1112,7 +1112,7 @@ export const propertiesMock = {
       geometry: {
         type: 'Point',
 
-        coordinates: [20.193509536381324, -87.46158627116479],
+        coordinates: [-87.46158627116479, 20.193509536381324],
       },
       price: 298000,
       priceRange: ['298000', '298000'],
@@ -1200,7 +1200,7 @@ export const propertiesMock = {
       geometry: {
         type: 'Point',
 
-        coordinates: [20.193111833655788, -87.4614575644176],
+        coordinates: [-87.4614575644176, 20.193111833655788],
       },
       price: 230000,
       priceRange: ['230000', '230000'],
@@ -1286,7 +1286,7 @@ export const propertiesMock = {
       geometry: {
         type: 'Point',
 
-        coordinates: [],
+        coordinates: [-87.46022321819146, 20.201657007356726],
       },
       price: 494376,
       priceRange: ['219841', '494376'],
@@ -1376,7 +1376,7 @@ export const propertiesMock = {
       geometry: {
         type: 'Point',
 
-        coordinates: [20.20010468930002, -87.45827316499586],
+        coordinates: [-87.45827316499586, 20.20010468930002],
       },
       price: 177800,
       priceRange: ['110000', '177800'],

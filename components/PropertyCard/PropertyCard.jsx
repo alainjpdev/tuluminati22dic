@@ -55,13 +55,20 @@ const PropertyCard = ({ properties }) => {
                           </div>
                         }
                       >
-                        <div className="text-sm-start mt-1 mx-3 text-sm-start lh-sm pt-0">
+                        <div
+                          className="text-sm-start mt-1 mx-3 text-sm-start lh-sm pt-0"
+                          style={{
+                            fontSize: '12px',
+                          }}
+                        >
                           {property.name}
-                          <h3 style={{ color: 'green' }}>
-                            {property.price.toLocaleString('en-US', {
-                              style: 'currency',
-                              currency: 'USD',
-                            })}
+                          <h3 style={{ color: 'green', fontSize: '12px' }}>
+                            <strong>
+                              {property.price.toLocaleString('en-US', {
+                                style: 'currency',
+                                currency: 'USD',
+                              })}
+                            </strong>
                           </h3>
                           <strong>{property.factsandfeatures.beds} </strong>bd |
                           <strong>
@@ -70,7 +77,13 @@ const PropertyCard = ({ properties }) => {
                           ba |
                           <br />
                           {property.address.street.toUpperCase()}
-                          <h6>{property.developer.toUpperCase()}</h6>
+                          <h6
+                            style={{
+                              fontSize: '8px',
+                            }}
+                          >
+                            {property.developer.toUpperCase()}
+                          </h6>
                         </div>
 
                         {/* <hr /> */}
@@ -97,10 +110,10 @@ const PropertyCard = ({ properties }) => {
         >
           {properties.map((property) => {
             return (
-              <div className="container-fluid p-0">
+              <div className="container-fluid p-0 h-100">
                 <div className="row p-0">
                   {/* <div className="col-12 sm:col-12 md:col-8 lg:col-8 mb-4 cursor-pointer p-0 "> */}
-                  <div className=" sm:col-12 px-0 cursor-pointer  shadow p-0 bg-white rounded m-1">
+                  <div className="sm:col-12 px-0 cursor-pointer  shadow p-0 bg-white rounded ">
                     <Link
                       href="/property/[slug]"
                       as={`/property/${property.id}`}
@@ -108,11 +121,12 @@ const PropertyCard = ({ properties }) => {
                     >
                       <Card
                         header={
-                          <div className="portrait">
+                          <div className="portrait p-0">
                             <img
                               style={{
                                 width: '100%',
                                 height: '25vh',
+                                padding: '0px',
                               }}
                               src={property.images[0]}
                               alt={property.name}
@@ -120,13 +134,20 @@ const PropertyCard = ({ properties }) => {
                           </div>
                         }
                       >
-                        <div className="text-sm-start mt-1 mx-3 text-sm-start lh-sm">
+                        <div
+                          className="text-sm-start mt-1 mx-3 text-sm-start lh-sm"
+                          style={{
+                            fontSize: '12px',
+                          }}
+                        >
                           {property.name}{' '}
-                          <h3 style={{ color: 'green' }}>
-                            {property.price.toLocaleString('en-US', {
-                              style: 'currency',
-                              currency: 'USD',
-                            })}
+                          <h3 style={{ color: 'green', fontSize: '12px' }}>
+                            <strong>
+                              {property.price.toLocaleString('en-US', {
+                                style: 'currency',
+                                currency: 'USD',
+                              })}
+                            </strong>
                           </h3>
                           <strong>{property.factsandfeatures.beds} </strong>bd |
                           <strong>
@@ -135,7 +156,13 @@ const PropertyCard = ({ properties }) => {
                           ba |
                           <br />
                           {property.address.street.toUpperCase()}
-                          <h6>{property.developer.toUpperCase()}</h6>
+                          <h6
+                            style={{
+                              fontSize: '9px',
+                            }}
+                          >
+                            {property.developer.toUpperCase()}
+                          </h6>
                         </div>
 
                         {/* <hr /> */}
