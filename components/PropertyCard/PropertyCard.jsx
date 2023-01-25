@@ -100,7 +100,7 @@ const PropertyCard = ({ properties }) => {
               <div className="container-fluid p-0">
                 <div className="row p-0">
                   {/* <div className="col-12 sm:col-12 md:col-8 lg:col-8 mb-4 cursor-pointer p-0 "> */}
-                  <div className=" sm:col-12 px-2 cursor-pointer">
+                  <div className=" sm:col-12 px-0 cursor-pointer  shadow p-0 bg-white rounded m-1">
                     <Link
                       href="/property/[slug]"
                       as={`/property/${property.id}`}
@@ -110,7 +110,10 @@ const PropertyCard = ({ properties }) => {
                         header={
                           <div className="portrait">
                             <img
-                              className=""
+                              style={{
+                                width: '100%',
+                                height: '25vh',
+                              }}
                               src={property.images[0]}
                               alt={property.name}
                             />
