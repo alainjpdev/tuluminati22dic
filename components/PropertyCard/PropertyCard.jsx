@@ -70,11 +70,12 @@ const PropertyCard = ({ properties }) => {
                               })}
                             </strong>
                           </h3>
-                          <strong>{property.factsandfeatures.beds} </strong>bd |
+                          <strong>{property.factsandfeatures.beds} </strong>bd{' '}
+                          <span className="lineatrans">|</span>
                           <strong>
                             {' ' + property.factsandfeatures.bath}
                           </strong>{' '}
-                          ba |
+                          ba <span className="lineatrans">|</span>
                           <br />
                           {property.address.street.toUpperCase()}
                           <h6
@@ -149,11 +150,12 @@ const PropertyCard = ({ properties }) => {
                               })}
                             </strong>
                           </h3>
-                          <strong>{property.factsandfeatures.beds} </strong>bd |
+                          <strong>{property.factsandfeatures.beds} </strong>bd{' '}
+                          <span className="lineatrans">|</span>
                           <strong>
                             {' ' + property.factsandfeatures.bath}
                           </strong>{' '}
-                          ba |
+                          ba <span className="lineatrans">|</span>
                           <br />
                           {property.address.street.toUpperCase()}
                           <h6

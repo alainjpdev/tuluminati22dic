@@ -52,14 +52,16 @@ export default function Buy({ properties, currentPage, pageCount }) {
       {/* <SearchFilter /> */}
       <br />
       <div>
-        <MDBBtn className="me-3 mx-3" color="primary">
-          For Sale
-        </MDBBtn>
-        <Link href={'/rent'}>
-          <MDBBtn className="me-1" color="white">
-            For Rent
+        <div className="forSale pb-1">
+          <MDBBtn className="me-3 mx-3 mb-1" color="primary">
+            For Sale
           </MDBBtn>
-        </Link>
+          <Link href={'/rent'}>
+            <MDBBtn className="me-1" color="white">
+              For Rent
+            </MDBBtn>
+          </Link>
+        </div>
         <div className="d-md-none">
           <Link href={'/mapPageSales'}>
             <div className="mapButton">
@@ -72,7 +74,7 @@ export default function Buy({ properties, currentPage, pageCount }) {
       <div className="row ">
         <div className="d-none d-md-block">
           <div className="wrap">
-            <div className="box">
+            <div className="box shadow">
               <PropertyCard properties={properties} />
             </div>
 
@@ -91,8 +93,8 @@ export default function Buy({ properties, currentPage, pageCount }) {
         </div>
       </div>
 
-      <div className="d-flex row justify-content-center mx-auto paginate-center">
-        {/* <ReactPaginate
+      {/* <div className="d-flex row justify-content-center mx-auto paginate-center"> */}
+      {/* <ReactPaginate
           onPageChange={paginationHandler}
           initialPage={currentPage - 1}
           pageCount={pageCount}
@@ -105,9 +107,7 @@ export default function Buy({ properties, currentPage, pageCount }) {
           pageClassName="paginate"
           containerClassName="custom-paginate"
         /> */}
-        <br />
-        <br />
-      </div>
+      {/* </div> */}
       {/* </MDBContainer> */}
     </section>
   )

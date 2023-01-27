@@ -26,7 +26,6 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1669829395/aflora/mKq0O19ft3See4DebonO4r1k8k05nsG-9Hp0UntCUms_kwlg31.jpg',
         'https://res.cloudinary.com/dk473trop/image/upload/v1669829398/aflora/9s00sxsl863lmWSH_ZnO94A3j9zU0tyWqc6CHNrMOVw_mogaxp.jpg',
         'https://res.cloudinary.com/dk473trop/image/upload/v1669829397/aflora/i6d2_iYkcYmwp1ETnwqzHTHF5lCYifrrU4ihlTMINDM_rxnzjk.jpg',
-        ,
         'https://res.cloudinary.com/dk473trop/image/upload/v1669829399/aflora/Wu2kmdANZReUpxIEfX954BIXU-Nd0OnwmJvcKWL9ZJs_zr1pwe.jpg',
         'https://res.cloudinary.com/dk473trop/image/upload/v1669829396/aflora/x4kaamHlyUXN-ffZaEPxye6GRBohF01Oi6ji5_oVdzQ_ue3ohy.jpg',
       ],
@@ -46,7 +45,7 @@ export const propertiesMock = {
         'Lot size': '987 sqm',
       },
       about:
-        'Aflora sits lightly on its abundant 3 hectare boundary, located between the town of Tulum and its crystalline beaches, inside the prime neighborhood of Aldea Zama. We invite you to make yourself at home with our wide range of amenities designed to cultivate inspiration. Woven into the site’s geography and architecture, we invite you to make yourself at home with our wide range of amenities designed                 See more....',
+        ' OVERVIEW Aflora sits lightly on its abundant 3 hectare boundary, located between the town of Tulum and its crystalline beaches, inside the prime neighborhood of Aldea Zama. We invite you to make yourself at home with our wide range of amenities designed to cultivate inspiration. Woven into the site’s geography and architecture, we invite you to make yourself at home with our wide range of amenities designed                 See more....',
       features2: ['some info', 'more info', 'and more'],
       Interiors: {
         'Total Livable Area': 'Number',

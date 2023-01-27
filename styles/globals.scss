@@ -153,10 +153,11 @@ a {
 }
 
 .nav-link {
-  color: $dark;
+  color: black;
+
 
   &:hover {
-    color: blue;
+    color: $dark;
   }
 }
 
@@ -376,6 +377,7 @@ div.scrollmenu a:hover {
   padding-left: 80px;
   margin: 0px;
   padding: 0px;
+  
 }
 .box2 {
   display: inline-block;
@@ -384,6 +386,41 @@ div.scrollmenu a:hover {
   // background-color: blue;
   overflow: scroll;
 }
+
+.boxSlug1{
+  display: inline-block;
+  height: 100vh;
+  width: 60%;
+  overflow: scroll;
+}
+
+.boxSlug2{
+  display: inline-block;
+  height: 100vh;
+  width: 40%;
+  // background-color: blue;
+  overflow-y: scroll;
+
+  margin: 0px;
+  padding: 0px;
+}
+
+.grid-layout{
+  display:grid;
+  grid-template-columns: auto auto;
+}
+
+.ima0{
+  grid-column: 1/3;
+  // justify-content: end;
+}
+
+.lineatrans{
+  color:gray;
+  opacity: .4;
+}
+
+
 
 .mainVideo {
   width: 100vw;
@@ -413,6 +450,14 @@ div.scrollmenu a:hover {
 
 .rowTop{
   padding-top: 500px;
+}
+
+.fixedTop{
+  padding-bottom: 250px;
+  z-index: 1;
+  
+  
+
 }
 @media screen and (max-width: 768px) {
   .login-img {
