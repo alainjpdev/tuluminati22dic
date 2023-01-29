@@ -1,8 +1,54 @@
 import Link from 'next/link'
 import { Card } from 'primereact/card'
 import { MDBCol } from 'mdb-react-ui-kit'
+import { useEffect, useRef, useState } from 'react'
+import VideoPlayer from '../VideoPlayer'
+import ImageCard from '../ImageCard'
+const isSafari = () => {
+  const ua = navigator.userAgent.toLowerCase()
+  return ua.indexOf('safari') > -1 && ua.indexOf('chrome') < 0
+}
+
+const video1 = '/videos/video1.mp4'
 
 const PropertyCard = ({ properties }) => {
+  // const video1 = '${property.video}'
+  const videoParentRef = useRef()
+  const [shouldUseImage, setShouldUseImage] = useState(false)
+  useEffect(() => {
+    // check if user agent is safari and we have the ref to the container <div />
+    if (isSafari() && videoParentRef.current) {
+      // obtain reference to the video element
+      const player = videoParentRef.current.children[0]
+
+      // if the reference to video player has been obtained
+      if (player) {
+        // set the video attributes using javascript as per the
+        // webkit Policy
+        player.controls = false
+        player.playsinline = true
+        player.muted = true
+        player.setAttribute('muted', '') // leave no stones unturned :)
+        player.autoplay = true
+
+        // Let's wait for an event loop tick and be async.
+        setTimeout(() => {
+          // player.play() might return a promise but it's not guaranteed crossbrowser.
+          const promise = player.play()
+          // let's play safe to ensure that if we do have a promise
+          if (promise.then) {
+            promise
+              .then(() => {})
+              .catch(() => {
+                // if promise fails, hide the video and fallback to <img> tag
+                videoParentRef.current.style.display = 'none'
+                setShouldUseImage(true)
+              })
+          }
+        }, 0)
+      }
+    }
+  }, [])
   const generateAboutText = (text) => {
     if (text.length > 200) {
       return `${text.substring(0, 200)}...`
@@ -123,7 +169,7 @@ const PropertyCard = ({ properties }) => {
                       <Card
                         header={
                           <div className="portrait p-0">
-                            <img
+                            {/* <img
                               style={{
                                 width: '100%',
                                 height: '25vh',
@@ -131,7 +177,45 @@ const PropertyCard = ({ properties }) => {
                               }}
                               src={property.images[0]}
                               alt={property.name}
-                            />
+                            /> */}
+                            {/* <div
+                              ref={videoParentRef}
+                              dangerouslySetInnerHTML={{
+                                __html: `
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          preload="metadata"
+        >
+        <source src="${video1}" type="video/mp4" />
+        </video>`,
+                              }}
+                            /> */}
+
+                            {!!property.video ? (
+                              <video
+                                style={{ width: '100%', height: '100%' }}
+                                autoPlay
+                                loop
+                                muted
+                                // src="/videos/tulumBeach.mp4"
+                                src={property.video}
+                                className="main p-0 m-0 videoBg"
+                                type="video/mp4"
+                              ></video>
+                            ) : (
+                              <img
+                                style={{
+                                  width: '100%',
+                                  height: '25vh',
+                                  padding: '0px',
+                                }}
+                                src={property.images[0]}
+                                alt={property.name}
+                              />
+                            )}
                           </div>
                         }
                       >

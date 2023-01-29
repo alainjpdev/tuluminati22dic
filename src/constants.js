@@ -30,7 +30,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1669829396/aflora/x4kaamHlyUXN-ffZaEPxye6GRBohF01Oi6ji5_oVdzQ_ue3ohy.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      video: '/videos/video1.mp4',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -109,7 +109,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1670333646/atikk/2015-Roof_05_waehug.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=6zK8NNfBFRF',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      video: '/videos/video3.mp4',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -188,7 +188,8 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1670608730/amaru_inca/AM_ESTUDIO_dtiwqy.png',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=6zK8NNfBFRF',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      video: '/videos/video2.mp4',
+
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -270,7 +271,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674414561/arthouse/93630b9a-b0b8-4835-85ad-015e66296468_o4dtzp.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      video: '/videos/video4.mp4',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -347,7 +348,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674415065/amelia/3.-_RECAMARA_3_ljoajx.png',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -434,7 +435,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674416813/aru/WhatsApp_Image_2020-12-15_at_4.21.04_PM_4_rtmre8.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -516,7 +517,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674420100/balam/08-GYM_mcnjzq.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -601,7 +602,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674423166/becan/03-Fachada_dia_Beca%CC%81n_nw1vdn.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -689,7 +690,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674497551/Calakmul/20-Master_Plan_CalaKmul_2_bct2fd.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -778,7 +779,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674578586/cardinal/Copia_de_Cardinal_recamara_g8rgdt.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -867,7 +868,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674581473/carey/01_-_PENTHOUSE_A2_CS_-_CAREY_jw2il8.jpg',
       ],
       virtualTour: 'https://biganto.com/tour/36623/',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -957,7 +958,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674589023/CASALIBRE/DSCF4959_rwldf8.jpg',
       ],
       virtualTour: 'https://biganto.com/tour/36623/',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -1047,7 +1048,8 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674591992/cien%20fuegos/DSC_1221_wsjxav.jpg',
       ],
       virtualTour: 'https://biganto.com/tour/36623/',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
+
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -1135,7 +1137,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674594616/coba1/12-Roof_Garden_PH_arfudo.jpg',
       ],
       virtualTour: 'https://biganto.com/tour/36623/',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -1221,7 +1223,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674595044/coba2/07-Ban%CC%83os_depto_grande_c4ragn.jpg',
       ],
       virtualTour: 'https://biganto.com/tour/36623/',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -1311,7 +1313,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674595682/costacaribe/fachada_noche_d0rqar.jpg',
       ],
       virtualTour: 'https://biganto.com/tour/36623/',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -1402,7 +1404,7 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674603176/crystal/0005_jh4t5p.jpg',
       ],
       virtualTour: 'https://biganto.com/tour/36623/',
-      video: 'https://youtu.be/CGE2st9Y_jo',
+      // video: 'https://youtu.be/CGE2st9Y_jo',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
