@@ -428,6 +428,7 @@ div.scrollmenu a:hover {
   margin: 0px;
   padding: 0px;
   top: 0px;
+  // object-fit: cover;
   // position: relative;
   // z-index: 1;
 }
@@ -449,7 +450,7 @@ div.scrollmenu a:hover {
 }
 
 .rowTop{
-  padding-top: 500px;
+  padding-top: 200px;
 }
 
 .fixedTop{

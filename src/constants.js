@@ -30,7 +30,8 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1669829396/aflora/x4kaamHlyUXN-ffZaEPxye6GRBohF01Oi6ji5_oVdzQ_ue3ohy.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
-      video: '/videos/video1.mp4',
+      video: '/videos/video4.mp4',
+
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -271,7 +272,9 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1674414561/arthouse/93630b9a-b0b8-4835-85ad-015e66296468_o4dtzp.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
-      video: '/videos/video4.mp4',
+      // video: '/videos/video4.mp4',
+      video: '/videos/video1.mp4',
+
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',

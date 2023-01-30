@@ -169,32 +169,23 @@ const PropertyCard = ({ properties }) => {
                       <Card
                         header={
                           <div className="portrait p-0">
-                            {/* <img
-                              style={{
-                                width: '100%',
-                                height: '25vh',
-                                padding: '0px',
-                              }}
-                              src={property.images[0]}
-                              alt={property.name}
-                            /> */}
                             {/* <div
                               ref={videoParentRef}
                               dangerouslySetInnerHTML={{
                                 __html: `
-        <video
-          loop
-          muted
-          autoplay
-          playsinline
-          preload="metadata"
-        >
-        <source src="${video1}" type="video/mp4" />
-        </video>`,
+                                    <video
+                                      loop
+                                      muted
+                                      autoplay
+                                      playsinline
+                                      preload="metadata"
+                                    >
+                                    <source src="${video1}" type="video/mp4" />
+                                    </video>`,
                               }}
                             /> */}
 
-                            {!!property.video ? (
+                            {/* {!!property.video ? (
                               <video
                                 style={{ width: '100%', height: '100%' }}
                                 autoPlay
@@ -205,6 +196,37 @@ const PropertyCard = ({ properties }) => {
                                 className="main p-0 m-0 videoBg"
                                 type="video/mp4"
                               ></video>
+                            ) : (
+                              <img
+                                style={{
+                                  width: '100%',
+                                  height: '25vh',
+                                  padding: '0px',
+                                }}
+                                src={property.images[0]}
+                                alt={property.name}
+                              />
+                            )} */}
+
+                            {!!property.video ? (
+                              <div
+                                ref={videoParentRef}
+                                dangerouslySetInnerHTML={{
+                                  __html: `
+                                    <video
+                                      loop
+                                      muted
+                                      autoplay
+                                      playsinline
+                                      preload="metadata"
+                                      width="100%"
+                                      height="250px"
+
+                                    >
+                                    <source src="${property.video}" type="video/mp4" />
+                                    </video>`,
+                                }}
+                              />
                             ) : (
                               <img
                                 style={{

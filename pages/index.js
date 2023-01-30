@@ -24,6 +24,7 @@ import {
   MDBRipple,
   MDBBtn,
 } from 'mdb-react-ui-kit'
+import ReactPlayer from 'react-player'
 
 // import videoBg from "../src/videos/cut.mp4"
 const isSafari = () => {
@@ -124,6 +125,9 @@ export default function Home({ propertiesVip, properties }) {
           autoplay
           playsinline
           preload="metadata"
+          width:"100vw"
+          height="750px"
+          object-fit:"cover"
         >
         <source src="${mainVideo}" type="video/mp4" />
         </video>`,
@@ -151,6 +155,19 @@ export default function Home({ propertiesVip, properties }) {
                     type="video/mp4"
                   ></video>
                 </div> */}
+
+                {/* <ReactPlayer
+                  playsinline={true}
+                  controls={false}
+                  playing={true}
+                  muted={true}
+                  loop={true}
+                  className="main p-0 m-0 videoBg p-0 m-0"
+                  width="100%"
+                  height=""
+                  url="/videos/tb.mp4"
+                  type="video/mp4"
+                /> */}
               </div>
             </div>
 

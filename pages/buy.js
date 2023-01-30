@@ -57,7 +57,7 @@ export default function Buy({ properties, currentPage, pageCount }) {
             For Sale
           </MDBBtn>
           <Link href={'/rent'}>
-            <MDBBtn className="me-1" color="white">
+            <MDBBtn className="me-3 mx-3 mb-1" color="white">
               For Rent
             </MDBBtn>
           </Link>
