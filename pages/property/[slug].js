@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
 import CardCarousel from '../../components/CardCarousel'
@@ -33,6 +33,11 @@ import Router from 'next/router'
 import Image from 'next/image'
 import Header from '../../components/Header'
 
+const isSafari = () => {
+  const ua = navigator.userAgent.toLowerCase()
+  return ua.indexOf('safari') > -1 && ua.indexOf('chrome') < 0
+}
+
 const Property = ({
   property,
   propertiesVip,
@@ -50,6 +55,42 @@ const Property = ({
   }
 
   const [visibleFullScreen, setVisibleFullScreen] = useState(false)
+
+  const videoParentRef = useRef()
+  useEffect(() => {
+    // check if user agent is safari and we have the ref to the container <div />
+    if (isSafari() && videoParentRef.current) {
+      // obtain reference to the video element
+      const player = videoParentRef.current.children[0]
+
+      // if the reference to video player has been obtained
+      if (player) {
+        // set the video attributes using javascript as per the
+        // webkit Policy
+        player.controls = false
+        player.playsinline = true
+        player.muted = true
+        player.setAttribute('muted', '') // leave no stones unturned :)
+        player.autoplay = true
+
+        // Let's wait for an event loop tick and be async.
+        setTimeout(() => {
+          // player.play() might return a promise but it's not guaranteed crossbrowser.
+          const promise = player.play()
+          // let's play safe to ensure that if we do have a promise
+          if (promise.then) {
+            promise
+              .then(() => {})
+              .catch(() => {
+                // if promise fails, hide the video and fallback to <img> tag
+                videoParentRef.current.style.display = 'none'
+                setShouldUseImage(true)
+              })
+          }
+        }, 0)
+      }
+    }
+  }, [])
 
   // let { isLoggedIn } = this.state
 
@@ -104,6 +145,27 @@ const Property = ({
                   <MDBCardBody className="mx-0 p-0">
                     <MDBRow>
                       <MDBCol className="col col-lg-12">
+                        {!!property.video ? (
+                          <div
+                            ref={videoParentRef}
+                            dangerouslySetInnerHTML={{
+                              __html: `
+                                    <video
+                                      loop
+                                      muted
+                                      autoplay
+                                      playsinline
+                                      preload="metadata"
+                                      width="500px"
+                                      height="350px"
+                                    >
+                                    <source src="${property.video}" type="video/mp4" />
+                                    </video>`,
+                            }}
+                          />
+                        ) : (
+                          <></>
+                        )}
                         <Carousel2 images={property.images} />
                         <br />
                       </MDBCol>
@@ -322,24 +384,43 @@ const Property = ({
                 <div className="boxSlug1">
                   <div className="container-fluid">
                     <div className="grid-layout p-0 ">
-                      {/* <div
-                        className="col d-flex"
-                        style={{ backgroundColor: 'red' }}
-                      > */}
+                      {!!property.video ? (
+                        <div
+                          ref={videoParentRef}
+                          dangerouslySetInnerHTML={{
+                            __html: `
+                                    <video
+                                      loop
+                                      muted
+                                      autoplay
+                                      playsinline
+                                      preload="metadata"
+                                      width="500px"
+                                      height="350px"
+                                    >
+                                    <source src="${property.video}" type="video/mp4" />
+                                    </video>`,
+                          }}
+                        />
+                      ) : (
+                        <></>
+                      )}
                       {property.images.map((image, index) => {
                         return (
-                          <div
-                            className={'ima' + index}
-                            style={{ margin: '2px' }}
-                          >
-                            <Image
-                              src={image}
-                              width={800}
-                              height={450}
-                              // layout={'fill'}
-                              // justify-content-end
-                            />
-                          </div>
+                          <>
+                            <div
+                              className={'ima' + index}
+                              style={{ margin: '2px' }}
+                            >
+                              <Image
+                                src={image}
+                                width={800}
+                                height={450}
+                                // layout={'fill'}
+                                // justify-content-end
+                              />
+                            </div>
+                          </>
                         )
                       })}
                       {/* </div> */}

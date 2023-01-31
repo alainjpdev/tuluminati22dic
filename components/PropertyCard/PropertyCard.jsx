@@ -90,14 +90,45 @@ const PropertyCard = ({ properties }) => {
                       <Card
                         header={
                           <div className="portrait ">
-                            <img
+                            {!!property.video ? (
+                              <div
+                                ref={videoParentRef}
+                                dangerouslySetInnerHTML={{
+                                  __html: `
+                                    <video
+                                      loop
+                                      muted
+                                      autoplay
+                                      playsinline
+                                      preload="metadata"
+                                      width="100%"
+                                      height="150px"
+
+                                    >
+                                    <source src="${property.video}" type="video/mp4" />
+                                    </video>`,
+                                }}
+                              />
+                            ) : (
+                              <img
+                                style={{
+                                  width: '100%',
+                                  height: '25vh',
+                                  padding: '0px',
+                                }}
+                                src={property.images[0]}
+                                alt={property.name}
+                              />
+                            )}
+
+                            {/* <img
                               style={{
                                 width: '100%',
                                 height: '25vh',
                               }}
                               src={property.images[0]}
                               alt={property.name}
-                            />
+                            /> */}
                           </div>
                         }
                       >
@@ -220,7 +251,7 @@ const PropertyCard = ({ properties }) => {
                                       playsinline
                                       preload="metadata"
                                       width="100%"
-                                      height="250px"
+                                      height="150px"
 
                                     >
                                     <source src="${property.video}" type="video/mp4" />
