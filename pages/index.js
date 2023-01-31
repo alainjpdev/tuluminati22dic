@@ -114,8 +114,18 @@ export default function Home({ propertiesVip, properties }) {
             <div className="row  maint p-0">
               <div className="col mainVideo overlat p-0">
                 {/* <div className="d-md-none"> */}
+                <video
+                  autoplay
+                  loop
+                  controls={true}
+                  playsinline
+                  preload="metadata"
+                  height="745px"
+                  src="/videos/azulik.mp4"
+                  type="video/mp4"
+                ></video>
 
-                <div
+                {/* <div
                   ref={videoParentRef}
                   dangerouslySetInnerHTML={{
                     __html: `
@@ -132,7 +142,7 @@ export default function Home({ propertiesVip, properties }) {
         <source src="${mainVideo}" type="video/mp4" />
         </video>`,
                   }}
-                />
+                /> */}
 
                 {/* <video
                   style={{ width: '100%', height: '100%' }}

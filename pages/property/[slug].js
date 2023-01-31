@@ -146,23 +146,17 @@ const Property = ({
                     <MDBRow>
                       <MDBCol className="col col-lg-12">
                         {!!property.video ? (
-                          <div
-                            ref={videoParentRef}
-                            dangerouslySetInnerHTML={{
-                              __html: `
-                                    <video
-                                      loop
-                                      muted
-                                      autoplay
-                                      playsinline
-                                      preload="metadata"
-                                      width="500px"
-                                      height="350px"
-                                    >
-                                    <source src="${property.video}" type="video/mp4" />
-                                    </video>`,
-                            }}
-                          />
+                          <div style={{ justifyContent: 'center' }}>
+                            <video
+                              autoplay
+                              controls={true}
+                              playsinline
+                              preload="metadata"
+                              height="250px"
+                              src={property.video}
+                              type="video/mp4"
+                            ></video>
+                          </div>
                         ) : (
                           <></>
                         )}

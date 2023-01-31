@@ -91,24 +91,16 @@ const PropertyCard = ({ properties }) => {
                         header={
                           <div className="portrait ">
                             {!!property.video ? (
-                              <div
-                                ref={videoParentRef}
-                                dangerouslySetInnerHTML={{
-                                  __html: `
-                                    <video
-                                      loop
-                                      muted
-                                      autoplay
-                                      playsinline
-                                      preload="metadata"
-                                      width="100%"
-                                      height="150px"
-
-                                    >
-                                    <source src="${property.video}" type="video/mp4" />
-                                    </video>`,
-                                }}
-                              />
+                              <video
+                                autoplay
+                                loop
+                                controls={true}
+                                playsinline
+                                preload="metadata"
+                                height="100px"
+                                src={property.video}
+                                type="video/mp4"
+                              ></video>
                             ) : (
                               <img
                                 style={{
