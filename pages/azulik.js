@@ -115,24 +115,20 @@ export default function Azulik({ propertiesVip, properties }) {
               <div className="col mainVideo overlat p-0">
                 {/* <div className="d-md-none"> */}
 
-                <div
-                  ref={videoParentRef}
-                  dangerouslySetInnerHTML={{
-                    __html: `
-        <video
-          loop
-          controls="true"
-          autoplay
-          playsinline
-          preload="metadata"
-          width:"100vw"
-          height="750px"
-          object-fit:"cover"
-        >
-        <source src="${mainVideo}" type="video/mp4" />
-        </video>`,
-                  }}
-                />
+                <div>
+                  <video
+                    autoplay
+                    loop
+                    controls={true}
+                    playsinline
+                    preload="metadata"
+                    height="745px"
+                    src="/videos/azulik.mp4"
+                    type="video/mp4"
+                  ></video>
+                </div>
+                {/* }} */}
+                {/* /> */}
 
                 {/* <video
                   style={{ width: '100%', height: '100%' }}
@@ -168,88 +164,6 @@ export default function Azulik({ propertiesVip, properties }) {
                   url="/videos/tb.mp4"
                   type="video/mp4"
                 /> */}
-              </div>
-            </div>
-
-            <div className="row rowTop">
-              <div className="col-md">
-                <Link href={'/buy'}>
-                  <MDBCard alignment="center">
-                    <MDBRipple
-                      rippleColor="light"
-                      rippleTag="div"
-                      className="bg-image hover-overlay"
-                    >
-                      <MDBCardImage
-                        src="images/hometul.png"
-                        width={200}
-                        fluid
-                        alt="..."
-                      />
-
-                      <a>
-                        <div
-                          className="mask"
-                          style={{
-                            backgroundColor: 'rgba(251, 251, 251, 0.15)',
-                          }}
-                        ></div>
-                      </a>
-                    </MDBRipple>
-                    <MDBCardBody>
-                      <MDBCardTitle>
-                        <strong>Buy a home</strong>
-                      </MDBCardTitle>
-                      <MDBCardText>
-                        Find your place with an immersive photo experience and
-                        the most listings, including things you won’t find
-                        anywhere else.
-                      </MDBCardText>
-                      <MDBBtn>Buy Home</MDBBtn>
-                    </MDBCardBody>
-                  </MDBCard>
-                </Link>
-              </div>
-              <div className="col-md">
-                <Link href={'/rent'}>
-                  <div className="col">
-                    <MDBCard alignment="center">
-                      {/* <MDBRipple
-                        rippleColor="light"
-                        rippleTag="div"
-                        className="bg-image hover-overlay"
-                      >
-                        <MDBCardImage
-                          src="images/rentul.png"
-                          width={200}
-                          fluid
-                          alt="..."
-                        />
-
-                        <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                        <a>
-                          <div
-                            className="mask"
-                            style={{
-                              backgroundColor: 'rgba(251, 251, 251, 0.15)',
-                            }}
-                          ></div>
-                        </a>
-                      </MDBRipple> */}
-                      <MDBCardBody>
-                        <MDBCardTitle>
-                          <strong>Rent a home</strong>
-                        </MDBCardTitle>
-                        <MDBCardText>
-                          Whether you’re looking for a single-family home,
-                          high-rise apartment, or something in between, we’ll
-                          help you find it.
-                        </MDBCardText>
-                        <MDBBtn>Find Rentals</MDBBtn>
-                      </MDBCardBody>
-                    </MDBCard>
-                  </div>
-                </Link>
               </div>
             </div>
           </div>
