@@ -31,6 +31,7 @@ export const propertiesMock = {
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
       video: '/videos/video4.mp4',
+      videoPrev: '/videos/video4corto.mp4',
 
       card: {
         agent: 'Alain Raimond',
@@ -111,6 +112,7 @@ export const propertiesMock = {
       ],
       virtualTour: 'https://my.matterport.com/show/?m=6zK8NNfBFRF',
       video: '/videos/video3.mp4',
+      videoPrev: '/videos/video3corto.mp4',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -190,6 +192,7 @@ export const propertiesMock = {
       ],
       virtualTour: 'https://my.matterport.com/show/?m=6zK8NNfBFRF',
       video: '/videos/video2.mp4',
+      videoPrev: '/videos/video2corto.mp4',
 
       card: {
         agent: 'Alain Raimond',
@@ -274,6 +277,7 @@ export const propertiesMock = {
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
       // video: '/videos/video4.mp4',
       video: '/videos/video1.mp4',
+      videoPrev: '/videos/video1corto.mp4',
 
       card: {
         agent: 'Alain Raimond',

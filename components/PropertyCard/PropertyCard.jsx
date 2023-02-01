@@ -90,17 +90,17 @@ const PropertyCard = ({ properties }) => {
                       <Card
                         header={
                           <div className="portrait p-0 m-0 ">
-                            {!!property.video ? (
+                            {!!property.videoPrev ? (
                               <video
                                 autoplay
                                 loop
                                 muted
-                                controls={true}
+                                controls={false}
                                 playsinline
                                 preload="metadata"
                                 height="150px"
                                 width="100%"
-                                src={property.video}
+                                src={property.videoPrev}
                                 type="video/mp4"
                               ></video>
                             ) : (
@@ -233,7 +233,7 @@ const PropertyCard = ({ properties }) => {
                               />
                             )} */}
 
-                            {!!property.video ? (
+                            {!!property.videoPrev ? (
                               <div
                                 ref={videoParentRef}
                                 dangerouslySetInnerHTML={{
@@ -248,7 +248,7 @@ const PropertyCard = ({ properties }) => {
                                       height="150px"
 
                                     >
-                                    <source src="${property.video}" type="video/mp4" />
+                                    <source src="${property.videoPrev}" type="video/mp4" />
                                     </video>`,
                                 }}
                               />
