@@ -153,6 +153,7 @@ const Property = ({
                               playsinline
                               preload="metadata"
                               height="250px"
+                              width="100%"
                               src={property.video}
                               type="video/mp4"
                             ></video>

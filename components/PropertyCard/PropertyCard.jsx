@@ -89,15 +89,17 @@ const PropertyCard = ({ properties }) => {
                     >
                       <Card
                         header={
-                          <div className="portrait ">
+                          <div className="portrait p-0 m-0 ">
                             {!!property.video ? (
                               <video
                                 autoplay
                                 loop
+                                muted
                                 controls={true}
                                 playsinline
                                 preload="metadata"
-                                height="100px"
+                                height="150px"
+                                width="100%"
                                 src={property.video}
                                 type="video/mp4"
                               ></video>
