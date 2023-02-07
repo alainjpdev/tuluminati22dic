@@ -111,8 +111,8 @@ export default function Home({ propertiesVip, properties }) {
           {/* <div> */}
 
           <div className="container-fluid  p-0">
-            <div className="row  maint p-0">
-              <div className="col mainVideo overlat p-0">
+            <div className="row  p-0">
+              <div className="col m-0 overlayt p-0">
                 {/* <div className="d-md-none"> */}
                 <video
                   autoplay
@@ -121,6 +121,7 @@ export default function Home({ propertiesVip, properties }) {
                   playsinline
                   preload="metadata"
                   height="745px"
+                  width="100%"
                   src="/videos/azulik.mp4"
                   type="video/mp4"
                 ></video>
