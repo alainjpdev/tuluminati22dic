@@ -31,7 +31,7 @@ const Header = () => {
         <MDBNavbarToggler onClick={handleToggle} />
         <MDBCol xs="1" className="text-center align-self-center p-0">
           <Link href="/">
-            <Image src="/images/logoX.png" width={150} height={45} alt="Logo" />
+            <Image src="/images/aldea.png" width={300} height={25} alt="Logo" />
           </Link>
         </MDBCol>
         <MDBCollapse

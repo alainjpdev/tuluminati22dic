@@ -1,6 +1,186 @@
 export const propertiesMock = {
   BuyHomes: [
     {
+      name: 'Faisano',
+      developer: 'NA',
+      id: 'BH019',
+      delivery: { notFinish: 'Coming soon', finish: 'Finished' },
+      address: {
+        street: 'Aldea Zama Street',
+        neighborhood: 'Aldea Zama',
+        zipCode: '7760',
+        state: 'Quintana Roo',
+      },
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+
+        coordinates: [20.1979333607652, -87.4645707434023],
+      },
+      price: 205000,
+      priceRange: ['205000', '340000'],
+      images: [
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776136/faisanoNidos/18CLV_Render_CAM02_20190131_m8xvrj.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776137/faisanoNidos/18CLV_Render_CAM01_20181209_t9lt07.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776136/faisanoNidos/18CLV_Render_CAM08_20190131_dszxpa.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776135/faisanoNidos/18CLV_Render_CAM18_20190131_djotgu.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776135/faisanoNidos/18CLV_Render_CAM06_20181116_lwcfy5.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776133/faisanoNidos/18CLV_Render_CAM11_20190131_bakfbk.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776131/faisanoNidos/18CLV_Render_CAM12_20181213_cl7xqb.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776131/faisanoNidos/18CLV_Render_CAM14_20181212_grfrkg.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776130/faisanoNidos/18CLV_Render_CAM13_20181212_dxf605.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776130/faisanoNidos/18CLV_Render_CAM9_20181209_lbduc8.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776129/faisanoNidos/18CLV_Render_CAM08_20181212_mjj4q1.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776129/faisanoNidos/18CLV_Render_CAM05_20181209_mhqicq.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776127/faisanoNidos/18CLV_Render_CAM05_20190204_gf6d9y.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776124/faisanoNidos/18CLV_Render_CAM07_20181116_amamhd.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776125/faisanoNidos/18CLV_Render_CAM03_20190131_t9lhjg.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776124/faisanoNidos/18CLV_Render_CAM19_20190131_fy1qop.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776121/faisanoNidos/18CLV_Render_CAM17_20190131_x3sjhr.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675776123/faisanoNidos/18CLV_Render_CAM15_20190131_mpmt5k.jpg',
+      ],
+      virtualTour: 'https://biganto.com/tour/36623/',
+      video: '/videos/faisano.mp4',
+      videoPrev: '/videos/faisanocorto.mp4',
+      card: {
+        agent: 'Alain Raimond',
+        agency: 'Desrochers Real Estate',
+        agentImage:
+          'https://media-exp1.licdn.com/dms/image/C4E03AQH_mVvxK1EM8w/profile-displayphoto-shrink_400_400/0/1660188307942?e=1675296000&v=beta&t=Rw2tXyQqqOISzDX-BWt7imTxWlFLtLsRb_cWDHMiv9Y',
+      },
+      factsandfeatures: {
+        type: 'string',
+        'Year build': '2022',
+        beds: '2',
+        bath: '1',
+        'Lot size': '987 sqm',
+      },
+      about: '                See more....',
+      features2: ['some info', 'more info', 'and more'],
+      Interiors: {
+        'Total Livable Area': 'Number',
+        Parking: 'Garage',
+        Basement: 'Partial',
+        Flooring: 'Hardwood',
+        Cooling: 'Central',
+      },
+      'Property details': {
+        Parking: {
+          'Total spaces': '2',
+          'Parking feaures': 'Garage - Detached, Covered',
+        },
+        Property: {
+          'Exterior features': 'Shingle (Not Wood)',
+          'Patio and porch details': 'Porch open',
+        },
+      },
+      'Construction details': {
+        'Home type': {
+          'Home type': 'Single Family',
+          'Architectural style': 'Colonial',
+        },
+        'Material information': {
+          Roof: 'Asphalt',
+          Windows: 'Drapes - Some',
+        },
+        Condition: {
+          'Property condition': 'Existing',
+          'New construction': 'No',
+          'Year built': '2022',
+        },
+      },
+    },
+    {
+      name: 'DejaVu',
+      developer: 'GRUPO R4',
+      id: 'BH018',
+      delivery: { notFinish: 'Coming soon', finish: 'Finished' },
+      address: {
+        street: 'Aldea Zama Street',
+        neighborhood: 'Aldea Zama',
+        zipCode: '7760',
+        state: 'Quintana Roo',
+      },
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+
+        coordinates: [20.200001165273548, -87.45383793168484],
+      },
+      price: 336000,
+      priceRange: ['336000', '354000'],
+      images: [
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693412/dejavu/DEJAVU_Interior3_fg5vtk.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693405/dejavu/DEJAVU_Coworking1_jyp79c.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693402/dejavu/DEJAVU_Interior1_go5uep.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693395/dejavu/DEJAVU_Fachada2_wrvh9f.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693394/dejavu/DEJAVU_Interior2_j4fegw.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693393/dejavu/DEJAVU_FirePit_fbauwk.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693391/dejavu/DEJAVU_Corredor_kg03bd.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693390/dejavu/DEJAVU_Fachada1_gxsvay.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693389/dejavu/DEJAVU_Amenidades3_z09kyu.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693387/dejavu/DEJAVU_Coworking_zursnt.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693387/dejavu/DEJAVU_AlbercaSalada_hay9uz.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693386/dejavu/DEJAVU_Amenidades4_ku903t.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693385/dejavu/DEJAVU_ShalaYoga_yaevum.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693384/dejavu/DEJAVU_AlbercaRoof_l21ays.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693384/dejavu/DEJAVU_AlbercaPrincipal_if9ex9.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693383/dejavu/DEJAVU_RoofAtardecer_jidkhs.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693383/dejavu/DEJAVU_RoofDia_qivan6.jpg',
+        'https://res.cloudinary.com/dk473trop/image/upload/v1675693383/dejavu/DEJAVU_Roof_gs2jk2.jpg',
+      ],
+      virtualTour: 'https://biganto.com/tour/36623/',
+      video: '/videos/dejavucorto.mp4',
+      videoPrev: '/videos/dejavucorto.mp4',
+      card: {
+        agent: 'Alain Raimond',
+        agency: 'Desrochers Real Estate',
+        agentImage:
+          'https://media-exp1.licdn.com/dms/image/C4E03AQH_mVvxK1EM8w/profile-displayphoto-shrink_400_400/0/1660188307942?e=1675296000&v=beta&t=Rw2tXyQqqOISzDX-BWt7imTxWlFLtLsRb_cWDHMiv9Y',
+      },
+      factsandfeatures: {
+        type: 'string',
+        'Year build': '2022',
+        beds: '2',
+        bath: '1',
+        'Lot size': '987 sqm',
+      },
+      about: '                See more....',
+      features2: ['some info', 'more info', 'and more'],
+      Interiors: {
+        'Total Livable Area': 'Number',
+        Parking: 'Garage',
+        Basement: 'Partial',
+        Flooring: 'Hardwood',
+        Cooling: 'Central',
+      },
+      'Property details': {
+        Parking: {
+          'Total spaces': '2',
+          'Parking feaures': 'Garage - Detached, Covered',
+        },
+        Property: {
+          'Exterior features': 'Shingle (Not Wood)',
+          'Patio and porch details': 'Porch open',
+        },
+      },
+      'Construction details': {
+        'Home type': {
+          'Home type': 'Single Family',
+          'Architectural style': 'Colonial',
+        },
+        'Material information': {
+          Roof: 'Asphalt',
+          Windows: 'Drapes - Some',
+        },
+        Condition: {
+          'Property condition': 'Existing',
+          'New construction': 'No',
+          'Year built': '2022',
+        },
+      },
+    },
+    {
       name: 'Aflora Tulum',
       developer: 'Luxma, Shangrhla',
       id: 'BH001',
@@ -19,7 +199,7 @@ export const propertiesMock = {
 
         // coordinates: [-77.034084142948, 38.909671288923],
       },
-      price: 934000,
+      price: 166337,
       priceRange: ['166337', '934,000'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1669829391/aflora/dy8ZbiqmkJQhqISoXNz3_f240B3ssQ0yCuc9UO1Zwig_cud7ru.jpg',
@@ -30,8 +210,8 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1669829396/aflora/x4kaamHlyUXN-ffZaEPxye6GRBohF01Oi6ji5_oVdzQ_ue3ohy.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
-      video: '/videos/video4.mp4',
-      videoPrev: '/videos/video4corto.mp4',
+      // video: '/videos/video4.mp4',
+      videoPrev: '/videos/videocortosample.mp4',
 
       card: {
         agent: 'Alain Raimond',
@@ -101,7 +281,7 @@ export const propertiesMock = {
 
         // coordinates: [-77.034084142948, 38.909671288923],
       },
-      price: 0,
+      price: 229900,
       priceRange: ['229900', '$339,000.00'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1670333637/atikk/2015_R_AttikTulum_Ext01_id0glm.jpg',
@@ -111,8 +291,8 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1670333646/atikk/2015-Roof_05_waehug.jpg',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=6zK8NNfBFRF',
-      video: '/videos/video3.mp4',
-      videoPrev: '/videos/video3corto.mp4',
+      // video: '/videos/video3.mp4',
+      // videoPrev: '/videos/video3corto.mp4',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',
@@ -180,7 +360,7 @@ export const propertiesMock = {
 
         // coordinates: [-77.034084142948, 38.909671288923],
       },
-      price: 226900,
+      price: 1429000,
       priceRange: ['1429000', '2269000'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1670608718/amaru_inca/PHOTO-2022-09-27-20-28-00_1_copia_rbnpqy.jpg',
@@ -191,8 +371,8 @@ export const propertiesMock = {
         'https://res.cloudinary.com/dk473trop/image/upload/v1670608730/amaru_inca/AM_ESTUDIO_dtiwqy.png',
       ],
       virtualTour: 'https://my.matterport.com/show/?m=6zK8NNfBFRF',
-      video: '/videos/video2.mp4',
-      videoPrev: '/videos/video2corto.mp4',
+      // video: '/videos/video2.mp4',
+      // videoPrev: '/videos/video2corto.mp4',
 
       card: {
         agent: 'Alain Raimond',
@@ -276,8 +456,8 @@ export const propertiesMock = {
       ],
       virtualTour: 'https://my.matterport.com/show/?m=nYhmHzFbGXD&brand=0',
       // video: '/videos/video4.mp4',
-      video: '/videos/video1.mp4',
-      videoPrev: '/videos/video1corto.mp4',
+      // video: '/videos/video1.mp4',
+      // videoPrev: '/videos/video1corto.mp4',
 
       card: {
         agent: 'Alain Raimond',
@@ -344,7 +524,7 @@ export const propertiesMock = {
 
         coordinates: [-87.45477513236666, 20.20028308538614],
       },
-      price: 625100,
+      price: 556900,
       priceRange: ['556,900', '625,100'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1674415067/amelia/5.-SALA_COMEDOR_TARDE_ukcqlk.jpg',
@@ -421,7 +601,7 @@ export const propertiesMock = {
 
         coordinates: [-87.46165012309827, 20.203421661389278],
       },
-      price: 497500,
+      price: 392700,
       priceRange: ['392,700', '497,500'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1674416869/aru/DSC08395_vk6twm.jpg',
@@ -508,7 +688,7 @@ export const propertiesMock = {
 
         coordinates: [-87.45955513153591, 20.194617599053164],
       },
-      price: 395000,
+      price: 285000,
       priceRange: ['285000', '395000'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1674420540/balam/1_cr8c0l.png',
@@ -590,7 +770,7 @@ export const propertiesMock = {
 
         coordinates: [-87.46092974524784, 20.19276140528637],
       },
-      price: 470000,
+      price: 290000,
       priceRange: ['290000', '470000'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1674423177/becan/16-Roof_top_Be%CC%81can_zx1jag.jpg',
@@ -675,7 +855,7 @@ export const propertiesMock = {
 
         coordinates: [-87.46002381825825, 20.194210419463175],
       },
-      price: 470000,
+      price: 290000,
       priceRange: ['290000', '470000'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1674497521/Calakmul/13-Estancia_CalaKmul_m7xgtk.jpg',
@@ -763,7 +943,7 @@ export const propertiesMock = {
 
         coordinates: [-87.45466408757765, 20.2000112342772],
       },
-      price: 610545,
+      price: 436244,
       priceRange: ['436244', '610545'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1674578587/cardinal/Copia_de_Cardinal_andador_central_qetc8a.jpg',
@@ -852,7 +1032,7 @@ export const propertiesMock = {
 
         coordinates: [-87.45803558757771, 20.1951554097456],
       },
-      price: 602700,
+      price: 172200,
       priceRange: ['172200', '602700'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1674581092/carey/2_ufq6n7.jpg',
@@ -941,7 +1121,7 @@ export const propertiesMock = {
 
         coordinates: [-87.4574904875071, 20.203813760340644],
       },
-      price: 699000,
+      price: 380000,
       priceRange: ['380000', '699000'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1674589028/CASALIBRE/Pool_4_mg6ewl.jpg',
@@ -1296,7 +1476,7 @@ export const propertiesMock = {
 
         coordinates: [-87.46022321819146, 20.201657007356726],
       },
-      price: 494376,
+      price: 219841,
       priceRange: ['219841', '494376'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1674595759/costacaribe/patio_noche_ur4rdu.jpg',
@@ -1386,7 +1566,7 @@ export const propertiesMock = {
 
         coordinates: [-87.45827316499586, 20.20010468930002],
       },
-      price: 177800,
+      price: 110000,
       priceRange: ['110000', '177800'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1674603179/crystal/RENDER_FACHADA_1_x0afr1.jpg',
@@ -1460,186 +1640,7 @@ export const propertiesMock = {
         },
       },
     },
-    {
-      name: 'DejaVu',
-      developer: 'GRUPO R4',
-      id: 'BH018',
-      delivery: { notFinish: 'Coming soon', finish: 'Finished' },
-      address: {
-        street: 'Aldea Zama Street',
-        neighborhood: 'Aldea Zama',
-        zipCode: '7760',
-        state: 'Quintana Roo',
-      },
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
 
-        coordinates: [20.200001165273548, -87.45383793168484],
-      },
-      price: 354000,
-      priceRange: ['336000', '354000'],
-      images: [
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693412/dejavu/DEJAVU_Interior3_fg5vtk.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693405/dejavu/DEJAVU_Coworking1_jyp79c.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693402/dejavu/DEJAVU_Interior1_go5uep.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693395/dejavu/DEJAVU_Fachada2_wrvh9f.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693394/dejavu/DEJAVU_Interior2_j4fegw.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693393/dejavu/DEJAVU_FirePit_fbauwk.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693391/dejavu/DEJAVU_Corredor_kg03bd.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693390/dejavu/DEJAVU_Fachada1_gxsvay.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693389/dejavu/DEJAVU_Amenidades3_z09kyu.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693387/dejavu/DEJAVU_Coworking_zursnt.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693387/dejavu/DEJAVU_AlbercaSalada_hay9uz.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693386/dejavu/DEJAVU_Amenidades4_ku903t.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693385/dejavu/DEJAVU_ShalaYoga_yaevum.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693384/dejavu/DEJAVU_AlbercaRoof_l21ays.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693384/dejavu/DEJAVU_AlbercaPrincipal_if9ex9.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693383/dejavu/DEJAVU_RoofAtardecer_jidkhs.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693383/dejavu/DEJAVU_RoofDia_qivan6.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675693383/dejavu/DEJAVU_Roof_gs2jk2.jpg',
-      ],
-      virtualTour: 'https://biganto.com/tour/36623/',
-      video: '/videos/dejavucorto.mp4',
-      videoPrev: '/videos/dejavucorto.mp4',
-      card: {
-        agent: 'Alain Raimond',
-        agency: 'Desrochers Real Estate',
-        agentImage:
-          'https://media-exp1.licdn.com/dms/image/C4E03AQH_mVvxK1EM8w/profile-displayphoto-shrink_400_400/0/1660188307942?e=1675296000&v=beta&t=Rw2tXyQqqOISzDX-BWt7imTxWlFLtLsRb_cWDHMiv9Y',
-      },
-      factsandfeatures: {
-        type: 'string',
-        'Year build': '2022',
-        beds: '2',
-        bath: '1',
-        'Lot size': '987 sqm',
-      },
-      about: '                See more....',
-      features2: ['some info', 'more info', 'and more'],
-      Interiors: {
-        'Total Livable Area': 'Number',
-        Parking: 'Garage',
-        Basement: 'Partial',
-        Flooring: 'Hardwood',
-        Cooling: 'Central',
-      },
-      'Property details': {
-        Parking: {
-          'Total spaces': '2',
-          'Parking feaures': 'Garage - Detached, Covered',
-        },
-        Property: {
-          'Exterior features': 'Shingle (Not Wood)',
-          'Patio and porch details': 'Porch open',
-        },
-      },
-      'Construction details': {
-        'Home type': {
-          'Home type': 'Single Family',
-          'Architectural style': 'Colonial',
-        },
-        'Material information': {
-          Roof: 'Asphalt',
-          Windows: 'Drapes - Some',
-        },
-        Condition: {
-          'Property condition': 'Existing',
-          'New construction': 'No',
-          'Year built': '2022',
-        },
-      },
-    },
-    {
-      name: 'Faisano',
-      developer: 'NA',
-      id: 'BH019',
-      delivery: { notFinish: 'Coming soon', finish: 'Finished' },
-      address: {
-        street: 'Aldea Zama Street',
-        neighborhood: 'Aldea Zama',
-        zipCode: '7760',
-        state: 'Quintana Roo',
-      },
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-
-        coordinates: [20.1979333607652, -87.4645707434023],
-      },
-      price: 340000,
-      priceRange: ['205000', '340000'],
-      images: [
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776136/faisanoNidos/18CLV_Render_CAM02_20190131_m8xvrj.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776137/faisanoNidos/18CLV_Render_CAM01_20181209_t9lt07.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776136/faisanoNidos/18CLV_Render_CAM08_20190131_dszxpa.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776135/faisanoNidos/18CLV_Render_CAM18_20190131_djotgu.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776135/faisanoNidos/18CLV_Render_CAM06_20181116_lwcfy5.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776133/faisanoNidos/18CLV_Render_CAM11_20190131_bakfbk.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776131/faisanoNidos/18CLV_Render_CAM12_20181213_cl7xqb.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776131/faisanoNidos/18CLV_Render_CAM14_20181212_grfrkg.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776130/faisanoNidos/18CLV_Render_CAM13_20181212_dxf605.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776130/faisanoNidos/18CLV_Render_CAM9_20181209_lbduc8.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776129/faisanoNidos/18CLV_Render_CAM08_20181212_mjj4q1.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776129/faisanoNidos/18CLV_Render_CAM05_20181209_mhqicq.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776127/faisanoNidos/18CLV_Render_CAM05_20190204_gf6d9y.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776124/faisanoNidos/18CLV_Render_CAM07_20181116_amamhd.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776125/faisanoNidos/18CLV_Render_CAM03_20190131_t9lhjg.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776124/faisanoNidos/18CLV_Render_CAM19_20190131_fy1qop.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776121/faisanoNidos/18CLV_Render_CAM17_20190131_x3sjhr.jpg',
-        'https://res.cloudinary.com/dk473trop/image/upload/v1675776123/faisanoNidos/18CLV_Render_CAM15_20190131_mpmt5k.jpg',
-      ],
-      virtualTour: 'https://biganto.com/tour/36623/',
-      video: '/videos/faisano.mp4',
-      videoPrev: '/videos/faisanocorto.mp4',
-      card: {
-        agent: 'Alain Raimond',
-        agency: 'Desrochers Real Estate',
-        agentImage:
-          'https://media-exp1.licdn.com/dms/image/C4E03AQH_mVvxK1EM8w/profile-displayphoto-shrink_400_400/0/1660188307942?e=1675296000&v=beta&t=Rw2tXyQqqOISzDX-BWt7imTxWlFLtLsRb_cWDHMiv9Y',
-      },
-      factsandfeatures: {
-        type: 'string',
-        'Year build': '2022',
-        beds: '2',
-        bath: '1',
-        'Lot size': '987 sqm',
-      },
-      about: '                See more....',
-      features2: ['some info', 'more info', 'and more'],
-      Interiors: {
-        'Total Livable Area': 'Number',
-        Parking: 'Garage',
-        Basement: 'Partial',
-        Flooring: 'Hardwood',
-        Cooling: 'Central',
-      },
-      'Property details': {
-        Parking: {
-          'Total spaces': '2',
-          'Parking feaures': 'Garage - Detached, Covered',
-        },
-        Property: {
-          'Exterior features': 'Shingle (Not Wood)',
-          'Patio and porch details': 'Porch open',
-        },
-      },
-      'Construction details': {
-        'Home type': {
-          'Home type': 'Single Family',
-          'Architectural style': 'Colonial',
-        },
-        'Material information': {
-          Roof: 'Asphalt',
-          Windows: 'Drapes - Some',
-        },
-        Condition: {
-          'Property condition': 'Existing',
-          'New construction': 'No',
-          'Year built': '2022',
-        },
-      },
-    },
     {
       name: 'Itza 2',
       developer: 'NA',
@@ -1657,7 +1658,7 @@ export const propertiesMock = {
 
         coordinates: [20.20171894493711, -87.4661982317885],
       },
-      price: 420000,
+      price: 275000,
       priceRange: ['275000', '420000'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1675783571/itza/18CLV_Render_CAM01_20181209_gdnif4.jpg',
@@ -1747,7 +1748,7 @@ export const propertiesMock = {
 
         coordinates: [20.19858114335277, -87.45944383206107],
       },
-      price: 198000,
+      price: 183000,
       priceRange: ['183000', '198000'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1675786652/jungle%20loft/VISTA-PERSPECTIVA-_rkqbsq.jpg',
@@ -1830,7 +1831,7 @@ export const propertiesMock = {
 
         coordinates: [20.194966633295454, -87.45820197589747],
       },
-      price: 449000,
+      price: 199000,
       priceRange: ['199000', '449000'],
       images: [
         'https://res.cloudinary.com/dk473trop/image/upload/v1675789532/kabana/06_KABANA_GARDEN_HOUSE_POOL_cztire.jpg',

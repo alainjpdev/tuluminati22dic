@@ -25,6 +25,7 @@ import {
   MDBBtn,
 } from 'mdb-react-ui-kit'
 import ReactPlayer from 'react-player'
+import YouTube from 'react-youtube'
 
 // import videoBg from "../src/videos/cut.mp4"
 const isSafari = () => {
@@ -91,7 +92,7 @@ export default function Home({ propertiesVip, properties }) {
   //     }}
   //   />
   // )
-
+  const [youtubeID] = useState('x01_I3pfE8I')
   const [estate, setEstate] = useState(true)
 
   const handleDisplay = (event) => {
@@ -114,7 +115,7 @@ export default function Home({ propertiesVip, properties }) {
             <div className="row  p-0">
               <div className="col m-0 overlayt p-0">
                 {/* <div className="d-md-none"> */}
-                <video
+                {/* <video
                   autoplay
                   loop
                   controls={true}
@@ -124,7 +125,17 @@ export default function Home({ propertiesVip, properties }) {
                   width="100%"
                   src="/videos/azulik.mp4"
                   type="video/mp4"
-                ></video>
+                ></video> */}
+                {/* <YouTube videoId="x01_I3pfE8I" /> */}
+
+                <iframe
+                  className="video"
+                  width="100%"
+                  height="745px"
+                  title="Youtube player"
+                  sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"
+                  src={`https://youtube.com/embed/${youtubeID}?autoplay=0`}
+                ></iframe>
 
                 {/* <div
                   ref={videoParentRef}
