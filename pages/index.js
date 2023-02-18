@@ -12,7 +12,9 @@ import MapboxComponentTest from '../components/Mapboxtest'
 import Image from 'next/image'
 import CardSection from '../components/CardSection'
 import Header from '../components/Header'
+import { useNavigate } from 'react-router-dom'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import {
   MDBCard,
   MDBCardBody,
@@ -26,72 +28,16 @@ import {
 } from 'mdb-react-ui-kit'
 import ReactPlayer from 'react-player'
 import YouTube from 'react-youtube'
-
-// import videoBg from "../src/videos/cut.mp4"
-const isSafari = () => {
-  const ua = navigator.userAgent.toLowerCase()
-  return ua.indexOf('safari') > -1 && ua.indexOf('chrome') < 0
-}
-
-const mainVideo = '/videos/tb.mp4'
+import useRedirectAfterSomeSeconds from '../hook/useRedirectAfterSomeSeconds'
 
 export default function Home({ propertiesVip, properties }) {
   const videoParentRef = useRef()
   const [shouldUseImage, setShouldUseImage] = useState(false)
-  useEffect(() => {
-    // check if user agent is safari and we have the ref to the container <div />
-    if (isSafari() && videoParentRef.current) {
-      // obtain reference to the video element
-      const player = videoParentRef.current.children[0]
 
-      // if the reference to video player has been obtained
-      if (player) {
-        // set the video attributes using javascript as per the
-        // webkit Policy
-        player.controls = false
-        player.playsinline = true
-        player.muted = true
-        player.setAttribute('muted', '') // leave no stones unturned :)
-        player.autoplay = true
+  const [redirectSeconds, setRedirectSeconds] = useState(5)
+  const router = useRouter()
+  const query = router.query
 
-        // Let's wait for an event loop tick and be async.
-        setTimeout(() => {
-          // player.play() might return a promise but it's not guaranteed crossbrowser.
-          const promise = player.play()
-          // let's play safe to ensure that if we do have a promise
-          if (promise.then) {
-            promise
-              .then(() => {})
-              .catch(() => {
-                // if promise fails, hide the video and fallback to <img> tag
-                videoParentRef.current.style.display = 'none'
-                setShouldUseImage(true)
-              })
-          }
-        }, 0)
-      }
-    }
-  }, [])
-
-  // return shouldUseImage ? (
-  //   <img src={mainVideo} alt="Muted Video" />
-  // ) : (
-  //   <div
-  //     ref={videoParentRef}
-  //     dangerouslySetInnerHTML={{
-  //       __html: `
-  //       <video
-  //         loop
-  //         muted
-  //         autoplay
-  //         playsinline
-  //         preload="metadata"
-  //       >
-  //       <source src="${mainVideo}" type="video/mp4" />
-  //       </video>`,
-  //     }}
-  //   />
-  // )
   const [youtubeID] = useState('x01_I3pfE8I')
   const [estate, setEstate] = useState(true)
 
@@ -100,6 +46,7 @@ export default function Home({ propertiesVip, properties }) {
     setEstate(!estate)
   }
 
+  const { secondsRemaining } = useRedirectAfterSomeSeconds('/', 10)
   if (estate) {
     return (
       <div>
@@ -115,9 +62,8 @@ export default function Home({ propertiesVip, properties }) {
             <div className="row  p-0">
               <div className="col m-0 overlayt p-0">
                 {/* <div className="d-md-none"> */}
-                {/* <video
+                <video
                   autoplay
-                  loop
                   controls={true}
                   playsinline
                   preload="metadata"
@@ -125,17 +71,19 @@ export default function Home({ propertiesVip, properties }) {
                   width="100%"
                   src="/videos/azulik.mp4"
                   type="video/mp4"
-                ></video> */}
+                ></video>
                 {/* <YouTube videoId="x01_I3pfE8I" /> */}
 
-                <iframe
+                {/* <iframe
+                  onended="videoEnded()"
                   className="video"
                   width="100%"
                   height="745px"
                   title="Youtube player"
+                  id="myvid"
                   sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"
                   src={`https://youtube.com/embed/${youtubeID}?autoplay=0`}
-                ></iframe>
+                ></iframe> */}
 
                 {/* <div
                   ref={videoParentRef}
@@ -190,12 +138,19 @@ export default function Home({ propertiesVip, properties }) {
                   url="/videos/tb.mp4"
                   type="video/mp4"
                 /> */}
+                <div className="container">
+                  <p>
+                    Redirecting to the Map in
+                    {' ' + secondsRemaining}{' '}
+                    {'  ' + secondsRemaining > 1 ? ' seconds' : 'second'}.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="row rowTop">
+            {/* <div className="row rowTop">
               <div className="col-md">
-                <Link href={'/buy'}>
+                <Link href={'/mapPageSales'}>
                   <MDBCard alignment="center">
                     <MDBRipple
                       rippleColor="light"
@@ -208,7 +163,7 @@ export default function Home({ propertiesVip, properties }) {
                         fluid
                         alt="..."
                       />
-                      {/* <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' /> */}
+
                       <a>
                         <div
                           className="mask"
@@ -248,7 +203,6 @@ export default function Home({ propertiesVip, properties }) {
                           alt="..."
                         />
 
-                        {/* <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' /> */}
                         <a>
                           <div
                             className="mask"
@@ -273,9 +227,7 @@ export default function Home({ propertiesVip, properties }) {
                   </div>
                 </Link>
               </div>
-
-              {/* <CardSection /> */}
-            </div>
+            </div> */}
           </div>
         </Layout>
       </div>

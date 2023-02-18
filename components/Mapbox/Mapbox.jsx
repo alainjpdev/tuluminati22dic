@@ -33,7 +33,7 @@ const MapboxComponent = ({ propertiesB }) => {
       style: 'mapbox://styles/mapbox/streets-v12',
 
       center: [-87.460795, 20.200037],
-      zoom: 14,
+      zoom: 12,
       scrollZoom: false,
     })
 
@@ -153,12 +153,14 @@ const MapboxComponent = ({ propertiesB }) => {
       .setHTML(
         `
         <a href="https://tuluminati22dic.vercel.app/property/${currentFeature.id}" target="_blank" title="Opens in a new window">
-     <img
-       className="someImg"
-       src=${currentFeature.images[0]}
-       alt="property picture"
-       width="150" height="80"
-     />
+        <video
+        src=${currentFeature.videoPrev}
+        controls={true}
+        playsinline
+        preload="metadata"
+        width="250" 
+        height="160"
+      ></video>
      <p></p>
      <p>${currentFeature.name}<br/>$${currentFeature.price}K <br/>${currentFeature.factsandfeatures.beds}<strong> bd</strong>, ${currentFeature.factsandfeatures.bath}<strong> ba</strong>
      </a></p>
@@ -167,6 +169,13 @@ const MapboxComponent = ({ propertiesB }) => {
 
       .addTo(map)
   }
+
+  // <img
+  //      className="someImg"
+  //      src=${currentFeature.images[0]}
+  //      alt="property picture"
+  //      width="150" height="80"
+  //    />
 
   const propertyId = propertiesArr
 

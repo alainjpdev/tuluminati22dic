@@ -26,12 +26,12 @@ const Header = () => {
       <MDBNavbar
         className="py-0 navbarcss"
         expand="md"
-        style={{ color: 'black' }}
+        style={{ color: 'white', background: 'black' }}
       >
         <MDBNavbarToggler onClick={handleToggle} />
         <MDBCol xs="1" className="text-center align-self-center p-0">
           <Link href="/">
-            <Image src="/images/aldea.png" width={300} height={25} alt="Logo" />
+            <Image src="/images/sp.png" width={300} height={96} alt="Logo" />
           </Link>
         </MDBCol>
         <MDBCollapse
@@ -46,7 +46,7 @@ const Header = () => {
               <Link href="/">
                 <a
                   className="nav-link"
-                  style={{ color: 'black', fontSize: '12px' }}
+                  style={{ color: 'white', fontSize: '12px' }}
                 >
                   {/* <MDBIcon icon="home" className="mr-1" /> */}
                   Home
@@ -57,7 +57,7 @@ const Header = () => {
               <Link href="/buy" passHref>
                 <a
                   className="nav-link"
-                  style={{ color: 'black', fontSize: '12px' }}
+                  style={{ color: 'white', fontSize: '12px' }}
                 >
                   {/* <MDBIcon icon="building" className="mr-1" /> */}
                   Buy
@@ -68,7 +68,7 @@ const Header = () => {
               <Link href="/rent" passHref>
                 <a
                   className="nav-link"
-                  style={{ color: 'black', fontSize: '12px' }}
+                  style={{ color: 'white', fontSize: '12px' }}
                 >
                   {/* <MDBIcon icon="building" className="mr-1" /> */}
                   Rent
@@ -79,7 +79,7 @@ const Header = () => {
               <Link href="/mapPdf" passHref>
                 <a
                   className="nav-link"
-                  style={{ color: 'black', fontSize: '12px' }}
+                  style={{ color: 'white', fontSize: '12px' }}
                 >
                   {/* <MDBIcon icon="building" className="mr-1" /> */}
                   Manzana33
@@ -90,7 +90,7 @@ const Header = () => {
               <Link href="/agents/agents2Page" passHref>
                 <a
                   className="nav-link"
-                  style={{ color: 'black', fontSize: '12px' }}
+                  style={{ color: 'white', fontSize: '12px' }}
                 >
                   {/* <MDBIcon icon="building" className="mr-1" /> */}
                   Agents
@@ -101,7 +101,7 @@ const Header = () => {
               <Link href="/contact">
                 <a
                   className="nav-link"
-                  style={{ color: 'black', fontSize: '12px' }}
+                  style={{ color: 'white', fontSize: '12px' }}
                 >
                   {/* <MDBIcon icon="address-book" className="mr-1" /> */}
                   Contact

@@ -45,19 +45,19 @@ export default function Buy({ properties, currentPage, pageCount }) {
   return (
     <section>
       <Head>
-        <title>Tuluminati X List of properties</title>
+        <title>Tuluminati X List of properties Map</title>
       </Head>
-      <Header className="fixed" />
+      <Header className="fixed pt-2" />
       {/* <MDBContainer> */}
       {/* <SearchFilter /> */}
       <br />
       <div>
-        <div className="forSale pb-1">
-          <MDBBtn className="me-3 mx-3 mb-1" color="primary">
+        <div className="forSale pb-1 mt-1">
+          <MDBBtn className="me-3 mx-3 mb-1 mt-1" color="primary">
             For Sale
           </MDBBtn>
           <Link href={'/rent'}>
-            <MDBBtn className="me-3 mx-3 mb-1" color="white">
+            <MDBBtn className="me-3 mx-3 mb-1 mt-1" color="white">
               For Rent
             </MDBBtn>
           </Link>
