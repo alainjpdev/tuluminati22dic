@@ -52,7 +52,7 @@ export default function Buy({ properties, currentPage, pageCount }) {
       {/* <SearchFilter /> */}
       <br />
       <div>
-        <div className="forSale pb-1 mt-1">
+        <div className="forSale pb-1 mt-1 mt-2">
           <MDBBtn className="me-3 mx-3 mb-1 mt-1" color="primary">
             For Sale
           </MDBBtn>

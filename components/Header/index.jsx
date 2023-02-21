@@ -29,9 +29,9 @@ const Header = () => {
         style={{ color: 'white', background: 'black' }}
       >
         <MDBNavbarToggler onClick={handleToggle} />
-        <MDBCol xs="1" className="text-center align-self-center p-0">
+        <MDBCol xs="1" className="text-center align-self-center p-3">
           <Link href="/">
-            <Image src="/images/sp.png" width={300} height={96} alt="Logo" />
+            <Image src="/images/sp.png" width={150} height={47} alt="Logo" />
           </Link>
         </MDBCol>
         <MDBCollapse

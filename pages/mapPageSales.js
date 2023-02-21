@@ -53,7 +53,7 @@ const MapPageSales = ({ properties }) => {
       {/* <SearchFilter /> */}
 
       <div className="sticky">
-        <MDBBtn className="me-3 mx-3" color="primary">
+        <MDBBtn className="me-3 mx-3 mt-2" color="primary">
           For Sale
         </MDBBtn>
         <Link href={'/mapPageRents'}>
