@@ -69,7 +69,7 @@ export default function Home({ propertiesVip, properties }) {
                   preload="metadata"
                   height="745px"
                   width="100%"
-                  src="/videos/azulik_full.mp4"
+                  src="https://res.cloudinary.com/dk473trop/video/upload/v1677176374/azulik_video/azulik_full_aarvha.mp4"
                   type="video/mp4"
                 ></video>
                 {/* <YouTube videoId="x01_I3pfE8I" /> */}
