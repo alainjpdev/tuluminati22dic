@@ -41,12 +41,12 @@ export default function Home({ propertiesVip, properties }) {
   const [youtubeID] = useState('x01_I3pfE8I')
   const [estate, setEstate] = useState(true)
 
-  const handleDisplay = (event) => {
-    event.preventDefault()
-    setEstate(!estate)
-  }
+  // const handleDisplay = (event) => {
+  //   event.preventDefault()
+  //   setEstate(!estate)
+  // }
 
-  const { secondsRemaining } = useRedirectAfterSomeSeconds('/', 10)
+  // const { secondsRemaining } = useRedirectAfterSomeSeconds('/', 10)
   if (estate) {
     return (
       <div>
@@ -69,7 +69,7 @@ export default function Home({ propertiesVip, properties }) {
                   preload="metadata"
                   height="745px"
                   width="100%"
-                  src="/videos/azulik.mp4"
+                  src="/videos/azulik_full.mp4"
                   type="video/mp4"
                 ></video>
                 {/* <YouTube videoId="x01_I3pfE8I" /> */}
@@ -139,11 +139,11 @@ export default function Home({ propertiesVip, properties }) {
                   type="video/mp4"
                 /> */}
                 <div className="container">
-                  <p>
+                  {/* <p>
                     Redirecting to the Map in
                     {' ' + secondsRemaining}{' '}
                     {'  ' + secondsRemaining > 1 ? ' seconds' : 'second'}.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
