@@ -41,7 +41,7 @@ export const propertiesMock = {
       ],
       virtualTour: 'https://biganto.com/tour/36623/',
       video: '/videos/faisano.mp4',
-      videoPrev: '/videos/faisanocorto.mp4',
+      // videoPrev: '/videos/faisanocorto.mp4',
       card: {
         agent: 'Alain Raimond',
         agency: 'Desrochers Real Estate',

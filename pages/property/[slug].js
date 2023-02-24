@@ -463,6 +463,7 @@ const Property = ({
                           dangerouslySetInnerHTML={{
                             __html: `
                                     <video
+                                    controls="true"
                                       loop
                                       muted
                                       autoplay

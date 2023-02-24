@@ -62,16 +62,19 @@ export default function Home({ propertiesVip, properties }) {
             <div className="row  p-0">
               <div className="col m-0 overlayt p-0">
                 {/* <div className="d-md-none"> */}
-                <video
+                <iframe
+                  loop
+                  muted
                   autoplay
-                  controls={true}
                   playsinline
                   preload="metadata"
+                  controls={false}
                   height="745px"
                   width="100%"
+                  // src="/videos/azulik_full.mp4"
                   src="https://res.cloudinary.com/dk473trop/video/upload/v1677176374/azulik_video/azulik_full_aarvha.mp4"
                   type="video/mp4"
-                ></video>
+                ></iframe>
                 {/* <YouTube videoId="x01_I3pfE8I" /> */}
 
                 {/* <iframe

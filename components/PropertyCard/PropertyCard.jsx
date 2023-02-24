@@ -95,7 +95,7 @@ const PropertyCard = ({ properties }) => {
                                 autoplay
                                 loop
                                 muted
-                                controls={false}
+                                controls={true}
                                 playsinline
                                 preload="metadata"
                                 height="150px"
