@@ -33,7 +33,7 @@ const MapboxComponent = ({ propertiesB }) => {
       style: 'mapbox://styles/mapbox/streets-v12',
 
       center: [-87.452119, 20.19915],
-      zoom: 14,
+      zoom: 15,
       scrollZoom: false,
     })
 

@@ -62,19 +62,25 @@ export default function Home({ propertiesVip, properties }) {
             <div className="row  p-0">
               <div className="col m-0 overlayt p-0">
                 {/* <div className="d-md-none"> */}
-                <iframe
+                <video
+                  // style={{
+                  //   width: '100%',
+                  //   height: '100vh',
+                  //   'object-fit': 'cover',
+                  // }}
                   loop
                   muted
                   autoplay
-                  playsinline
                   preload="metadata"
-                  controls={false}
-                  height="745px"
+                  controls={true}
+                  height="100%"
                   width="100%"
                   // src="/videos/azulik_full.mp4"
                   src="https://res.cloudinary.com/dk473trop/video/upload/v1677176374/azulik_video/azulik_full_aarvha.mp4"
                   type="video/mp4"
-                ></iframe>
+                  className="main p-0 m-0 videoBg p-0 m-0"
+                />
+
                 {/* <YouTube videoId="x01_I3pfE8I" /> */}
 
                 {/* <iframe
@@ -141,13 +147,13 @@ export default function Home({ propertiesVip, properties }) {
                   url="/videos/tb.mp4"
                   type="video/mp4"
                 /> */}
-                <div className="container">
-                  {/* <p>
+                {/* <div className="container"> */}
+                {/* <p>
                     Redirecting to the Map in
                     {' ' + secondsRemaining}{' '}
                     {'  ' + secondsRemaining > 1 ? ' seconds' : 'second'}.
                   </p> */}
-                </div>
+                {/* </div> */}
               </div>
             </div>
 

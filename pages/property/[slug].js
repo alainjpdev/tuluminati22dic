@@ -172,10 +172,12 @@ const Property = ({
 
                         <h3 style={{ color: 'green', fontSize: '24px' }}>
                           <strong>
-                            {property.price.toLocaleString('en-US', {
-                              style: 'currency',
-                              currency: 'USD',
-                            })}
+                            Starting from
+                            {' ' +
+                              property.price.toLocaleString('en-US', {
+                                style: 'currency',
+                                currency: 'USD',
+                              })}
                           </strong>
                         </h3>
                         <div style={styles} className="d-inline m-2">
@@ -515,10 +517,12 @@ const Property = ({
                             <div style={styles} className="m-2">
                               <h3 style={{ color: 'green', fontSize: '24px' }}>
                                 <strong>
-                                  {property.price.toLocaleString('en-US', {
-                                    style: 'currency',
-                                    currency: 'USD',
-                                  })}
+                                  Starting from
+                                  {' ' +
+                                    property.price.toLocaleString('en-US', {
+                                      style: 'currency',
+                                      currency: 'USD',
+                                    })}
                                 </strong>
                               </h3>
                             </div>
