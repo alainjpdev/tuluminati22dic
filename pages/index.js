@@ -41,12 +41,12 @@ export default function Home({ propertiesVip, properties }) {
   const [youtubeID] = useState('x01_I3pfE8I')
   const [estate, setEstate] = useState(true)
 
-  // const handleDisplay = (event) => {
-  //   event.preventDefault()
-  //   setEstate(!estate)
-  // }
+  const handleDisplay = (event) => {
+    event.preventDefault()
+    setEstate(!estate)
+  }
 
-  // const { secondsRemaining } = useRedirectAfterSomeSeconds('/', 10)
+  const { secondsRemaining } = useRedirectAfterSomeSeconds('/', 10)
   if (estate) {
     return (
       <div>
@@ -54,36 +54,37 @@ export default function Home({ propertiesVip, properties }) {
           <title>TuluminatiX</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Layout>
-          {/* <h2 className="hello">hello world</h2> */}
-          {/* <div> */}
+        {/* <Layout> */}
+        {/* <h2 className="hello">hello world</h2> */}
+        {/* <div> */}
+        <Header />
 
-          <div className="container-fluid  p-0">
-            <div className="row  p-0">
-              <div className="col m-0 overlayt p-0">
-                {/* <div className="d-md-none"> */}
-                <video
-                  // style={{
-                  //   width: '100%',
-                  //   height: '100vh',
-                  //   'object-fit': 'cover',
-                  // }}
-                  loop
-                  muted
-                  autoplay
-                  preload="metadata"
-                  controls={true}
-                  height="100%"
-                  width="100%"
-                  // src="/videos/azulik_full.mp4"
-                  src="https://res.cloudinary.com/dk473trop/video/upload/v1677176374/azulik_video/azulik_full_aarvha.mp4"
-                  type="video/mp4"
-                  className="main p-0 m-0 videoBg p-0 m-0"
-                />
+        <div className="container-fluid  p-0">
+          <div className="row  p-0">
+            <div className="col m-0 overlayt p-0">
+              {/* <div className="d-md-none"> */}
+              <video
+                // style={{
+                //   width: '100%',
+                //   height: '100vh',
+                //   'object-fit': 'cover',
+                // }}
+                loop
+                muted
+                autoplay={true}
+                preload="metadata"
+                controls={true}
+                height="80%"
+                width="100%"
+                // src="/videos/azulik_full.mp4"
+                src="https://res.cloudinary.com/dk473trop/video/upload/v1677176374/azulik_video/azulik_full_aarvha.mp4"
+                type="video/mp4"
+                className="main p-0 m-0 videoBg p-0 m-0"
+              />
 
-                {/* <YouTube videoId="x01_I3pfE8I" /> */}
+              {/* <YouTube videoId="x01_I3pfE8I" /> */}
 
-                {/* <iframe
+              {/* <iframe
                   onended="videoEnded()"
                   className="video"
                   width="100%"
@@ -94,7 +95,7 @@ export default function Home({ propertiesVip, properties }) {
                   src={`https://youtube.com/embed/${youtubeID}?autoplay=0`}
                 ></iframe> */}
 
-                {/* <div
+              {/* <div
                   ref={videoParentRef}
                   dangerouslySetInnerHTML={{
                     __html: `
@@ -113,7 +114,7 @@ export default function Home({ propertiesVip, properties }) {
                   }}
                 /> */}
 
-                {/* <video
+              {/* <video
                   style={{ width: '100%', height: '100%' }}
                   autoPlay
                   loop
@@ -122,8 +123,8 @@ export default function Home({ propertiesVip, properties }) {
                   className="main p-0 m-0 videoBg"
                   type="video/mp4"
                 ></video> */}
-                {/* </div> */}
-                {/* <div className="d-none d-md-block">
+              {/* </div> */}
+              {/* <div className="d-none d-md-block">
                   <video
                     style={{ width: '100%', height: '100%' }}
                     muted
@@ -135,7 +136,7 @@ export default function Home({ propertiesVip, properties }) {
                   ></video>
                 </div> */}
 
-                {/* <ReactPlayer
+              {/* <ReactPlayer
                   playsinline={true}
                   controls={false}
                   playing={true}
@@ -147,17 +148,17 @@ export default function Home({ propertiesVip, properties }) {
                   url="/videos/tb.mp4"
                   type="video/mp4"
                 /> */}
-                {/* <div className="container"> */}
-                {/* <p>
+              {/* <div className="container"> */}
+              {/* <p>
                     Redirecting to the Map in
                     {' ' + secondsRemaining}{' '}
                     {'  ' + secondsRemaining > 1 ? ' seconds' : 'second'}.
                   </p> */}
-                {/* </div> */}
-              </div>
+              {/* </div> */}
             </div>
+          </div>
 
-            {/* <div className="row rowTop">
+          {/* <div className="row rowTop">
               <div className="col-md">
                 <Link href={'/mapPageSales'}>
                   <MDBCard alignment="center">
@@ -237,8 +238,8 @@ export default function Home({ propertiesVip, properties }) {
                 </Link>
               </div>
             </div> */}
-          </div>
-        </Layout>
+        </div>
+        {/* </Layout> */}
       </div>
     )
   } else {
