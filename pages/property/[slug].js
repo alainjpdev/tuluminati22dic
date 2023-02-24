@@ -467,7 +467,7 @@ const Property = ({
                                       loop
                                       muted
                                       autoplay
-                                      playsinline
+                                      playsInline
                                       preload="metadata"
                                       width="500px"
                                       height="350px"
